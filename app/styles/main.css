@@ -7330,13 +7330,84 @@ td.visible-print {
 .fa-plus-square-o:before {
   content: "\f196";
 }
-.browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
+.main-scene {
+  background: url("../images/background.jpg") 100% center;
+  height: 500px;
+  -webkit-transition: background-position 0.2s ease-out;
+  transition: background-position 0.2s ease-out;
 }
-.jumbotron {
-  margin: 50px auto 0 auto;
+.main-scene > div.center-block {
+  line-height: 500px;
+  width: 300px;
+  height: 300px;
+  color: rgba(204, 204, 204, 0.8);
+  font-size: 300px;
+  cursor: pointer;
+}
+.main-scene > div.center-block:hover {
+  color: white;
+}
+@-webkit-keyframes horse-fast {
+  0% {
+    background-position-x: 0;
+  }
+  20% {
+    background-position-x: -449px;
+  }
+  40% {
+    background-position-x: -898px;
+  }
+  60% {
+    background-position-x: -1347px;
+  }
+  80% {
+    background-position-x: -1796px;
+  }
+  100% {
+    background-position-x: -2245px;
+  }
+}
+#horseFast {
+  width: 449px;
+  height: 378px;
+  background: url("../images/horse-fast.png") repeat-x;
+  -webkit-animation: horse-fast 0.3s step-end infinite;
+  animation: horse-fast 0.3s step-end infinite;
+}
+@-webkit-keyframes horse-slow {
+  0% {
+    background-position-x: 0;
+  }
+  12.5% {
+    background-position-x: -449px;
+  }
+  25% {
+    background-position-x: -898px;
+  }
+  37.5% {
+    background-position-x: -1347px;
+  }
+  50% {
+    background-position-x: -1796px;
+  }
+  62.5% {
+    background-position-x: -2245px;
+  }
+  75% {
+    background-position-x: -2694px;
+  }
+  87.5% {
+    background-position-x: -3143px;
+  }
+  100% {
+    background-position-x: -3592px;
+  }
+}
+#horseSlow {
+  width: 449px;
+  height: 418px;
+  background: url("../images/horse-slow.png") repeat-x;
+  -webkit-animation: horse-slow 0.6s step-end infinite;
+  animation: horse-slow 0.6s step-end infinite;
 }
 /*# sourceMappingURL=/styles/main.css.map */

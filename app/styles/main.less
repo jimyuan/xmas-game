@@ -4,13 +4,86 @@
 @import "../bower_components/font-awesome/less/font-awesome.less";
 @fa-font-path: "../fonts/font-awesome";
 
-.browsehappy {
-  margin: 0.2em 0; 
-  background: #ccc; 
-  color: #000; 
-  padding: 0.2em 0; 
+.main-scene{
+  background: url("../images/background.jpg") 100% center;
+  height:500px;
+  .transition(background-position .2s ease-out); 
+  &>div.center-block{
+    line-height: 500px;
+    .square(300px);
+    color:darken(rgba(255,255,255,.8), 20%);
+    font-size: 300px;
+    cursor:pointer;
+    &:hover{
+      color:white;
+    }
+  }
 }
 
-.jumbotron {
-  margin: 50px auto 0 auto;
+@cell:-449px;
+.animate-cell(@w:-@cell, @h:378px){
+  .size(@w, @h);
+}
+
+@-webkit-keyframes horse-fast{
+  0%{
+    background-position-x: 0;
+  }
+  20%{
+    background-position-x: @cell;
+  }
+  40%{
+    background-position-x: @cell*2;
+  }
+  60%{
+    background-position-x: @cell*3;
+  }
+  80%{
+    background-position-x: @cell*4;
+  }
+  100%{
+    background-position-x: @cell*5;
+  }
+}
+
+#horseFast{
+  .animate-cell;
+  background: url("../images/horse-fast.png") repeat-x;
+  .animation(horse-fast .3s step-end infinite);
+}
+
+@-webkit-keyframes horse-slow{
+  0%{
+    background-position-x: 0;
+  }
+  12.5%{
+    background-position-x: @cell;
+  }
+  25%{
+    background-position-x: @cell*2;
+  }
+  37.5%{
+    background-position-x: @cell*3;
+  }
+  50%{
+    background-position-x: @cell*4;
+  }
+  62.5%{
+    background-position-x: @cell*5;
+  }
+  75%{
+    background-position-x: @cell*6;
+  }
+  87.5%{
+    background-position-x: @cell*7;
+  }
+  100%{
+    background-position-x: @cell*8;
+  }
+}
+
+#horseSlow{
+  .animate-cell(@w:-@cell, @h:418px);
+  background: url("../images/horse-slow.png") repeat-x;
+  .animation(horse-slow 0.6s step-end infinite);
 }
