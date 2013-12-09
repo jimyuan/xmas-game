@@ -1,0 +1,117 @@
+#warphorseWalkSlow {
+  .animate-cell(@w:400px,@h:400px);
+  position: relative;
+}
+/*
+慢走
+*/
+@-webkit-keyframes horse-walk-slow{
+  @cell2:-400px;
+  0%{
+    background-position-x: 0;
+  }
+  8.3%{
+    background-position-x: @cell2;
+  }
+  16.6%{
+    background-position-x: @cell2*2;
+  }
+  25%{
+    background-position-x: @cell2*3;
+  }
+  33.3%{
+    background-position-x: @cell2*4;
+  }
+  41.6%{
+    background-position-x: @cell2*5;
+  }
+  50%{
+    background-position-x: @cell2*6;
+  }
+  58.3%{
+    background-position-x: @cell2*7;
+  }
+  66.7%{
+    background-position-x: @cell2*8;
+  }
+  75%{
+    background-position-x: @cell2*9;
+  }
+  83.3%{
+    background-position-x: @cell2*10;
+  }
+}
+
+#horseWalkSlow{
+  .animate-cell(@w:400px, @h:400px);
+  background: url("../images/horse-walk-slow.png") repeat-x;
+  .animation(horse-walk-slow 0.6s step-end infinite);
+  position: absolute;z-index:2;
+}
+
+/*
+慢走头像动画
+*/
+@-webkit-keyframes horse-walkhead-slow{
+  0%{
+    top:136.2px;
+    left: 254.55px; 
+  }
+  8.3%{
+    top:135.9px;
+
+    left: 246.6px; 
+  }
+  16.6%{
+    top:136px;
+    left: 242.05px; 
+  } 
+  25%{
+    top:136.2px;
+    left: 242.4px; 
+  }
+  33.3%{
+    top:136.1px;
+    left: 242px; 
+  }
+  41.6%{
+    top:136.05px;
+    left: 246.6px; 
+  }
+  50%{
+    top:136.2px;
+    left: 254.55px; 
+  }
+  58.3%{
+   top:135.9px;
+    left: 246.6px; 
+  }
+  66.7%{
+    top:136px;
+    left: 242.05px; 
+  }
+  75%{
+    top:136.2px;
+    left: 240.4px; 
+  }
+  83.3%{
+    top:136.45px;
+    left: 243.05px; 
+  }
+  91.6%{
+    top:137.65px;
+    left: 251.75px; 
+  }
+}
+
+#horseWalkSlowHead {
+  .animate-cell(@w:32px,@h:40px);
+
+  /*-webkit-transform:rotate(-10deg); */
+  position: absolute;
+  z-index: 1; 
+  top:136.2px;
+  left:254.55px; 
+  background: url("../images/head.jpg") no-repeat;background-size: 100% auto;
+ .animation(horse-walkhead-slow 0.6s step-end infinite);
+}

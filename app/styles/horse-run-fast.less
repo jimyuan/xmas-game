@@ -1,0 +1,70 @@
+#warphorseRunFast {
+  .animate-cell;
+  position: relative;
+}
+/*
+  快跑
+*/
+@-webkit-keyframes horse-run-fast{
+  0%{
+    background-position-x: 0;
+  }
+  20%{
+    background-position-x: @cell;
+  }
+  40%{
+    background-position-x: @cell*2;
+  }
+  60%{
+    background-position-x: @cell*3;
+  }
+  80%{
+    background-position-x: @cell*4;
+  }
+}
+
+#horseRunFast{
+  .animate-cell;
+  background: url("../images/horse-fast.png") repeat-x;
+  .animation(horse-run-fast .3s step-end infinite);
+  position: absolute; z-index: 2;  
+}
+
+/*
+快跑头像动画
+*/
+@-webkit-keyframes horse-runhead-fast{
+  0%{
+    top:124.75px;
+    left: 275.8px; 
+  }
+  20%{
+    top:129.55px;
+
+    left: 270.95px; 
+  }
+  40%{
+    top:129.05;
+    left: 255.45px; 
+  } 
+  60%{
+    top:129.65px;
+    left: 270.95px; 
+  }
+  80%{
+    top:125.25px;
+    left: 279.25px; 
+  }
+}
+
+#horseRunFastHead {
+  .animate-cell(@w:32px,@h:40px);
+
+  /*-webkit-transform:rotate(-10deg); */
+  position: absolute;
+  z-index: 1; 
+  top:124.75px;
+  left: 275.8px; 
+  background: url("../images/head.jpg") no-repeat;background-size: 100% auto;
+ .animation(horse-runhead-fast 0.3s step-end infinite);
+}
