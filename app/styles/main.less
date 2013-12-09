@@ -4,13 +4,45 @@
 @import "../bower_components/font-awesome/less/font-awesome.less";
 @fa-font-path: "../fonts/font-awesome";
 
-.browsehappy {
-  margin: 0.2em 0; 
-  background: #ccc; 
-  color: #000; 
-  padding: 0.2em 0; 
+
+@cell:-449px;
+.animate-cell(@w:-@cell, @h:378px){
+  .size(@w, @h);
 }
 
-.jumbotron {
-  margin: 50px auto 0 auto;
+@import "horse-run-fast.less";
+@import "horse-run-slow.less";
+@import "horse-walk-fast.less";
+@import "horse-walk-slow.less";
+@import "monster-yellow.less";
+@import "monster-green.less";
+
+body{
+  background: url("../images/body_bg.jpg") no-repeat center;
+}
+.main-scene{
+  background: url("../images/background.png") 100% center;
+  height:500px;
+  .transition(background-position .2s ease-out); 
+  &>div:first-child{
+    top:160px;
+    
+    left:50%;
+    margin-left:-200px;
+
+  }
+}
+
+#timeCount {
+  float:right;
+
+}
+#count {
+  float:right;
+}
+
+#startButton{
+  .square(100px);
+  .center-block;
+  font-size:100px;
 }

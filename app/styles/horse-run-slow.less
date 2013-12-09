@@ -1,0 +1,87 @@
+/*
+慢跑
+*/
+@-webkit-keyframes horse-run-slow{
+  0%{
+    background-position-x: 0;
+  }
+  12.5%{
+    background-position-x: @cell;
+  }
+  25%{
+    background-position-x: @cell*2;
+  }
+  37.5%{
+    background-position-x: @cell*3;
+  }
+  50%{
+    background-position-x: @cell*4;
+  }
+  62.5%{
+    background-position-x: @cell*5;
+  }
+  75%{
+    background-position-x: @cell*6;
+  }
+  87.5%{
+    background-position-x: @cell*7;
+  }
+}
+
+/*
+慢跑头像动画
+*/
+@-webkit-keyframes horse-runhead-slow{
+  0%{
+    top:116.65px;
+    left: 253.6px; 
+  }
+  12.5%{
+    top:123.45px;
+    left: 253.6px; 
+  }
+  25%{
+    top:131.35px;
+    left: 253.6px; 
+  }
+  37.5%{
+    top:130.95px;
+    left: 246.4px; 
+  }
+  50%{
+    top:134.95px;
+    left: 233.2px; 
+  }
+  62.5%{
+    top:142.3px;
+    left: 242.15px; 
+  }
+  75%{
+    top:140.95px;
+    left: 252.8px; 
+  }
+  87.5%{
+    top:130.95px;
+    left: 252.8px; 
+  }
+}
+
+#warphorseRunSlow {
+  .animate-cell(@w:-@cell, @h:418px);
+  position: relative;
+  &>div:first-child{
+    .animate-cell(@w:-@cell, @h:418px);
+    background: url("../images/horse-slow.png") repeat-x;
+    .animation(horse-run-slow 0.6s step-end infinite);
+    position: absolute; z-index: 2;
+  }
+  &>div:last-child{
+    .animate-cell(@w:32px,@h:40px);
+    position: absolute;
+    z-index: 1; 
+    top:116.65px;
+    left: 253.6px; 
+    background: url("../images/head.jpg") no-repeat;background-size: 100% auto;
+   .animation(horse-runhead-slow 0.6s step-end infinite);
+  }
+}
