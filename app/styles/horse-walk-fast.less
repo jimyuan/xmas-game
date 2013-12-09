@@ -1,7 +1,4 @@
-#warphorseWalkFast {
-  .animate-cell(@w:450px, @h:400px);
-  position: relative;
-}
+
 /*
 快走
 */
@@ -38,14 +35,6 @@
     background-position-x: @cell2*9;
   }
 }
-
-#horseWalkFast{
-  .animate-cell(@w:450px, @h:400px);
-  background: url("../images/horse-walk-fast.png") repeat-x;
-  .animation(horse-walk-fast 0.6s step-end infinite);
-  position: absolute; z-index: 2;
-}
-
 
 /*
 快走头像动画
@@ -93,14 +82,22 @@
   }
 }
 
-#horseWalkFastHead {
-  .animate-cell(@w:32px,@h:40px);
-
-  /*-webkit-transform:rotate(-10deg); */
-  position: absolute;
-  z-index: 1; 
-  top:116.65px;
-  left: 253.6px; 
-  background: url("../images/head.jpg") no-repeat;background-size: 100% auto;
- .animation(horse-walkhead-fast 0.6s step-end infinite);
+#warphorseWalkFast {
+  .animate-cell(@w:450px, @h:400px);
+  position: relative;
+  &>div:first-child{
+    .animate-cell(@w:450px, @h:400px);
+    background: url("../images/horse-walk-fast.png") repeat-x;
+    .animation(horse-walk-fast 0.6s step-end infinite);
+    position: absolute; z-index: 2;
+  }
+  &>div:last-child{
+    .animate-cell(@w:32px,@h:40px);
+    position: absolute;
+    z-index: 1; 
+    top:116.65px;
+    left: 253.6px; 
+    background: url("../images/head.jpg") no-repeat;background-size: 100% auto;
+   .animation(horse-walkhead-fast 0.6s step-end infinite);    
+  }
 }

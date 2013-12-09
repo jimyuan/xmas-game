@@ -1,7 +1,4 @@
-#warphorseWalkSlow {
-  .animate-cell(@w:400px,@h:400px);
-  position: relative;
-}
+
 /*
 慢走
 */
@@ -41,14 +38,6 @@
     background-position-x: @cell2*10;
   }
 }
-
-#horseWalkSlow{
-  .animate-cell(@w:400px, @h:400px);
-  background: url("../images/horse-walk-slow.png") repeat-x;
-  .animation(horse-walk-slow 0.6s step-end infinite);
-  position: absolute;z-index:2;
-}
-
 /*
 慢走头像动画
 */
@@ -104,14 +93,22 @@
   }
 }
 
-#horseWalkSlowHead {
-  .animate-cell(@w:32px,@h:40px);
-
-  /*-webkit-transform:rotate(-10deg); */
-  position: absolute;
-  z-index: 1; 
-  top:136.2px;
-  left:254.55px; 
-  background: url("../images/head.jpg") no-repeat;background-size: 100% auto;
- .animation(horse-walkhead-slow 0.6s step-end infinite);
+#warphorseWalkSlow {
+  .animate-cell(@w:400px,@h:400px);
+  position: relative;
+  &>div:first-child{
+    .animate-cell(@w:400px, @h:400px);
+    background: url("../images/horse-walk-slow.png") repeat-x;
+    .animation(horse-walk-slow 0.6s step-end infinite);
+    position: absolute;z-index:2;
+  }
+  &>div:last-child{
+    .animate-cell(@w:32px,@h:40px);
+    position: absolute;
+    z-index: 1; 
+    top:136.2px;
+    left:254.55px; 
+    background: url("../images/head.jpg") no-repeat;background-size: 100% auto;
+   .animation(horse-walkhead-slow 0.6s step-end infinite);    
+  }
 }
