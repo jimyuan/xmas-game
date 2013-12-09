@@ -17,13 +17,28 @@
 @import "monster-yellow.less";
 @import "monster-green.less";
 
+body{
+  background: url("../images/body_bg.jpg") no-repeat center;
+}
 .main-scene{
-  background: url("../images/background.jpg") 100% center;
+  background: url("../images/background.png") 100% center;
   height:500px;
   .transition(background-position .2s ease-out); 
-  &>div{
-    .center-block
+  &>div:first-child{
+    top:160px;
+    
+    left:50%;
+    margin-left:-200px;
+
   }
+}
+
+#timeCount {
+  float:right;
+
+}
+#count {
+  float:right;
 }
 
 #startButton{
