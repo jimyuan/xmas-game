@@ -7684,6 +7684,154 @@ td.visible-print {
   -webkit-animation: horse-walkhead-slow 0.6s step-end infinite;
   animation: horse-walkhead-slow 0.6s step-end infinite;
 }
+/*
+  黄毛怪
+*/
+@-webkit-keyframes monster-yellow {
+  0% {
+    background-position-x: 0;
+  }
+  11.1% {
+    background-position-x: -150px;
+  }
+  22.2% {
+    background-position-x: -300px;
+  }
+  33.3% {
+    background-position-x: -450px;
+  }
+  44.4% {
+    background-position-x: -600px;
+  }
+  55.5% {
+    background-position-x: -750px;
+  }
+  66.6% {
+    background-position-x: -900px;
+  }
+  77.7% {
+    background-position-x: -1050px;
+  }
+  88.8% {
+    background-position-x: -1200px;
+  }
+}
+#monsterYellow {
+  width: 150px;
+  height: 150px;
+  background: url("../images/monster-yellow.png") repeat-x;
+  -webkit-animation: monster-yellow 0.3s step-end infinite;
+  animation: monster-yellow 0.3s step-end infinite;
+}
+#warphorseMonsterGreen {
+  width: 257px;
+  height: 264px;
+  position: relative;
+}
+/*
+慢走
+*/
+@-webkit-keyframes monster-green {
+  0% {
+    background-position-x: 0;
+  }
+  11.1% {
+    background-position-x: -257px;
+  }
+  22.2% {
+    background-position-x: -514px;
+  }
+  33.3% {
+    background-position-x: -771px;
+  }
+  44.4% {
+    background-position-x: -1028px;
+  }
+  55.6% {
+    background-position-x: -1285px;
+  }
+  66.7% {
+    background-position-x: -1542px;
+  }
+  77.8% {
+    background-position-x: -1799px;
+  }
+  88.9% {
+    background-position-x: -2056px;
+  }
+}
+#monsterGreen {
+  width: 257px;
+  height: 264px;
+  background: url("../images/monster-green.png") repeat-x;
+  -webkit-animation: monster-green 0.6s step-end infinite;
+  animation: monster-green 0.6s step-end infinite;
+  position: absolute;
+  z-index: 2;
+}
+/*
+慢走头像动画
+*/
+@-webkit-keyframes monster-greenHead {
+  0% {
+    top: 61.95px;
+    left: 138.5px;
+    -webkit-transform: rotate();
+  }
+  11.1% {
+    top: 63.4px;
+    left: 122.75px;
+    -webkit-transform: rotate();
+  }
+  22.2% {
+    top: 75px;
+    left: 71.85px;
+    -webkit-transform: rotate();
+  }
+  33.3% {
+    top: 83.85px;
+    left: 55.4px;
+    -webkit-transform: rotate();
+  }
+  44.4% {
+    top: 85.25px;
+    left: 57.4px;
+    -webkit-transform: rotate();
+  }
+  55.6% {
+    top: 81.85px;
+    left: 69.9px;
+    -webkit-transform: rotate();
+  }
+  66.7% {
+    top: 69.3px;
+    left: 104px;
+    -webkit-transform: rotate();
+  }
+  77.8% {
+    top: 64.05px;
+    left: 128.85px;
+    -webkit-transform: rotate();
+  }
+  88.9% {
+    top: 61.8px;
+    left: 138.1px;
+    -webkit-transform: rotate();
+  }
+}
+#monsterGreenHead {
+  width: 50px;
+  height: 50px;
+  -webkit-transform: rotate(-10deg);
+  position: absolute;
+  z-index: 1;
+  top: 61.95px;
+  left: 138.5px;
+  background: url("../images/head.jpg") no-repeat;
+  background-size: 100% auto;
+  -webkit-animation: monster-greenHead 0.6s step-end infinite;
+  animation: monster-greenHead 0.6s step-end infinite;
+}
 .main-scene {
   background: url("../images/background.jpg") 100% center;
   height: 500px;
