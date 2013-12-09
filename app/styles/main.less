@@ -21,14 +21,13 @@
   background: url("../images/background.jpg") 100% center;
   height:500px;
   .transition(background-position .2s ease-out); 
-  &>div.center-block{
-    line-height: 500px;
-    .square(300px);
-    color:darken(rgba(255,255,255,.8), 20%);
-    font-size: 300px;
-    cursor:pointer;
-    &:hover{
-      color:white;
-    }
+  &>div{
+    .center-block
   }
+}
+
+#startButton{
+  .square(100px);
+  .center-block;
+  font-size:100px;
 }
