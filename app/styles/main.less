@@ -21,6 +21,7 @@
 
 body{
   background: url("../images/body_bg.jpg") no-repeat center;
+  overflow: hidden;
 }
 .main-scene{
   background: url("../images/background.png");
@@ -123,4 +124,16 @@ body{
   top:0px;
   margin-left:-50px;
 
+}
+
+.door{
+  position:absolute;
+  top:0; left:0;
+  z-index: 1000;
+  background: white;
+}
+
+.zoomOut{
+  .transition(all 0.2s ease-out); 
+  .scale(0);
 }

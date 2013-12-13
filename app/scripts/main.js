@@ -8,7 +8,7 @@
     beforeScene:$(".before-scene"),
     stopwatch:$("#timeCount span"),
     timerBar:$("#timeCount").children(":last-child").children(":first-child"),
-    timerBar2:$("#timeCount").children(":last-child").children(":last-child").offset(),
+    timerBar2:$("#timeCount").children(":last-child").children(":last-child"),
     timerBarPer:$("#timeCount").width(),
     currBarWidth:0,
     speedStyle:["WalkStop","WalkSlow","WalkFast","RunSlow","RunFast"],
@@ -71,7 +71,9 @@
           var flag = J.timerBarPer/430;
           J.currBarWidth +=flag;
           J.timerBar.width(J.currBarWidth);
-          J.timerBar2.left = J.currBarWidth;
+          J.timerBar2.css("left", J.currBarWidth);
+          console.log(J.currBarWidth);
+          // .right = J.currBarWidth;
         }
       },
       init:function () {
@@ -97,6 +99,14 @@
   }
 
   J.move=function(){
+    $(document).on("keypress", function(e){e.preventDefault();})
     $("i.fa-play-circle-o").on("click" ,J._gameStart);
+   }();
+
+   J.door=function(){
+    $(".door").height($(document).height()).width($(window).width())
+    .on("click", function(){
+      $(this).addClass("zoomOut");
+    });
    }();
 }(jQuery);
