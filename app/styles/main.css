@@ -7319,23 +7319,23 @@ td.visible-print {
 */
 @-webkit-keyframes horse-runhead-fast {
   0% {
-    top: 124.75px;
+    top: 120.75px;
     left: 275.8px;
   }
   20% {
-    top: 129.55px;
+    top: 125.55px;
     left: 270.95px;
   }
   40% {
-    top: 129.05;
+    top: 125.05;
     left: 255.45px;
   }
   60% {
-    top: 129.65px;
+    top: 125.65px;
     left: 270.95px;
   }
   80% {
-    top: 125.25px;
+    top: 121.25px;
     left: 279.25px;
   }
 }
@@ -7359,7 +7359,7 @@ td.visible-print {
   /*-webkit-transform:rotate(-10deg); */
   position: absolute;
   z-index: 1;
-  top: 124.75px;
+  top: 120.75px;
   left: 275.8px;
   background: url("../images/head.jpg") no-repeat;
   background-size: 100% auto;
@@ -7400,35 +7400,35 @@ td.visible-print {
 */
 @-webkit-keyframes horse-runhead-slow {
   0% {
-    top: 116.65px;
+    top: 110.65px;
     left: 253.6px;
   }
   12.5% {
-    top: 123.45px;
+    top: 117.45px;
     left: 253.6px;
   }
   25% {
-    top: 131.35px;
+    top: 125.35px;
     left: 253.6px;
   }
   37.5% {
-    top: 130.95px;
+    top: 124.95px;
     left: 246.4px;
   }
   50% {
-    top: 134.95px;
+    top: 128.95px;
     left: 233.2px;
   }
   62.5% {
-    top: 142.3px;
+    top: 136.3px;
     left: 242.15px;
   }
   75% {
-    top: 140.95px;
+    top: 134.95px;
     left: 252.8px;
   }
   87.5% {
-    top: 130.95px;
+    top: 124.95px;
     left: 252.8px;
   }
 }
@@ -7451,7 +7451,7 @@ td.visible-print {
   height: 40px;
   position: absolute;
   z-index: 1;
-  top: 116.65px;
+  top: 110.65px;
   left: 253.6px;
   background: url("../images/head.jpg") no-repeat;
   background-size: 100% auto;
@@ -7498,43 +7498,43 @@ td.visible-print {
 */
 @-webkit-keyframes horse-walkhead-fast {
   0% {
-    top: 136.5px;
+    top: 123.5px;
     left: 249.55px;
   }
   10% {
-    top: 139.6px;
+    top: 126.6px;
     left: 258.8px;
   }
   20% {
-    top: 140.4px;
+    top: 127.4px;
     left: 263.15px;
   }
   30% {
-    top: 147.8px;
+    top: 134.8px;
     left: 257.95px;
   }
   40% {
-    top: 149.35px;
+    top: 136.35px;
     left: 244.7px;
   }
   50% {
-    top: 136.5px;
+    top: 123.5px;
     left: 249.55px;
   }
   60% {
-    top: 139.6px;
+    top: 126.6px;
     left: 258.8px;
   }
   70% {
-    top: 140.4px;
+    top: 127.4px;
     left: 263.15px;
   }
   80% {
-    top: 147.8px;
+    top: 134.8px;
     left: 257.9px;
   }
   90% {
-    top: 149.35px;
+    top: 136.35px;
     left: 244.7px;
   }
 }
@@ -7557,8 +7557,8 @@ td.visible-print {
   height: 40px;
   position: absolute;
   z-index: 1;
-  top: 116.65px;
-  left: 253.6px;
+  top: 123.5px;
+  left: 249.55px;
   background: url("../images/head.jpg") no-repeat;
   background-size: 100% auto;
   -webkit-animation: horse-walkhead-fast 0.6s step-end infinite;
@@ -7608,51 +7608,51 @@ td.visible-print {
 @-webkit-keyframes horse-walkhead-slow {
   0% {
     top: 136.2px;
-    left: 254.55px;
+    left: 245.55px;
   }
   8.3% {
     top: 135.9px;
-    left: 246.6px;
+    left: 237.65px;
   }
   16.6% {
     top: 136px;
-    left: 242.05px;
+    left: 233.05px;
   }
   25% {
     top: 136.2px;
-    left: 242.4px;
+    left: 231.4px;
   }
   33.3% {
     top: 136.1px;
-    left: 242px;
+    left: 233px;
   }
   41.6% {
     top: 136.05px;
-    left: 246.6px;
+    left: 237.6px;
   }
   50% {
     top: 136.2px;
-    left: 254.55px;
+    left: 245.55px;
   }
   58.3% {
     top: 135.9px;
-    left: 246.6px;
+    left: 237.6px;
   }
   66.7% {
     top: 136px;
-    left: 242.05px;
+    left: 233.05px;
   }
   75% {
     top: 136.2px;
-    left: 240.4px;
+    left: 231.4px;
   }
   83.3% {
     top: 136.45px;
-    left: 243.05px;
+    left: 234.05px;
   }
   91.6% {
     top: 137.65px;
-    left: 251.75px;
+    left: 242.75px;
   }
 }
 #warphorseWalkSlow {
@@ -7675,11 +7675,115 @@ td.visible-print {
   position: absolute;
   z-index: 1;
   top: 136.2px;
-  left: 254.55px;
+  left: 245.55px;
   background: url("../images/head.jpg") no-repeat;
   background-size: 100% auto;
   -webkit-animation: horse-walkhead-slow 0.6s step-end infinite;
   animation: horse-walkhead-slow 0.6s step-end infinite;
+}
+/*
+停止
+*/
+@-webkit-keyframes horse-walk-stop {
+  0% {
+    background-position-x: 0;
+  }
+  4% {
+    background-position-x: -400px;
+  }
+  8% {
+    background-position-x: -800px;
+  }
+  12% {
+    background-position-x: -1200px;
+  }
+  16% {
+    background-position-x: -1600px;
+  }
+  20% {
+    background-position-x: -2000px;
+  }
+  24% {
+    background-position-x: -2400px;
+  }
+  28% {
+    background-position-x: -2800px;
+  }
+  32% {
+    background-position-x: -3200px;
+  }
+  36% {
+    background-position-x: -3600px;
+  }
+  40% {
+    background-position-x: -4000px;
+  }
+  44% {
+    background-position-x: -4400px;
+  }
+  48% {
+    background-position-x: -4800px;
+  }
+  52% {
+    background-position-x: -4800px;
+  }
+  56% {
+    background-position-x: -5600px;
+  }
+  60% {
+    background-position-x: -6000px;
+  }
+  64% {
+    background-position-x: -6400px;
+  }
+  68% {
+    background-position-x: -6800px;
+  }
+  72% {
+    background-position-x: -7200px;
+  }
+  76% {
+    background-position-x: -7600px;
+  }
+  80% {
+    background-position-x: -8000px;
+  }
+  84% {
+    background-position-x: -8400px;
+  }
+  88% {
+    background-position-x: -8800px;
+  }
+  92% {
+    background-position-x: -9200px;
+  }
+  96% {
+    background-position-x: -9600px;
+  }
+}
+#warphorseWalkStop {
+  width: 400px;
+  height: 410px;
+  position: relative;
+}
+#warphorseWalkStop > div:first-child {
+  width: 400px;
+  height: 410px;
+  background: url("../images/horse-walk-stop.png") repeat-x;
+  -webkit-animation: horse-walk-stop 2s step-end infinite;
+  animation: horse-walk-stop 2s step-end infinite;
+  position: absolute;
+  z-index: 2;
+}
+#warphorseWalkStop > div:last-child {
+  width: 32px;
+  height: 40px;
+  position: absolute;
+  z-index: 1;
+  top: 136.55px;
+  left: 254.55px;
+  background: url("../images/head.jpg") no-repeat;
+  background-size: 100% auto;
 }
 /*
   黄毛怪
@@ -7833,21 +7937,99 @@ body {
   background: url("../images/body_bg.jpg") no-repeat center;
 }
 .main-scene {
-  background: url("../images/background.png") 100% center;
-  height: 500px;
+  background: url("../images/background.png");
+  height: 470px;
+  margin-top: 250px;
   -webkit-transition: background-position 0.2s ease-out;
   transition: background-position 0.2s ease-out;
 }
 .main-scene > div:first-child {
-  top: 160px;
+  width: 100%;
+  height: 417px;
+  position: absolute;
+  left: 0px;
+  top: 470px;
+  z-index: 1;
+  background: url("../images/body-bg-before.jpg") no-repeat center center;
+}
+.main-scene > div:nth-child(2) {
+  /*qian bei jin*/
+  height: 597px;
+  width: 9600px;
+  position: absolute;
+  left: 0px;
+  top: -50px;
+  background: url("../images/background-before.png") right center;
+  z-index: 66;
+  -webkit-transition: background-position 0.2s ease-out;
+  transition: background-position 0.2s ease-out;
+}
+.main-scene > div:last-child {
+  /*ma*/
+  position: absolute;
+  top: 50%;
   left: 50%;
+  margin-top: -205px;
   margin-left: -200px;
+  z-index: 88;
 }
 #timeCount {
+  right: 50px;
+  top: 100px;
+  position: absolute;
+  z-index: 999;
+  line-height: 35px;
+}
+#timeCount > div:first-child {
   float: right;
 }
+#timeCount > div:last-child {
+  width: 100%;
+  height: 7px;
+  background-color: #00F;
+}
+#timeCount > div:last-child > div:first-child {
+  width: 1px;
+  height: 7px;
+  background-color: #333;
+}
+#timeCount > div:last-child > div:last-child {
+  position: absolute;
+  top: 84px;
+  left: 0px;
+  width: 5px;
+  height: 12px;
+  background-color: #FFF;
+}
+/*.Bar ,.Bars { 
+  position: relative; 
+  width: 100%;    
+  color: #FFF;
+  height: 7px;
+}
+.Bar div,.Bars div { 
+  display: block; 
+  position: relative; 
+  background:#00F;
+  color: #333333; height: 7px; 
+  line-height: 20px;    
+}*/
 #count {
-  float: right;
+  left: 50px;
+  top: 100px;
+  position: absolute;
+  z-index: 999;
+  line-height: 35px;
+}
+#count > div:first-child {
+  float: left;
+}
+.fontFace {
+  font-size: 60px;
+  color: #FFF;
+}
+.title {
+  color: #FFF;
 }
 #startButton {
   width: 100px;
@@ -7856,5 +8038,10 @@ body {
   margin-left: auto;
   margin-right: auto;
   font-size: 100px;
+  position: absolute;
+  z-index: 100;
+  left: 50%;
+  top: 0px;
+  margin-left: -50px;
 }
 /*# sourceMappingURL=/styles/main.css.map */

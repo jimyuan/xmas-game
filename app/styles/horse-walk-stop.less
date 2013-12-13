@@ -1,0 +1,101 @@
+
+/*
+停止
+*/
+@-webkit-keyframes horse-walk-stop{
+  @cell2:-400px;
+  0%{
+    background-position-x: 0;
+  }
+  4%{
+    background-position-x: @cell2;
+  }
+  8%{
+    background-position-x: @cell2*2;
+  }
+  12%{
+    background-position-x: @cell2*3;
+  }
+  16%{
+    background-position-x: @cell2*4;
+  }
+  20%{
+    background-position-x: @cell2*5;
+  }
+  24%{
+    background-position-x: @cell2*6;
+  }
+  28%{
+    background-position-x: @cell2*7;
+  }
+  32%{
+    background-position-x: @cell2*8;
+  }
+  36%{
+    background-position-x: @cell2*9;
+  }
+  40%{
+    background-position-x: @cell2*10;
+  }
+  44%{
+    background-position-x: @cell2*11;
+  }
+  48%{
+    background-position-x: @cell2*12;
+  }
+  52%{
+    background-position-x: @cell2*12;
+  }
+  56%{
+    background-position-x: @cell2*14;
+  }
+  60%{
+    background-position-x: @cell2*15;
+  }
+  64%{
+    background-position-x: @cell2*16;
+  }
+  68%{
+    background-position-x: @cell2*17;
+  }
+  72%{
+    background-position-x: @cell2*18;
+  }
+  76%{
+    background-position-x: @cell2*19;
+  }
+  80%{
+    background-position-x: @cell2*20;
+  }
+  84%{
+    background-position-x: @cell2*21;
+  }
+  88%{
+    background-position-x: @cell2*22;
+  }
+  92%{
+    background-position-x: @cell2*23;
+  }
+  96%{
+    background-position-x: @cell2*24;
+  }
+}
+
+#warphorseWalkStop {
+  .animate-cell(@w:400px,@h:410px);
+  position: relative;
+  &>div:first-child{
+    .animate-cell(@w:400px, @h:410px);
+    background: url("../images/horse-walk-stop.png") repeat-x;
+    .animation(horse-walk-stop 2s step-end infinite);
+    position: absolute;z-index:2;
+  }
+  &>div:last-child{
+    .animate-cell(@w:32px,@h:40px);
+    position: absolute;
+    z-index: 1; 
+    top:136.55px;
+    left:254.55px; 
+    background: url("../images/head.jpg") no-repeat;background-size: 100% auto;
+  }
+}

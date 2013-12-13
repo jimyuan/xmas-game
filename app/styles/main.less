@@ -14,35 +14,113 @@
 @import "horse-run-slow.less";
 @import "horse-walk-fast.less";
 @import "horse-walk-slow.less";
+@import "horse-walk-stop.less";
 @import "monster-yellow.less";
 @import "monster-green.less";
+@import "timer_bar.less";
 
 body{
   background: url("../images/body_bg.jpg") no-repeat center;
 }
 .main-scene{
-  background: url("../images/background.png") 100% center;
-  height:500px;
-  .transition(background-position .2s ease-out); 
-  &>div:first-child{
-    top:160px;
-    
+  background: url("../images/background.png");
+  height: 470px;
+  margin-top: 250px;
+  .transition(background-position 0.2s ease-out); 
+  &>div:first-child{ 
+    .size(100%,417px);
+    position: absolute;
+    left: 0px;
+    top: 470px;
+    z-index: 1;
+    background: url("../images/body-bg-before.jpg") no-repeat center center;
+  }
+  &>div:nth-child(2) {/*qian bei jin*/
+    height: 597px;
+    width: 9600px;
+    position: absolute;
+    left:0px;
+    top:-50px;
+    background:url("../images/background-before.png") right center  ;
+    z-index: 66;
+    .transition(background-position .2s ease-out); 
+  }
+  &>div:last-child{/*ma*/
+    position: absolute;
+    top:50%;
     left:50%;
+    margin-top: -205px;
     margin-left:-200px;
-
+    z-index: 88;
   }
 }
 
 #timeCount {
-  float:right;
-
+  right: 50px;
+  top: 100px;
+  position: absolute;
+  z-index: 999;
+  line-height: 35px;
+  &>div:first-child {
+    float:right;
+  }
+  &>div:last-child{
+    .size(100%,7px);
+    background-color: #00F;
+    &>div:first-child{
+      .size(1px,7px);
+      background-color: #333;
+    }
+    &>div:last-child {
+      position: absolute;
+      top: 84px;
+      left: 0px;
+      .size(5px,12px);
+      background-color: #FFF;
+    }
+  }
 }
+
+/*.Bar ,.Bars { 
+  position: relative; 
+  width: 100%;    
+  color: #FFF;
+  height: 7px;
+}
+.Bar div,.Bars div { 
+  display: block; 
+  position: relative; 
+  background:#00F;
+  color: #333333; height: 7px; 
+  line-height: 20px;    
+}*/
 #count {
-  float:right;
+  left: 50px;
+  top: 100px;
+  position: absolute;
+  z-index: 999;
+  &>div:first-child {
+    float:left;
+  }
+  line-height: 35px;
+}
+.fontFace{
+  font-size: 60px;
+  color: #FFF;
+}
+
+.title{
+  color: #FFF;
 }
 
 #startButton{
   .square(100px);
   .center-block;
   font-size:100px;
+  position: absolute;
+  z-index: 100;
+  left:50%;
+  top:0px;
+  margin-left:-50px;
+
 }
