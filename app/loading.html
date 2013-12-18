@@ -1,0 +1,77 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Loading......</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+  </head>
+  <body>
+    <!--[if lt IE 9]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div id="loading"></div>
+    <div id="percent1"></div>
+    <div id="percent0"></div>
+    <!-- build:js scripts/main.js -->
+    <script src="bower_components/jquery/jquery.js"></script>
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+    <script>
+      $(function(){
+        /*var a=$.R(0, 99);
+        var i, l=0, a2=[];
+        $(a).each(function(){
+          i= Math.floor(Math.random()*a.length);
+          a2.push(a[i]);
+          a.splice(i, 1);
+        });
+        a2.length=20;
+        a2.sort(function(x, y){return x-y}).push(99);*/
+
+        var img=["horse-fast.png","horse-slow.png","horse-walk-fast.png","horse-walk-slow.png","monster-green.png","monster-yellow.png","background.png", "body_bg.jpg"];
+        var cImg=[];
+        var numImagesLoaded = 0;
+        function incrementAndCheckLoading(){
+          showPercent(numImagesLoaded);
+          numImagesLoaded=numImagesLoaded+1;
+          if(numImagesLoaded === img.length){
+            $("#percent1").css("background-image","url(images/num-9.png)");
+            $("#percent0").css("background-image","url(images/num-8.png)");
+            console.log("All are done!");
+          }
+        }
+        function showPercent(num){
+          var percent=Math.floor(num/img.length*100);
+
+          if(percent<10){
+            $("#percent1").css("background-image","url(images/num-0.png)");
+            $("#percent0").css("background-image","url(images/num-"+percent+".png)");
+          }
+          else{
+            $("#percent1").css("background-image","url(images/num-"+Math.floor(percent/10)+".png)");
+            $("#percent0").css("background-image","url(images/num-"+(percent-Math.floor(percent/10)*10)+".png)");
+          }
+          console.log(percent+"% "+img[num]+" is done!");
+        }
+
+        $(img).each(function(x, y){
+          cImg[x]=new Image();
+          cImg[x].src="images/"+y;
+          cImg[x].onload = incrementAndCheckLoading;
+        });
+      });
+    </script>
+
+  </body>
+</html>
