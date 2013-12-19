@@ -8932,6 +8932,13 @@ body {
   background-position: right center;
   margin-left: -53px;
 }
+.brandgo {
+  -webkit-transform: rotate(-2000deg);
+  -ms-transform: rotate(-2000deg);
+  transform: rotate(-2000deg);
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+}
 /*
 汽车
 */
@@ -9465,18 +9472,18 @@ bicycle_3
   background: url("../images/background.png");
   height: 470px;
   margin: auto;
-  margin-top: 250px;
+  margin-top: 205px;
   -webkit-transition: background-position 0.2s ease-out;
   transition: background-position 0.2s ease-out;
 }
 .main-scene > div:first-child {
   width: 100%;
-  height: 417px;
+  height: 100%;
   position: absolute;
   left: 0px;
-  top: 470px;
+  top: 420px;
   z-index: 1;
-  background: url("../images/body-bg-before.jpg") no-repeat center center;
+  background: #fbffdc;
 }
 .main-scene > div:nth-child(2) {
   /*qian bei jin*/
@@ -9759,12 +9766,5 @@ bicycle_3
   width: 169px;
   height: 422px;
   background: url("../images/succesMark.png");
-}
-.zoomOut {
-  -webkit-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
-  -webkit-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
 }
 /*# sourceMappingURL=/styles/main.css.map */

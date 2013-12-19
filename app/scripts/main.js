@@ -44,6 +44,10 @@
     },
     //开始游戏
     _gameStart:function(e){
+      window.setTimeout(function(){
+        $("#enddiv").addClass("brandgo").animate({
+        top: "-1000px", left: "-1000px"});
+      },1000);
       J._timer.init();
       J.timeStamp=e.timeStamp;
       $(document).bind("keyup",J._keyUphandler);
@@ -112,7 +116,9 @@
             }
          },"jsonp");
       });
-      
+    },
+    _setMastSize:function(){
+      $(".fullscreen").width($(document).width()).height($(document).height());
     },
 
     showWeiboList:function(_own) {
@@ -228,8 +234,7 @@
   }
 
   function weiboListhide(e,imgsrc) {
-     $('#oppbox').removeClass("zoomIn");
-     $('#oppbox').addClass("zoomOut");
+     $('#oppbox').removeClass("zoomIn").addClass("zoomOut");
      J._gameStart(e);
      J._changeHorseHead(imgsrc);
   }
@@ -269,7 +274,6 @@
           });
         }
       },"jsonp");
-    
   }
 
   function setRating() {
@@ -323,10 +327,7 @@
   //     $(this).addClass("zoomOut");
   //   });
   // }();
-  var img=["num-0.png","num-1.png","num-2.png","num-3.png","num-4.png","num-5.png","num-6.png","num-7.png","num-8.png","num-9.png","loading-circle.png",
-                 "background-before.png","background.png","body_bg.jpg","body-bg-before.jpg","green_bg.png","hill_1.png","hill_2.png",
-                 "horse-fast.png","horse-slow.png","horse-walk-fast.png","horse-walk-slow.png","horse-walk-stop.png","monster-green.png",
-                 "ranking_beipai.png","ranking_bg.png","ranking_pai.png","ranking_title.png","scroe_title.png","succesMark.png","weibolist_title.png","write_bg.png"];
+  var img=["num-0.png","num-1.png","num-2.png","num-3.png","num-4.png","num-5.png","num-6.png","num-7.png","num-8.png","num-9.png","loading-circle.png", "background-before.png","background.png","body_bg.jpg","body-bg-before.jpg","green_bg.png","hill_1.png","hill_2.png", "horse-fast.png","horse-slow.png","horse-walk-fast.png","horse-walk-slow.png","horse-walk-stop.png","monster-green.png", "ranking_beipai.png","ranking_bg.png","ranking_pai.png","ranking_title.png","scroe_title.png","succesMark.png","weibolist_title.png","write_bg.png"];
   var cImg=[];
   var numImagesLoaded = 0;
   function incrementAndCheckLoading(){
@@ -344,8 +345,7 @@
   }
   function showPercent(num){
     var percent=Math.floor(num/img.length*100);
-
-    if(percent<10){
+    if(percent<10){ 
       $("#percent1").css("background-image","url(images/num-0.png)");
       $("#percent0").css("background-image","url(images/num-"+percent+".png)");
     }
@@ -353,7 +353,6 @@
       $("#percent1").css("background-image","url(images/num-"+Math.floor(percent/10)+".png)");
       $("#percent0").css("background-image","url(images/num-"+(percent-Math.floor(percent/10)*10)+".png)");
     }
-    //console.log(percent+"% "+img[num]+" is done!");
   }
 
   $(img).each(function(x, y){
@@ -361,5 +360,9 @@
     cImg[x].src="images/"+y;
     cImg[x].onload = incrementAndCheckLoading;
   });
+
+  
+  // document.getElementById("enddiv").addEventListener("webkitAnimationEnd", function(){console.log("transition done")});
+  
   window.showWeiboList=J.showWeiboList;
 }(jQuery);
