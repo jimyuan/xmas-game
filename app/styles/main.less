@@ -35,6 +35,11 @@ body {
 @import "weibofd_list.less";
 @import "loading.less";
 
+
+body{
+  overflow: hidden;
+}
+
 .main-scene{
   .size(100%,100%);
   background: url("../images/background.png");
@@ -316,3 +321,8 @@ body {
   }
 }
 
+
+.zoomOut{
+  .transition(all 0.2s ease-out); 
+  .scale(0);
+}

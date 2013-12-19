@@ -8912,6 +8912,9 @@ body {
   background-position: right center;
   margin-left: -53px;
 }
+body {
+  overflow: hidden;
+}
 .main-scene {
   width: 100%;
   height: 100%;
@@ -9212,5 +9215,12 @@ body {
   width: 169px;
   height: 422px;
   background: url("../images/succesMark.png");
+}
+.zoomOut {
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
 }
 /*# sourceMappingURL=/styles/main.css.map */

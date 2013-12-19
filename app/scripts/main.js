@@ -64,17 +64,17 @@
     //游戏结束
     _gameOver:function () {
       //game over
-      J._timer.stop();
+      $(document).unbind("keyup",J._keyUphandler);
       J.stopwatch.text("00:00");
       console.log("游戏结束");
       show('scroe','scroe',J._openScroeWindow,true);
-      $(document).unbind("keyup",J._keyUphandler);
     },
     //计时器
     _timer:{
       timer:0,
       updateTimer:function () {
         if(J.currTime < 0) {
+           J._timer.stop();
            J._gameOver();
         } else {
           J.stopwatch.text(formatTime(J.currTime));
@@ -83,7 +83,6 @@
           J.currBarWidth +=flag;
           J.timerBar.width(J.currBarWidth);
           J.timerBar2.css("left", J.currBarWidth);
-          // .right = J.currBarWidth;
         }
       },
       init:function () {
