@@ -39,7 +39,7 @@
 #monsterGreen{
   .animate-cell(@w:257px, @h:264px);
   background: url("../images/monster-green.png") repeat-x;
-  .animation(monster-green 0.6s step-end infinite);
+  .animation(monster-green .6s step-end infinite);
   position: absolute;z-index:2;
 }
 
@@ -48,61 +48,59 @@
 */
 @-webkit-keyframes monster-greenHead{
   0%{
-    top:61.95px;
-    left: 138.5px; 
-    -webkit-transform:rotate(16.3deg);
+    top: 64.1px;
+    left: 133.6px;
+    .rotate(16.3deg);
   }
   11.1%{
-    top:63.4px;
-
-    left: 122.75px; 
-    -webkit-transform:rotate(6.8deg);
+    top:60.75px;
+    left: 119.85px; 
+    .rotate(6.8deg);
   }
   22.2%{
-    top:75px;
-    left: 71.85px; 
-    -webkit-transform:rotate(-21deg);
+    top:  63.7px;
+    left: 80px; 
+    .rotate(-21deg);
   } 
   33.3%{
-    top:83.85px;
-    left: 55.4px; 
-    -webkit-transform:rotate(-33deg);
+    top: 65px;
+    left: 64px; 
+    .rotate(-33deg);
   }
   44.4%{
-    top:85.25px;
-    left: 57.4px; 
-    -webkit-transform:rotate(-34.9deg);
+    top: 63px;
+    left: 68px; 
+    .rotate(-34.9deg);
   }
   55.6%{
-    top:81.85px;
-    left: 69.9px; 
-    -webkit-transform:rotate(-30deg);
+    top: 60px;
+    left: 80px; 
+    .rotate(-30deg);
   }
   66.7%{
-    top:69.3px;
-    left: 104px; 
-    -webkit-transform:rotate(-8deg);
+    top:54.65px;
+    left: 106.95px; 
+    .rotate(-8.1deg);
   }
   77.8%{
-   top:64.05px;
-    left: 128.85px;
-    -webkit-transform:rotate(8deg); 
+   top:57.35px;
+    left: 125.15px;
+    .rotate(8.1deg); 
   }
   88.9%{
-    top:61.8px;
-    left:138.1px;
-    -webkit-transform:rotate(16deg);
+    top:55.1px;
+    left:132px;
+    .rotate(16deg);
   }
 }
 
 #monsterGreenHead {
   .animate-cell(@w:50px,@h:50px);
-
-  -webkit-transform:rotate(16.3deg);
   position: absolute;
   z-index: 1; 
-  top:61.95px;
-  left: 138.5px;  
+  top: 64.1px;
+  left: 133.6px;
+  .rotate(16.3deg);
   background: url("../images/head.jpg") no-repeat;background-size: 100% auto;
- .animation(monster-greenHead 0.6s step-end infinite);
+  .animation(monster-greenHead .6s step-end infinite);
 }

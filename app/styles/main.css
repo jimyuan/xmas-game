@@ -7885,59 +7885,79 @@ body {
 */
 @-webkit-keyframes monster-greenHead {
   0% {
-    top: 61.95px;
-    left: 138.5px;
+    top: 64.1px;
+    left: 133.6px;
     -webkit-transform: rotate(16.3deg);
+    -ms-transform: rotate(16.3deg);
+    transform: rotate(16.3deg);
   }
   11.1% {
-    top: 63.4px;
-    left: 122.75px;
+    top: 60.75px;
+    left: 119.85px;
     -webkit-transform: rotate(6.8deg);
+    -ms-transform: rotate(6.8deg);
+    transform: rotate(6.8deg);
   }
   22.2% {
-    top: 75px;
-    left: 71.85px;
+    top: 63.7px;
+    left: 80px;
     -webkit-transform: rotate(-21deg);
+    -ms-transform: rotate(-21deg);
+    transform: rotate(-21deg);
   }
   33.3% {
-    top: 83.85px;
-    left: 55.4px;
+    top: 65px;
+    left: 64px;
     -webkit-transform: rotate(-33deg);
+    -ms-transform: rotate(-33deg);
+    transform: rotate(-33deg);
   }
   44.4% {
-    top: 85.25px;
-    left: 57.4px;
+    top: 63px;
+    left: 68px;
     -webkit-transform: rotate(-34.9deg);
+    -ms-transform: rotate(-34.9deg);
+    transform: rotate(-34.9deg);
   }
   55.6% {
-    top: 81.85px;
-    left: 69.9px;
+    top: 60px;
+    left: 80px;
     -webkit-transform: rotate(-30deg);
+    -ms-transform: rotate(-30deg);
+    transform: rotate(-30deg);
   }
   66.7% {
-    top: 69.3px;
-    left: 104px;
-    -webkit-transform: rotate(-8deg);
+    top: 54.65px;
+    left: 106.95px;
+    -webkit-transform: rotate(-8.1deg);
+    -ms-transform: rotate(-8.1deg);
+    transform: rotate(-8.1deg);
   }
   77.8% {
-    top: 64.05px;
-    left: 128.85px;
-    -webkit-transform: rotate(8deg);
+    top: 57.35px;
+    left: 125.15px;
+    -webkit-transform: rotate(8.1deg);
+    -ms-transform: rotate(8.1deg);
+    transform: rotate(8.1deg);
   }
   88.9% {
-    top: 61.8px;
-    left: 138.1px;
+    top: 55.1px;
+    left: 132px;
     -webkit-transform: rotate(16deg);
+    -ms-transform: rotate(16deg);
+    transform: rotate(16deg);
   }
 }
 #monsterGreenHead {
   width: 50px;
   height: 50px;
-  -webkit-transform: rotate(16.3deg);
   position: absolute;
   z-index: 1;
-  top: 61.95px;
-  left: 138.5px;
+  top: 64.1px;
+  left: 133.6px;
+  -webkit-transform: rotate(16.3deg);
+  -ms-transform: rotate(16.3deg);
+  transform: rotate(16.3deg);
   background: url("../images/head.jpg") no-repeat;
   background-size: 100% auto;
   -webkit-animation: monster-greenHead 0.6s step-end infinite;
@@ -8912,8 +8932,404 @@ body {
   background-position: right center;
   margin-left: -53px;
 }
-body {
-  overflow: hidden;
+/*
+汽车
+*/
+/*car1
+*/
+#wrapcar_3 {
+  width: 410px;
+  height: 310px;
+  position: relative;
+}
+@-webkit-keyframes wrapcar_3 {
+  0% {
+    background-position-x: 0;
+  }
+  9% {
+    background-position-x: -410px;
+  }
+  18.1% {
+    background-position-x: -820px;
+  }
+  27.2% {
+    background-position-x: -1230px;
+  }
+  36.3% {
+    background-position-x: -1640px;
+  }
+  45.4% {
+    background-position-x: -2050px;
+  }
+  54.5% {
+    background-position-x: -2460px;
+  }
+  63.6% {
+    background-position-x: -2870px;
+  }
+  72.7% {
+    background-position-x: -3280px;
+  }
+  81.8% {
+    background-position-x: -3690px;
+  }
+  90.9% {
+    background-position-x: -4100px;
+  }
+}
+#car_3 {
+  width: 410px;
+  height: 310px;
+  background: url("../images/car_3.png") repeat-x;
+  -webkit-animation: wrapcar_3 0.6s step-end infinite;
+  animation: wrapcar_3 0.6s step-end infinite;
+  position: absolute;
+  z-index: 2;
+}
+@-webkit-keyframes wrapcar_3_head {
+  0% {
+    top: 42.8px;
+  }
+  9% {
+    top: 41.95px;
+  }
+  18.1% {
+    top: 41.1px;
+  }
+  27.2% {
+    top: 40.3px;
+  }
+  36.3% {
+    top: 39.45px;
+  }
+  45.4% {
+    top: 38.6px;
+  }
+  54.5% {
+    top: 39.3px;
+  }
+  63.6% {
+    top: 40px;
+  }
+  72.7% {
+    top: 40.65px;
+  }
+  81.8% {
+    top: 41.35px;
+  }
+  90.9% {
+    top: 42.05px;
+  }
+}
+#car_3_head {
+  width: 91px;
+  height: 155px;
+  position: absolute;
+  z-index: 1;
+  top: 42.8px;
+  left: 98.05px;
+  background: url("../images/head_1.png") no-repeat;
+  background-size: 80% auto;
+  -webkit-animation: wrapcar_3_head 0.6s step-end infinite;
+  animation: wrapcar_3_head 0.6s step-end infinite;
+}
+/*car2
+*/
+#wrapcar_2 {
+  width: 410px;
+  height: 280px;
+  position: relative;
+}
+@-webkit-keyframes wrapcar_2 {
+  0% {
+    background-position-x: 0;
+  }
+  9% {
+    background-position-x: -410px;
+  }
+  18.1% {
+    background-position-x: -820px;
+  }
+  27.2% {
+    background-position-x: -1230px;
+  }
+  36.3% {
+    background-position-x: -1640px;
+  }
+  45.4% {
+    background-position-x: -2050px;
+  }
+  54.5% {
+    background-position-x: -2460px;
+  }
+  63.6% {
+    background-position-x: -2870px;
+  }
+  72.7% {
+    background-position-x: -3280px;
+  }
+  81.8% {
+    background-position-x: -3690px;
+  }
+  90.9% {
+    background-position-x: -4100px;
+  }
+}
+#car_2 {
+  width: 410px;
+  height: 280px;
+  background: url("../images/car_2.png") repeat-x;
+  -webkit-animation: wrapcar_2 0.6s step-end infinite;
+  animation: wrapcar_2 0.6s step-end infinite;
+  position: absolute;
+  z-index: 2;
+}
+@-webkit-keyframes wrapcar_2_head {
+  0% {
+    top: 42.65px;
+  }
+  9% {
+    top: 42px;
+  }
+  18.1% {
+    top: 41.35px;
+  }
+  27.2% {
+    top: 40.65px;
+  }
+  36.3% {
+    top: 40px;
+  }
+  45.4% {
+    top: 39.4px;
+  }
+  54.5% {
+    top: 39.9px;
+  }
+  63.6% {
+    top: 40.45px;
+  }
+  72.7% {
+    top: 40.95px;
+  }
+  81.8% {
+    top: 41.5px;
+  }
+  90.9% {
+    top: 41.95px;
+  }
+}
+#car_2_head {
+  width: 91px;
+  height: 155px;
+  position: absolute;
+  z-index: 1;
+  top: 42.65px;
+  left: 126.6px;
+  background: url("../images/head_1.png") no-repeat;
+  background-size: 72% auto;
+  -webkit-animation: wrapcar_2_head 0.6s step-end infinite;
+  animation: wrapcar_2_head 0.6s step-end infinite;
+}
+/*car1
+*/
+#wrapcar_1 {
+  width: 410px;
+  height: 280px;
+  position: relative;
+}
+@-webkit-keyframes wrapcar_1 {
+  0% {
+    background-position-x: 0;
+  }
+  9% {
+    background-position-x: -410px;
+  }
+  18.1% {
+    background-position-x: -820px;
+  }
+  27.2% {
+    background-position-x: -1230px;
+  }
+  36.3% {
+    background-position-x: -1640px;
+  }
+  45.4% {
+    background-position-x: -2050px;
+  }
+  54.5% {
+    background-position-x: -2460px;
+  }
+  63.6% {
+    background-position-x: -2870px;
+  }
+  72.7% {
+    background-position-x: -3280px;
+  }
+  81.8% {
+    background-position-x: -3690px;
+  }
+  90.9% {
+    background-position-x: -4100px;
+  }
+}
+#car_1 {
+  width: 410px;
+  height: 280px;
+  background: url("../images/car_1.png") repeat-x;
+  -webkit-animation: wrapcar_1 0.6s step-end infinite;
+  animation: wrapcar_1 0.6s step-end infinite;
+  position: absolute;
+  z-index: 2;
+}
+@-webkit-keyframes wrapcar_1_head {
+  0% {
+    top: 42.65px;
+  }
+  9% {
+    top: 42px;
+  }
+  18.1% {
+    top: 41.35px;
+  }
+  27.2% {
+    top: 40.65px;
+  }
+  36.3% {
+    top: 40px;
+  }
+  45.4% {
+    top: 39.4px;
+  }
+  54.5% {
+    top: 39.9px;
+  }
+  63.6% {
+    top: 40.45px;
+  }
+  72.7% {
+    top: 40.95px;
+  }
+  81.8% {
+    top: 41.5px;
+  }
+  90.9% {
+    top: 41.95px;
+  }
+}
+#car_1_head {
+  width: 91px;
+  height: 155px;
+  position: absolute;
+  z-index: 1;
+  top: 42.65px;
+  left: 126.6px;
+  background: url("../images/head_1.png") no-repeat;
+  background-size: 72% auto;
+  -webkit-animation: wrapcar_1_head 0.6s step-end infinite;
+  animation: wrapcar_1_head 0.6s step-end infinite;
+}
+/*
+自行车
+*/
+/*
+bicycle_1
+*/
+#wrapbicycle_1 {
+  width: 410px;
+  height: 280px;
+  position: relative;
+}
+@-webkit-keyframes wrapbicycle_1 {
+  0% {
+    background-position-x: 0;
+  }
+  9% {
+    background-position-x: -410px;
+  }
+  18.1% {
+    background-position-x: -820px;
+  }
+  27.2% {
+    background-position-x: -1230px;
+  }
+  36.3% {
+    background-position-x: -1640px;
+  }
+  45.4% {
+    background-position-x: -2050px;
+  }
+  54.5% {
+    background-position-x: -2460px;
+  }
+  63.6% {
+    background-position-x: -2870px;
+  }
+  72.7% {
+    background-position-x: -3280px;
+  }
+  81.8% {
+    background-position-x: -3690px;
+  }
+  90.9% {
+    background-position-x: -4100px;
+  }
+}
+#bicycle_1 {
+  width: 410px;
+  height: 280px;
+  background: url("../images/car_1.png") repeat-x;
+  -webkit-animation: wrapbicycle_1 0.6s step-end infinite;
+  animation: wrapbicycle_1 0.6s step-end infinite;
+  position: absolute;
+  z-index: 2;
+}
+@-webkit-keyframes wrapbicycle_1_head {
+  0% {
+    top: 42.65px;
+  }
+  9% {
+    top: 42px;
+  }
+  18.1% {
+    top: 41.35px;
+  }
+  27.2% {
+    top: 40.65px;
+  }
+  36.3% {
+    top: 40px;
+  }
+  45.4% {
+    top: 39.4px;
+  }
+  54.5% {
+    top: 39.9px;
+  }
+  63.6% {
+    top: 40.45px;
+  }
+  72.7% {
+    top: 40.95px;
+  }
+  81.8% {
+    top: 41.5px;
+  }
+  90.9% {
+    top: 41.95px;
+  }
+}
+#bicycle_1_head {
+  width: 91px;
+  height: 155px;
+  position: absolute;
+  z-index: 1;
+  top: 42.65px;
+  left: 126.6px;
+  background: url("../images/head_1.png") no-repeat;
+  background-size: 72% auto;
+  -webkit-animation: wrapbicycle_1_head 0.6s step-end infinite;
+  animation: wrapbicycle_1_head 0.6s step-end infinite;
 }
 .main-scene {
   width: 100%;
