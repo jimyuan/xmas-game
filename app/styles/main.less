@@ -34,6 +34,7 @@ body {
 @import "weibofd_send.less";
 @import "weibofd_list.less";
 @import "loading.less";
+@import "2014go.less";
 
 
 body{
@@ -45,15 +46,15 @@ body{
   background: url("../images/background.png");
   height: 470px;
   margin:auto;
-  margin-top: 250px;
+  margin-top: 205px;
   .transition(background-position 0.2s ease-out); 
   &>div:first-child{ 
-    .size(100%,417px);
+    .size(100%,100%);
     position: absolute;
     left: 0px;
-    top: 470px;
+    top: 420px;
     z-index: 1;
-    background: url("../images/body-bg-before.jpg") no-repeat center center;
+    background:#fbffdc;
   }
   &>div:nth-child(2) {/*qian bei jin*/
     height: 597px;
@@ -319,10 +320,4 @@ body{
     .size(169px,422px);
     background:url("../images/succesMark.png");
   }
-}
-
-
-.zoomOut{
-  .transition(all 0.2s ease-out); 
-  .scale(0);
 }
