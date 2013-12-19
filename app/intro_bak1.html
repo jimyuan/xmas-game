@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CreateJS export from intro</title>
+
+<script src="http://code.createjs.com/easeljs-0.6.0.min.js"></script>
+<script src="http://code.createjs.com/tweenjs-0.4.0.min.js"></script>
+<script src="http://code.createjs.com/movieclip-0.6.0.min.js"></script>
+<script src="http://code.createjs.com/preloadjs-0.3.0.min.js"></script>
+<script src="scripts/intro.js"></script>
+
+<script>
+var canvas, stage, exportRoot;
+
+function init() {
+	createjs.MotionGuidePlugin.install();
+
+	canvas = document.getElementById("canvas");
+	images = images||{};
+
+	var manifest = [
+		{src:"images/intro/cha1.png", id:"cha1"},
+		{src:"images/intro/cha2.png", id:"cha2"},
+		{src:"images/intro/cha3.png", id:"cha3"},
+		{src:"images/intro/copy1.png", id:"copy1"},
+		{src:"images/intro/pai.png", id:"pai"},
+		{src:"images/intro/rbg.jpg", id:"rbg"},
+		{src:"images/intro/tree1.png", id:"tree1"},
+		{src:"images/intro/tree2.png", id:"tree2"},
+		{src:"images/intro/tree3.png", id:"tree3"},
+		{src:"images/intro/tree4.png", id:"tree4"},
+		{src:"images/intro/yun1.png", id:"yun1"},
+		{src:"images/intro/yun2.png", id:"yun2"}
+	];
+
+	var loader = new createjs.LoadQueue(false);
+	loader.addEventListener("fileload", handleFileLoad);
+	loader.addEventListener("complete", handleComplete);
+	loader.loadManifest(manifest);
+}
+
+function handleFileLoad(evt) {
+	if (evt.item.type == "image") { images[evt.item.id] = evt.result; }
+}
+
+function handleComplete() {
+	exportRoot = new lib.intro();
+
+	stage = new createjs.Stage(canvas);
+	stage.addChild(exportRoot);
+	stage.update();
+
+	createjs.Ticker.setFPS(24);
+	createjs.Ticker.addEventListener("tick", stage);
+}
+</script>
+</head>
+
+<body onload="init();" style="background-color:#D4D4D4">
+	<canvas id="canvas" width="1280" height="720" style="background-color:#4CA395"></canvas>
+</body>
+</html>

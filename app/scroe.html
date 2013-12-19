@@ -19,45 +19,26 @@
     <!--[if lt IE 9]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    <div class="door">
-      <div id="intro">
-        <div id="centerClouds">
-          
-        </div>
-        <!--云动画-->
-        <div id="clouds">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-        <!--树动画-->
-        <div id="trees">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-        <!--马动画-->
-        <div id="introHorse">
-          <div></div>
-        </div>
-        <!--球拍动画-->
-        <div id="racket"></div>
-        <!--底动画-->
-        <div id="intro-bg">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
+    <div id="scroe">
+      <div></div>
+      <div></div>
+      <div>
+        <div id="scroe_head_left"></div>
+        <div id="desc_right">
+          <div id="scroe_rating"></div>
+          <div>时间:<span>30</span>秒</div>
+          <div id="score_count">次数:<span></span>次</div>
+          <div id="score_ranking">排名:<span></span>名</div>
         </div>
       </div>
+      <div>
+        <div>跟好友炫耀一下</div>
+        <img src="images/weibo.png" id="weiboBtn" style="cursor:pointer;">
+        <img src="images/weixin.png" id="weixinBtn" style="cursor:pointer;">
+      </div>
+      <div id="scroe_open_ranking"></div>
     </div>
+    
     <!-- build:js scripts/main.js -->
     <script src="bower_components/jquery/jquery.js"></script>
     <script src="scripts/main.js"></script>

@@ -1,0 +1,86 @@
+#scroe{
+	.size(100%,100%);
+	background: rgba(76,163,149,0.5);
+	
+	&>div:nth-child(1) {
+		.size(100%,100%);
+		position: absolute;
+		left: 0px;
+		bottom: 0px;
+		z-index: 1;
+		background:url("../images/write_bg.png") no-repeat;
+	}
+	&>div:nth-child(2) {
+		.size(600px,90px);
+		position: absolute;
+		left: 50%;
+  	margin-left:-300px; 
+		top: 160px;
+		z-index: 20;
+		background:url("../images/scroe_title.png") no-repeat;
+	}
+	&>div:nth-child(3) {
+		.size(350px,310px);
+		position: absolute;
+		margin-left:-175px;
+		z-index: 10;
+		top: 270px;
+		left: 50%;
+		&>div:first-child {
+		  .size(160px,160px);
+			float: left;
+		  background: url("../images/head.jpeg") no-repeat center center;
+		  border-radius: 50% 50% 50% 50%;
+		  outline: medium none;
+		  overflow: hidden;
+		}
+		&>div:last-child{
+			.size(150px,150px);
+			float: right;
+			margin-top: 18px;
+			&>div:nth-child(1) {
+				font-size: 24px;
+			}
+			&>div:nth-child(2) {
+				color: #4CA395;
+				font-size: 20px;
+			}
+			&>div:nth-child(3) {
+				color: #4CA395;
+				font-size: 20px;
+			}
+			&>div:nth-child(4) {
+				color: #4CA395;
+				font-size: 20px;
+			}
+		}
+	}
+	&>div:nth-child(4) {
+		width: 350px;
+		position: absolute;
+		left: 50%;
+  	margin-left:-175px; 
+		top: 450px;
+		z-index: 20;
+		color: #4CA395;
+		font-size: 24px;
+		&>div:nth-child(1) {
+			float:left;
+		}
+		&>div:nth-child(2) {
+			margin-left: 200px;
+			margin-top: -15px;
+		}
+
+	}
+	&>div:nth-child(5) {
+		.size(220px,65px);
+		position: absolute;
+		left: 50%;
+  	margin-left:-110px; 
+		top: 540px;
+		z-index: 20;
+		background:url("../images/ranking_title.png") no-repeat;
+		cursor: pointer;
+	}
+}
