@@ -5,11 +5,6 @@
 bicycle_1
 .animate-cell(@w:200px,@h:280px);
 */
-#wrapbicycle_1 {
-  .animate-cell(@w:220px,@h:300px);
-  position: relative;
-}
-
 @-webkit-keyframes wrapbicycle_1{
   @cell2:-220px;
   0% {
@@ -35,14 +30,6 @@ bicycle_1
   }
 }
 
-#bicycle_1{
-  .animate-cell(@w:220px,@h:300px);
-  background: url("../images/bicycle_1.png") repeat-x;
-  .animation(wrapbicycle_1 .3s step-end infinite);
-  position: absolute;z-index:2;
-}
-
-
 @-webkit-keyframes wrapbicycle_1_head{
  0% {
     top: 37px;
@@ -67,25 +54,29 @@ bicycle_1
   }
 }
 
-#bicycle_1_head {
-  .animate-cell(@w:91px,@h:155px);
-  position: absolute;
-  z-index: 1; 
-  top: 37px;
-  left: 95.85px;
-  background: url("../images/head_1.png") no-repeat;background-size: 74.4% auto;
-  .animation(wrapbicycle_1_head .3s step-end infinite);
+#wrapbicycle_1 {
+  .animate-cell(@w:220px,@h:300px);
+  &>div:first-child{
+    .animate-cell(@w:220px,@h:300px);
+    background: url("../images/bicycle_1.png") repeat-x;
+    .animation(wrapbicycle_1 .3s step-end infinite);
+    position: absolute;z-index:2;
+  }
+  &>div:last-child{
+    .animate-cell(@w:91px,@h:155px);
+    position: absolute;
+    z-index: 1; 
+    top: 37px;
+    left: 95.85px;
+    background: url("../images/head_1.png") no-repeat;background-size: 74.4% auto;
+    .animation(wrapbicycle_1_head .3s step-end infinite);   
+  }
 }
-
 
 /*
 bicycle_2
 .animate-cell(@w:200px,@h:280px);
 */
-#wrapbicycle_2 {
-  .animate-cell(@w:220px,@h:300px);
-  position: relative;
-}
 
 @-webkit-keyframes wrapbicycle_2{
   @cell2:-220px;
@@ -111,15 +102,6 @@ bicycle_2
     background-position-x: @cell2*6;
   }
 }
-
-#bicycle_2{
-  .animate-cell(@w:220px,@h:300px);
-  background: url("../images/bicycle_2.png") repeat-x;
-  .animation(wrapbicycle_2 .3s step-end infinite);
-  position: absolute;z-index:2;
-}
-
-
 @-webkit-keyframes wrapbicycle_2_head{
  0% {
     top: 40.7px;
@@ -143,25 +125,28 @@ bicycle_2
     top: 39.7px;
   }
 }
-
-#bicycle_2_head {
-  .animate-cell(@w:91px,@h:155px);
-  position: absolute;
-  z-index: 1; 
-  top: 40.7px;
-  left: 95.85px;
-  background: url("../images/head_1.png") no-repeat;background-size: 74.4% auto;
-  .animation(wrapbicycle_2_head .3s step-end infinite);
+#wrapbicycle_2 {
+  .animate-cell(@w:220px,@h:300px);
+  &>div:first-child{
+    .animate-cell(@w:220px,@h:300px);
+    background: url("../images/bicycle_2.png") repeat-x;
+    .animation(wrapbicycle_2 .3s step-end infinite);
+    position: absolute;z-index:2;
+  }
+  &>div:last-child{
+    .animate-cell(@w:91px,@h:155px);
+    position: absolute;
+    z-index: 1; 
+    top: 40.7px;
+    left: 95.85px;
+    background: url("../images/head_1.png") no-repeat;background-size: 74.4% auto;
+    .animation(wrapbicycle_2_head .3s step-end infinite);    
+  }
 }
 
 /*
 bicycle_3
 */
-#wrapbicycle_3 {
-  .animate-cell(@w:200px,@h:280px);
-  position: relative;
-}
-
 @-webkit-keyframes wrapbicycle_3{
   @cell2:-200px;
   0% {
@@ -186,15 +171,6 @@ bicycle_3
     background-position-x: @cell2*6;
   }
 }
-
-#bicycle_3{
-  .animate-cell(@w:200px,@h:280px);
-  background: url("../images/bicycle_3.png") repeat-x;
-  .animation(wrapbicycle_3 .3s step-end infinite);
-  position: absolute;z-index:2;
-}
-
-
 @-webkit-keyframes wrapbicycle_3_head{
  0% {
     top: 38.6px;
@@ -218,13 +194,21 @@ bicycle_3
     top: 37.8px;
   }
 }
-
-#bicycle_3_head {
-  .animate-cell(@w:91px,@h:155px);
-  position: absolute;
-  z-index: 1; 
-  top: 38.6px;
-  left: 80.45px;
-  background: url("../images/head_1.png") no-repeat;background-size: 74.4% auto;
-  .animation(wrapbicycle_3_head .3s step-end infinite);
+#wrapbicycle_3 {
+  .animate-cell(@w:200px,@h:280px);
+  &>div:first-child{
+    .animate-cell(@w:200px,@h:280px);
+    background: url("../images/bicycle_3.png") repeat-x;
+    .animation(wrapbicycle_3 .3s step-end infinite);
+    position: absolute;z-index:2;
+  }
+  &>div:last-child{
+    .animate-cell(@w:91px,@h:155px);
+    position: absolute;
+    z-index: 1; 
+    top: 38.6px;
+    left: 80.45px;
+    background: url("../images/head_1.png") no-repeat;background-size: 74.4% auto;
+    .animation(wrapbicycle_3_head .3s step-end infinite);    
+  }
 }

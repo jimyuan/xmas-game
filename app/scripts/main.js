@@ -51,6 +51,7 @@
       J._timer.init();
       J.timeStamp=e.timeStamp;
       $(document).bind("keyup",J._keyUphandler);
+      J._street();
     },
     //鼠标松开事件
     _keyUphandler:function(e){
@@ -191,6 +192,31 @@
       }
       $('#ranking_pai ul').html(rankpaihtml);
       $('#ranking_beipai ul').html(rankbeipaihtml);
+    },
+    _street:function(){ //路人场景
+      var sp=["wrapcar_1","wrapcar_2","wrapcar_3","wrapbicycle_1","wrapbicycle_2","wrapbicycle_3"];
+      var rdm=0, c={};
+      sp=$.ext(sp, 10);
+      $($.chaos(sp)).each(function(x,y){
+        $("#mini-wrap").append('<div class="mini-animate" id="'+y+'"><div/><div/></div>');
+      });
+      $("#mini-wrap .mini-animate").each(function(){
+        rdm=Math.random();
+        if(rdm>0.5){
+          c={
+            "top":(Math.floor(-50-Math.random()*10))+"px",
+            "z-index":60
+          }
+        }
+        else{
+          c={
+            "top":(Math.floor(150+Math.random()*10))+"px",
+            "z-index":100,
+          }
+        }
+        $(this).css(c).css("left",(Math.floor(9300*Math.random()))+"px");
+      });
+      $("#mini-wrap").animate({"left":$(window).width()+"px"}, 30);
     }
   };
   function formatTime(time) {
@@ -239,21 +265,22 @@
      J._changeHorseHead(imgsrc);
   }
   function show(_htmlname,divname,functionName,isfun) {
-    console.log($('#oppbox').length);
     if($('#oppbox').length !== 0) {
       if($("#oppbox").is(":animated")){   
-      } else {
+      } 
+      else {
         $('#oppbox').addClass("zoomOut");
         $('#oppbox').remove();
         $('body').append('<div id="oppbox"></div>');
         $('#oppbox').addClass("zoomIn");
         $('#oppbox').load(_htmlname+'.html #'+divname,function(){
           if(isfun){
-             functionName();
+           functionName();
           }
         });
       }
-    } else {
+    } 
+    else {
       $('body').append('<div id="oppbox"></div>');
       $('#oppbox').addClass("zoomIn");
       $('#oppbox').load(_htmlname+'.html #'+divname,function(){
