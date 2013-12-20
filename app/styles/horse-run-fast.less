@@ -25,25 +25,34 @@
 */
 @-webkit-keyframes horse-runhead-fast{
   0%{
-    top:120.75px;
-    left: 275.8px; 
+    top:121.85px;
+    left: 272.9px;
+    .rotate(12.7deg);
+    .skew(-20deg,4deg);
   }
   20%{
-    top:125.55px;
-
-    left: 270.95px; 
+    top:126.65px;
+    left: 268.05px;
+    .rotate(12.7deg);
+    .skew(-20deg,4deg);
   }
   40%{
-    top:125.05;
-    left: 255.45px; 
+    top:126.1px;
+    left: 252.55px;
+    .rotate(14deg);
+    .skew(-20deg,6deg);
   } 
   60%{
-    top:125.65px;
-    left: 270.95px; 
+    top:125.75px;
+    left: 271.05px;
+    .rotate(12.7deg);
+    .skew(-20deg,4deg);
   }
   80%{
-    top:121.25px;
-    left: 279.25px; 
+    top:122.15px;
+    left: 279.2px;
+    .rotate(16.4deg);
+    .skew(-20deg,4deg);
   }
 }
 
@@ -54,19 +63,20 @@
   &>div:first-child{
     .animate-cell;
     background: url("../images/horse-fast.png") repeat-x;
-    .animation(horse-run-fast .3s step-end infinite);
-    position: absolute; z-index: 2;  
+    .animation(horse-run-fast 3s step-end infinite);
+    position: absolute; z-index: 1;  
 
   }
   &>div:last-child{
-    .animate-cell(@w:32px,@h:40px);
-    /*-webkit-transform:rotate(-10deg); */
+    .animate-cell(@w:25px,@h:25px);
     position: absolute;
-    z-index: 1; 
-    top:120.75px;
-    left: 275.8px; 
-    background: url("../images/head.jpg") no-repeat;background-size: 100% auto;
-   .animation(horse-runhead-fast 0.3s step-end infinite);
+    z-index: 2; 
+    top:121.85px;
+    left: 272.9px;
+    .rotate(12.7deg);
+    .skew(-20deg,4deg);
+    background: url("../images/head.jpeg") no-repeat;background-size: 100% auto;
+   .animation(horse-runhead-fast 3s step-end infinite);
     
   }
 }

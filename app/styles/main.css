@@ -7329,24 +7329,54 @@ body {
 */
 @-webkit-keyframes horse-runhead-fast {
   0% {
-    top: 120.75px;
-    left: 275.8px;
+    top: 121.85px;
+    left: 272.9px;
+    -webkit-transform: rotate(12.7deg);
+    -ms-transform: rotate(12.7deg);
+    transform: rotate(12.7deg);
+    -webkit-transform: skew(-20deg, 4deg);
+    -ms-transform: skewX(-20deg) skewY(4deg);
+    transform: skew(-20deg, 4deg);
   }
   20% {
-    top: 125.55px;
-    left: 270.95px;
+    top: 126.65px;
+    left: 268.05px;
+    -webkit-transform: rotate(12.7deg);
+    -ms-transform: rotate(12.7deg);
+    transform: rotate(12.7deg);
+    -webkit-transform: skew(-20deg, 4deg);
+    -ms-transform: skewX(-20deg) skewY(4deg);
+    transform: skew(-20deg, 4deg);
   }
   40% {
-    top: 125.05;
-    left: 255.45px;
+    top: 126.1px;
+    left: 252.55px;
+    -webkit-transform: rotate(14deg);
+    -ms-transform: rotate(14deg);
+    transform: rotate(14deg);
+    -webkit-transform: skew(-20deg, 6deg);
+    -ms-transform: skewX(-20deg) skewY(6deg);
+    transform: skew(-20deg, 6deg);
   }
   60% {
-    top: 125.65px;
-    left: 270.95px;
+    top: 125.75px;
+    left: 271.05px;
+    -webkit-transform: rotate(12.7deg);
+    -ms-transform: rotate(12.7deg);
+    transform: rotate(12.7deg);
+    -webkit-transform: skew(-20deg, 4deg);
+    -ms-transform: skewX(-20deg) skewY(4deg);
+    transform: skew(-20deg, 4deg);
   }
   80% {
-    top: 121.25px;
-    left: 279.25px;
+    top: 122.15px;
+    left: 279.2px;
+    -webkit-transform: rotate(16.4deg);
+    -ms-transform: rotate(16.4deg);
+    transform: rotate(16.4deg);
+    -webkit-transform: skew(-20deg, 4deg);
+    -ms-transform: skewX(-20deg) skewY(4deg);
+    transform: skew(-20deg, 4deg);
   }
 }
 #warphorseRunFast {
@@ -7358,23 +7388,28 @@ body {
   width: 449px;
   height: 378px;
   background: url("../images/horse-fast.png") repeat-x;
-  -webkit-animation: horse-run-fast 0.3s step-end infinite;
-  animation: horse-run-fast 0.3s step-end infinite;
-  position: absolute;
-  z-index: 2;
-}
-#warphorseRunFast > div:last-child {
-  width: 32px;
-  height: 40px;
-  /*-webkit-transform:rotate(-10deg); */
+  -webkit-animation: horse-run-fast 3s step-end infinite;
+  animation: horse-run-fast 3s step-end infinite;
   position: absolute;
   z-index: 1;
-  top: 120.75px;
-  left: 275.8px;
-  background: url("../images/head.jpg") no-repeat;
+}
+#warphorseRunFast > div:last-child {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  z-index: 2;
+  top: 121.85px;
+  left: 272.9px;
+  -webkit-transform: rotate(12.7deg);
+  -ms-transform: rotate(12.7deg);
+  transform: rotate(12.7deg);
+  -webkit-transform: skew(-20deg, 4deg);
+  -ms-transform: skewX(-20deg) skewY(4deg);
+  transform: skew(-20deg, 4deg);
+  background: url("../images/head.jpeg") no-repeat;
   background-size: 100% auto;
-  -webkit-animation: horse-runhead-fast 0.3s step-end infinite;
-  animation: horse-runhead-fast 0.3s step-end infinite;
+  -webkit-animation: horse-runhead-fast 3s step-end infinite;
+  animation: horse-runhead-fast 3s step-end infinite;
 }
 /*
 慢跑
@@ -7454,13 +7489,13 @@ body {
   -webkit-animation: horse-run-slow 0.6s step-end infinite;
   animation: horse-run-slow 0.6s step-end infinite;
   position: absolute;
-  z-index: 2;
+  z-index: 1;
 }
 #warphorseRunSlow > div:last-child {
   width: 32px;
   height: 40px;
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   top: 110.65px;
   left: 253.6px;
   background: url("../images/head.jpg") no-repeat;
@@ -7560,13 +7595,13 @@ body {
   -webkit-animation: horse-walk-fast 0.6s step-end infinite;
   animation: horse-walk-fast 0.6s step-end infinite;
   position: absolute;
-  z-index: 2;
+  z-index: 1;
 }
 #warphorseWalkFast > div:last-child {
-  width: 32px;
-  height: 40px;
+  width: 25px;
+  height: 25px;
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   top: 123.5px;
   left: 249.55px;
   background: url("../images/head.jpg") no-repeat;
@@ -7677,13 +7712,13 @@ body {
   -webkit-animation: horse-walk-slow 0.6s step-end infinite;
   animation: horse-walk-slow 0.6s step-end infinite;
   position: absolute;
-  z-index: 2;
+  z-index: 1;
 }
 #warphorseWalkSlow > div:last-child {
   width: 32px;
   height: 40px;
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   top: 136.2px;
   left: 245.55px;
   background: url("../images/head.jpg") no-repeat;
@@ -7771,6 +7806,161 @@ body {
     background-position-x: -9600px;
   }
 }
+/*
+快跑头像动画
+*/
+@-webkit-keyframes horse-walkhead-stop {
+  0% {
+    top: 138.2px;
+    -webkit-transform: skew(-5deg, -6deg);
+    -ms-transform: skewX(-5deg) skewY(-6deg);
+    transform: skew(-5deg, -6deg);
+  }
+  4% {
+    top: 138.25px;
+    -webkit-transform: skew(-5deg, -6deg);
+    -ms-transform: skewX(-5deg) skewY(-6deg);
+    transform: skew(-5deg, -6deg);
+  }
+  8% {
+    top: 138.3px;
+    -webkit-transform: skew(-5deg, -6deg);
+    -ms-transform: skewX(-5deg) skewY(-6deg);
+    transform: skew(-5deg, -6deg);
+  }
+  12% {
+    top: 138.5px;
+    -webkit-transform: skew(-5deg, -6deg);
+    -ms-transform: skewX(-5deg) skewY(-6deg);
+    transform: skew(-5deg, -6deg);
+  }
+  16% {
+    top: 138.75px;
+    -webkit-transform: skew(-5deg, -6deg);
+    -ms-transform: skewX(-5deg) skewY(-6deg);
+    transform: skew(-5deg, -6deg);
+  }
+  20% {
+    top: 139.25px;
+    -webkit-transform: skew(-5deg, -6deg);
+    -ms-transform: skewX(-5deg) skewY(-6deg);
+    transform: skew(-5deg, -6deg);
+  }
+  24% {
+    top: 139.7px;
+    -webkit-transform: skew(-5deg, -6deg);
+    -ms-transform: skewX(-5deg) skewY(-6deg);
+    transform: skew(-5deg, -6deg);
+  }
+  28% {
+    top: 140.15px;
+    -webkit-transform: skew(-5deg, -6deg);
+    -ms-transform: skewX(-5deg) skewY(-6deg);
+    transform: skew(-5deg, -6deg);
+  }
+  32% {
+    top: 140.5px;
+    -webkit-transform: skew(-5deg, -6deg);
+    -ms-transform: skewX(-5deg) skewY(-6deg);
+    transform: skew(-5deg, -6deg);
+  }
+  36% {
+    top: 140.7px;
+    -webkit-transform: skew(-5deg, -6deg);
+    -ms-transform: skewX(-5deg) skewY(-6deg);
+    transform: skew(-5deg, -6deg);
+  }
+  40% {
+    top: 140.85px;
+    -webkit-transform: skew(-5deg, -6deg);
+    -ms-transform: skewX(-5deg) skewY(-6deg);
+    transform: skew(-5deg, -6deg);
+  }
+  44% {
+    top: 140.9px;
+    -webkit-transform: skew(-5deg, -6deg);
+    -ms-transform: skewX(-5deg) skewY(-6deg);
+    transform: skew(-5deg, -6deg);
+  }
+  48% {
+    top: 140.85px;
+    -webkit-transform: skew(-5deg, -6deg);
+    -ms-transform: skewX(-5deg) skewY(-6deg);
+    transform: skew(-5deg, -6deg);
+  }
+  52% {
+    top: 140.8px;
+    -webkit-transform: skew(-5deg, -6deg);
+    -ms-transform: skewX(-5deg) skewY(-6deg);
+    transform: skew(-5deg, -6deg);
+  }
+  56% {
+    top: 140.7px;
+    -webkit-transform: skew(-5deg, -6deg);
+    -ms-transform: skewX(-5deg) skewY(-6deg);
+    transform: skew(-5deg, -6deg);
+  }
+  60% {
+    top: 140.5px;
+    -webkit-transform: skew(-5deg, -6deg);
+    -ms-transform: skewX(-5deg) skewY(-6deg);
+    transform: skew(-5deg, -6deg);
+  }
+  64% {
+    top: 140.25px;
+    -webkit-transform: skew(-5deg, -6deg);
+    -ms-transform: skewX(-5deg) skewY(-6deg);
+    transform: skew(-5deg, -6deg);
+  }
+  68% {
+    top: 139.85px;
+    -webkit-transform: skew(-5deg, -6deg);
+    -ms-transform: skewX(-5deg) skewY(-6deg);
+    transform: skew(-5deg, -6deg);
+  }
+  72% {
+    top: 139.45px;
+    -webkit-transform: skew(-5deg, -6deg);
+    -ms-transform: skewX(-5deg) skewY(-6deg);
+    transform: skew(-5deg, -6deg);
+  }
+  76% {
+    top: 139px;
+    -webkit-transform: skew(-5deg, -6deg);
+    -ms-transform: skewX(-5deg) skewY(-6deg);
+    transform: skew(-5deg, -6deg);
+  }
+  80% {
+    top: 138.7px;
+    -webkit-transform: skew(-5deg, -6deg);
+    -ms-transform: skewX(-5deg) skewY(-6deg);
+    transform: skew(-5deg, -6deg);
+  }
+  84% {
+    top: 138.45px;
+    -webkit-transform: skew(-5deg, -6deg);
+    -ms-transform: skewX(-5deg) skewY(-6deg);
+    transform: skew(-5deg, -6deg);
+  }
+  88% {
+    top: 138.3px;
+    -webkit-transform: skew(-5deg, -6deg);
+    -ms-transform: skewX(-5deg) skewY(-6deg);
+    transform: skew(-5deg, -6deg);
+  }
+  92% {
+    top: 138.2px;
+    -webkit-transform: skew(-5deg, -6deg);
+    -ms-transform: skewX(-5deg) skewY(-6deg);
+    transform: skew(-5deg, -6deg);
+  }
+  96% {
+    top: 138.2px;
+    -webkit-transform: skew(-5deg, -6deg);
+    -ms-transform: skewX(-5deg) skewY(-6deg);
+    transform: skew(-5deg, -6deg);
+  }
+}
 #warphorseWalkStop {
   width: 400px;
   height: 410px;
@@ -7780,20 +7970,25 @@ body {
   width: 400px;
   height: 410px;
   background: url("../images/horse-walk-stop.png") repeat-x;
-  -webkit-animation: horse-walk-stop 2s step-end infinite;
-  animation: horse-walk-stop 2s step-end infinite;
-  position: absolute;
-  z-index: 2;
-}
-#warphorseWalkStop > div:last-child {
-  width: 32px;
-  height: 40px;
+  -webkit-animation: horse-walk-stop 1.5s step-end infinite;
+  animation: horse-walk-stop 1.5s step-end infinite;
   position: absolute;
   z-index: 1;
-  top: 136.55px;
-  left: 254.55px;
-  background: url("../images/head.jpg") no-repeat;
+}
+#warphorseWalkStop > div:last-child {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  z-index: 2;
+  top: 138.2px;
+  left: 254px;
+  -webkit-transform: skew(-5deg, -6deg);
+  -ms-transform: skewX(-5deg) skewY(-6deg);
+  transform: skew(-5deg, -6deg);
+  background: url("../images/head.jpeg") no-repeat;
   background-size: 100% auto;
+  -webkit-animation: horse-walkhead-stop 1.5s step-end infinite;
+  animation: horse-walkhead-stop 1.5s step-end infinite;
 }
 /*
   黄毛怪

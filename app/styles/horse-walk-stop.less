@@ -81,21 +81,129 @@
   }
 }
 
+/*
+快跑头像动画
+*/
+@-webkit-keyframes horse-walkhead-stop{
+  0%{
+    top: 138.2px;
+    .skew(-5deg,-6deg);
+  }
+  4%{
+    top: 138.25px;
+    .skew(-5deg,-6deg);
+  }
+  8%{
+    top: 138.3px;
+    .skew(-5deg,-6deg);
+  }
+  12%{
+    top: 138.5px;
+    .skew(-5deg,-6deg);
+  }
+  16%{
+    top: 138.75px;
+    .skew(-5deg,-6deg);
+  }
+  20%{
+    top: 139.25px;
+    .skew(-5deg,-6deg);
+  }
+  24%{
+    top: 139.7px;
+    .skew(-5deg,-6deg);
+  }
+  28%{
+    top: 140.15px;
+    .skew(-5deg,-6deg);
+  }
+  32%{
+    top: 140.5px;
+    .skew(-5deg,-6deg);
+  }
+  36%{
+    top: 140.7px;
+    .skew(-5deg,-6deg);
+  }
+  40%{
+    top: 140.85px;
+    .skew(-5deg,-6deg);
+  }
+  44%{
+    top: 140.9px;
+    .skew(-5deg,-6deg);
+  }
+  48%{
+    top: 140.85px;
+    .skew(-5deg,-6deg);
+  }
+  52%{
+    top: 140.8px;
+    .skew(-5deg,-6deg);
+  }
+  56%{
+    top: 140.7px;
+    .skew(-5deg,-6deg);
+  }
+  60%{
+    top: 140.5px;
+    .skew(-5deg,-6deg);
+  }
+  64%{
+    top: 140.25px;
+    .skew(-5deg,-6deg);
+  }
+  68%{
+    top: 139.85px;
+    .skew(-5deg,-6deg);
+  }
+  72%{
+    top: 139.45px;
+    .skew(-5deg,-6deg);
+  }
+  76%{
+    top: 139px;
+    .skew(-5deg,-6deg);
+  }
+  80%{
+    top: 138.7px;
+    .skew(-5deg,-6deg);
+  }
+  84%{
+    top: 138.45px;
+    .skew(-5deg,-6deg);
+  }
+  88%{
+    top: 138.3px;
+    .skew(-5deg,-6deg);
+  }
+  92%{
+    top: 138.2px;
+    .skew(-5deg,-6deg);
+  }
+  96%{
+    top: 138.2px;
+    .skew(-5deg,-6deg);
+  }
+}
+
 #warphorseWalkStop {
   .animate-cell(@w:400px,@h:410px);
   position: relative;
   &>div:first-child{
     .animate-cell(@w:400px, @h:410px);
     background: url("../images/horse-walk-stop.png") repeat-x;
-    .animation(horse-walk-stop 2s step-end infinite);
-    position: absolute;z-index:2;
+    .animation(horse-walk-stop 1.5s step-end infinite);
+    position: absolute;z-index:1;
   }
   &>div:last-child{
-    .animate-cell(@w:32px,@h:40px);
+    .animate-cell(@w:25px,@h:25px);
     position: absolute;
-    z-index: 1; 
-    top:136.55px;
-    left:254.55px; 
-    background: url("../images/head.jpg") no-repeat;background-size: 100% auto;
+    z-index: 2;
+    top: 138.2px;
+    left:254px;
+    .skew(-5deg,-6deg);
+    background: url("../images/head.jpeg") no-repeat;background-size: 100% auto;
+    .animation(horse-walkhead-stop 1.5s step-end infinite);
   }
 }
