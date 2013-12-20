@@ -7332,7 +7332,7 @@ td.visible-print {
 }
 body {
   background-color: #4CA395;
-  /*overflow: hidden;*/
+  overflow: hidden;
 }
 #gameMain {
   width: 100%;
@@ -8978,13 +8978,8 @@ body {
 /*
 汽车
 */
-/*car1
+/*car3
 */
-#wrapcar_3 {
-  width: 410px;
-  height: 310px;
-  position: relative;
-}
 @-webkit-keyframes wrapcar_3 {
   0% {
     background-position-x: 0;
@@ -9019,15 +9014,6 @@ body {
   90.9% {
     background-position-x: -4100px;
   }
-}
-#car_3 {
-  width: 410px;
-  height: 310px;
-  background: url("../images/car_3.png") repeat-x;
-  -webkit-animation: wrapcar_3 0.4s step-end infinite;
-  animation: wrapcar_3 0.4s step-end infinite;
-  position: absolute;
-  z-index: 2;
 }
 @-webkit-keyframes wrapcar_3_head {
   0% {
@@ -9064,7 +9050,20 @@ body {
     top: 42.05px;
   }
 }
-#car_3_head {
+#wrapcar_3 {
+  width: 410px;
+  height: 310px;
+}
+#wrapcar_3 > div:first-child {
+  width: 410px;
+  height: 310px;
+  background: url("../images/car_3.png") repeat-x;
+  -webkit-animation: wrapcar_3 0.4s step-end infinite;
+  animation: wrapcar_3 0.4s step-end infinite;
+  position: absolute;
+  z-index: 2;
+}
+#wrapcar_3 > div:last-child {
   width: 91px;
   height: 155px;
   position: absolute;
@@ -9078,11 +9077,6 @@ body {
 }
 /*car2
 */
-#wrapcar_2 {
-  width: 410px;
-  height: 280px;
-  position: relative;
-}
 @-webkit-keyframes wrapcar_2 {
   0% {
     background-position-x: 0;
@@ -9117,15 +9111,6 @@ body {
   90.9% {
     background-position-x: -4100px;
   }
-}
-#car_2 {
-  width: 410px;
-  height: 280px;
-  background: url("../images/car_2.png") repeat-x;
-  -webkit-animation: wrapcar_2 0.4s step-end infinite;
-  animation: wrapcar_2 0.4s step-end infinite;
-  position: absolute;
-  z-index: 2;
 }
 @-webkit-keyframes wrapcar_2_head {
   0% {
@@ -9162,7 +9147,20 @@ body {
     top: 41.95px;
   }
 }
-#car_2_head {
+#wrapcar_2 {
+  width: 410px;
+  height: 280px;
+}
+#wrapcar_2 > div:first-child {
+  width: 410px;
+  height: 280px;
+  background: url("../images/car_2.png") repeat-x;
+  -webkit-animation: wrapcar_2 0.4s step-end infinite;
+  animation: wrapcar_2 0.4s step-end infinite;
+  position: absolute;
+  z-index: 2;
+}
+#wrapcar_2 > div:last-child {
   width: 91px;
   height: 155px;
   position: absolute;
@@ -9176,11 +9174,6 @@ body {
 }
 /*car1
 */
-#wrapcar_1 {
-  width: 410px;
-  height: 280px;
-  position: relative;
-}
 @-webkit-keyframes wrapcar_1 {
   0% {
     background-position-x: 0;
@@ -9215,15 +9208,6 @@ body {
   90.9% {
     background-position-x: -4100px;
   }
-}
-#car_1 {
-  width: 410px;
-  height: 280px;
-  background: url("../images/car_1.png") repeat-x;
-  -webkit-animation: wrapcar_1 0.4s step-end infinite;
-  animation: wrapcar_1 0.4s step-end infinite;
-  position: absolute;
-  z-index: 2;
 }
 @-webkit-keyframes wrapcar_1_head {
   0% {
@@ -9260,7 +9244,20 @@ body {
     top: 41.95px;
   }
 }
-#car_1_head {
+#wrapcar_1 {
+  width: 410px;
+  height: 280px;
+}
+#wrapcar_1 > div:first-child {
+  width: 410px;
+  height: 280px;
+  background: url("../images/car_1.png") repeat-x;
+  -webkit-animation: wrapcar_1 0.4s step-end infinite;
+  animation: wrapcar_1 0.4s step-end infinite;
+  position: absolute;
+  z-index: 2;
+}
+#wrapcar_1 > div:last-child {
   width: 91px;
   height: 155px;
   position: absolute;
@@ -9279,11 +9276,6 @@ body {
 bicycle_1
 .animate-cell(@w:200px,@h:280px);
 */
-#wrapbicycle_1 {
-  width: 220px;
-  height: 300px;
-  position: relative;
-}
 @-webkit-keyframes wrapbicycle_1 {
   0% {
     background-position-x: 0;
@@ -9306,15 +9298,6 @@ bicycle_1
   85.7% {
     background-position-x: -1320px;
   }
-}
-#bicycle_1 {
-  width: 220px;
-  height: 300px;
-  background: url("../images/bicycle_1.png") repeat-x;
-  -webkit-animation: wrapbicycle_1 0.3s step-end infinite;
-  animation: wrapbicycle_1 0.3s step-end infinite;
-  position: absolute;
-  z-index: 2;
 }
 @-webkit-keyframes wrapbicycle_1_head {
   0% {
@@ -9339,7 +9322,20 @@ bicycle_1
     top: 37px;
   }
 }
-#bicycle_1_head {
+#wrapbicycle_1 {
+  width: 220px;
+  height: 300px;
+}
+#wrapbicycle_1 > div:first-child {
+  width: 220px;
+  height: 300px;
+  background: url("../images/bicycle_1.png") repeat-x;
+  -webkit-animation: wrapbicycle_1 0.3s step-end infinite;
+  animation: wrapbicycle_1 0.3s step-end infinite;
+  position: absolute;
+  z-index: 2;
+}
+#wrapbicycle_1 > div:last-child {
   width: 91px;
   height: 155px;
   position: absolute;
@@ -9355,11 +9351,6 @@ bicycle_1
 bicycle_2
 .animate-cell(@w:200px,@h:280px);
 */
-#wrapbicycle_2 {
-  width: 220px;
-  height: 300px;
-  position: relative;
-}
 @-webkit-keyframes wrapbicycle_2 {
   0% {
     background-position-x: 0;
@@ -9382,15 +9373,6 @@ bicycle_2
   85.7% {
     background-position-x: -1320px;
   }
-}
-#bicycle_2 {
-  width: 220px;
-  height: 300px;
-  background: url("../images/bicycle_2.png") repeat-x;
-  -webkit-animation: wrapbicycle_2 0.3s step-end infinite;
-  animation: wrapbicycle_2 0.3s step-end infinite;
-  position: absolute;
-  z-index: 2;
 }
 @-webkit-keyframes wrapbicycle_2_head {
   0% {
@@ -9415,7 +9397,20 @@ bicycle_2
     top: 39.7px;
   }
 }
-#bicycle_2_head {
+#wrapbicycle_2 {
+  width: 220px;
+  height: 300px;
+}
+#wrapbicycle_2 > div:first-child {
+  width: 220px;
+  height: 300px;
+  background: url("../images/bicycle_2.png") repeat-x;
+  -webkit-animation: wrapbicycle_2 0.3s step-end infinite;
+  animation: wrapbicycle_2 0.3s step-end infinite;
+  position: absolute;
+  z-index: 2;
+}
+#wrapbicycle_2 > div:last-child {
   width: 91px;
   height: 155px;
   position: absolute;
@@ -9430,11 +9425,6 @@ bicycle_2
 /*
 bicycle_3
 */
-#wrapbicycle_3 {
-  width: 200px;
-  height: 280px;
-  position: relative;
-}
 @-webkit-keyframes wrapbicycle_3 {
   0% {
     background-position-x: 0;
@@ -9457,15 +9447,6 @@ bicycle_3
   85.7% {
     background-position-x: -1200px;
   }
-}
-#bicycle_3 {
-  width: 200px;
-  height: 280px;
-  background: url("../images/bicycle_3.png") repeat-x;
-  -webkit-animation: wrapbicycle_3 0.3s step-end infinite;
-  animation: wrapbicycle_3 0.3s step-end infinite;
-  position: absolute;
-  z-index: 2;
 }
 @-webkit-keyframes wrapbicycle_3_head {
   0% {
@@ -9490,7 +9471,20 @@ bicycle_3
     top: 37.8px;
   }
 }
-#bicycle_3_head {
+#wrapbicycle_3 {
+  width: 200px;
+  height: 280px;
+}
+#wrapbicycle_3 > div:first-child {
+  width: 200px;
+  height: 280px;
+  background: url("../images/bicycle_3.png") repeat-x;
+  -webkit-animation: wrapbicycle_3 0.3s step-end infinite;
+  animation: wrapbicycle_3 0.3s step-end infinite;
+  position: absolute;
+  z-index: 2;
+}
+#wrapbicycle_3 > div:last-child {
   width: 91px;
   height: 155px;
   position: absolute;
@@ -9802,5 +9796,21 @@ bicycle_3
   width: 169px;
   height: 422px;
   background: url("../images/succesMark.png");
+}
+#mini-wrap {
+  position: absolute;
+  top: 300px;
+  left: 0;
+  width: 9600px;
+  height: 500px;
+  left: -9600px;
+  -webkit-transition: all 30s ease-out;
+  transition: all 30s ease-out;
+}
+.mini-animate {
+  position: absolute;
+  top: 150px;
+  left: 1200px;
+  z-index: 80;
 }
 /*# sourceMappingURL=/styles/main.css.map */

@@ -6,7 +6,7 @@
 
 body {
   background-color: #4CA395;
-  /*overflow: hidden;*/
+  overflow: hidden;
 }
 
 #gameMain {
@@ -318,4 +318,22 @@ body {
     .size(169px,422px);
     background:url("../images/succesMark.png");
   }
+}
+
+#mini-wrap{
+  position:absolute;
+  top:300px; left:0;
+  .size(9600px, 500px);
+  left:-9600px;
+  .transition(all 30s ease-out); 
+}
+.mini-animate{
+  position:absolute;
+  top:150px;
+  left:1200px;
+  z-index:80;
+}
+
+#oppbox{
+  // display:none
 }
