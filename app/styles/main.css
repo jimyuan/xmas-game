@@ -9521,7 +9521,7 @@ bicycle_3
   width: 9600px;
   position: absolute;
   left: 0px;
-  top: -50px;
+  top: -120px;
   background: url("../images/background-before.png") right center;
   z-index: 66;
   -webkit-transition: background-position 0.2s ease-out;
@@ -9809,8 +9809,5 @@ bicycle_3
 }
 .mini-animate {
   position: absolute;
-  top: 150px;
-  left: 1200px;
-  z-index: 80;
 }
 /*# sourceMappingURL=/styles/main.css.map */

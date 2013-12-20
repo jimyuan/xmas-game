@@ -204,19 +204,20 @@
         rdm=Math.random();
         if(rdm>0.5){
           c={
-            "top":(Math.floor(-50-Math.random()*10))+"px",
-            "z-index":60
+            "bottom":(Math.floor(Math.random()*10))+"px",
+            "z-index":100
           }
         }
         else{
           c={
-            "top":(Math.floor(150+Math.random()*10))+"px",
-            "z-index":100,
+            "bottom ":(Math.floor(20+Math.random()*10))+"px",
+            "z-index":80,
           }
         }
         $(this).css(c).css("left",(Math.floor(9300*Math.random()))+"px");
       });
-      $("#mini-wrap").animate({"left":$(window).width()+"px"}, 30);
+      // $("#mini-wrap").animate({"left":$(window).width()+"px"}, 30);
+      $("#mini-wrap").css("left", $(window).width()+"px");
     }
   };
   function formatTime(time) {
