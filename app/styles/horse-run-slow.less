@@ -33,36 +33,44 @@
 */
 @-webkit-keyframes horse-runhead-slow{
   0%{
-    top:110.65px;
-    left: 253.6px; 
+    top:112.4px;
+    left: 252.75px; 
+    .skew(3deg,-10deg);
   }
   12.5%{
-    top:117.45px;
-    left: 253.6px; 
+    top:119.25px;
+    left: 252.65px; 
+    .skew(3deg,-10deg);
   }
   25%{
-    top:125.35px;
-    left: 253.6px; 
+    top:127.15px;
+    left: 252.7px;
+    .skew(3deg,-10deg); 
   }
   37.5%{
-    top:124.95px;
-    left: 246.4px; 
+    top:126.7px;
+    left: 245.55px;
+    .skew(3deg,-10deg); 
   }
   50%{
-    top:128.95px;
-    left: 233.2px; 
+    top:130.7px;
+    left: 235.35px;
+    .skew(3deg,-10deg);
   }
   62.5%{
-    top:136.3px;
-    left: 242.15px; 
+    top:138.1px;
+    left: 247.4px;
+    .skew(-1.2deg,-13.8deg); 
   }
   75%{
-    top:134.95px;
-    left: 252.8px; 
+    top:136.7px;
+    left: 256.9px;
+    .skew(3deg,-10deg);
   }
   87.5%{
-    top:124.95px;
-    left: 252.8px; 
+    top:126.7px;
+    left: 255.9px;
+    .skew(3deg,-10deg);
   }
 }
 
@@ -72,16 +80,17 @@
   &>div:first-child{
     .animate-cell(@w:-@cell, @h:418px);
     background: url("../images/horse-slow.png") repeat-x;
-    .animation(horse-run-slow 0.6s step-end infinite);
-    position: absolute; z-index: 2;
+    .animation(horse-run-slow .6s step-end infinite);
+    position: absolute; z-index: 1;
   }
   &>div:last-child{
-    .animate-cell(@w:32px,@h:40px);
+    .animate-cell(@w:25px,@h:25px);
     position: absolute;
-    z-index: 1; 
-    top:110.65px;
-    left: 253.6px; 
-    background: url("../images/head.jpg") no-repeat;background-size: 100% auto;
-   .animation(horse-runhead-slow 0.6s step-end infinite);
+    z-index: 2; 
+    top:112.4px;
+    left: 252.75px; 
+    .skew(3deg,-10deg);
+    background: url("../images/head.jpeg") no-repeat;background-size: 100% auto;
+   .animation(horse-runhead-slow .6s step-end infinite);
   }
 }
