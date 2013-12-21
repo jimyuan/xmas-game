@@ -1,0 +1,33 @@
+@-webkit-keyframes rotate-circle{
+  to{
+    .rotate(360deg);
+  }
+}
+
+#loading{
+  @w:148px;
+  .square(@w);
+  background: url(../images/loading-circle.png) no-repeat;
+  position: absolute;
+  left:50%; top:50%;
+  margin-top: -@w/2;
+  margin-left:-@w/2;
+  .animation(rotate-circle 10s linear infinite);
+}
+
+#percent1, #percent0{
+  position: absolute;
+  .size(50px, 72px);
+  top:50%;
+  margin-top:-72px/2;
+  left:50%;
+  margin-left: 3px;
+  background-repeat: no-repeat;
+  background-position: 0 center;
+  background-image:url("../images/num-0.png");
+}
+
+#percent1{
+  background-position: right center;
+  margin-left: -50px-3;
+}

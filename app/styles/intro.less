@@ -1,0 +1,449 @@
+#intro {
+  .animate-cell(@w:1280px,@h:720px);
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  margin-left: -640px;
+}
+
+/*
+动画播放次数
+*/
+@count:1;
+/*
+动画播放方式
+*/
+@fill-mode:forwards;
+/*
+ 云动画
+*/
+@-webkit-keyframes center_clouds{
+  from {bottom: -353px;}
+  to {bottom: 300px;}
+}
+
+#centerClouds{
+  .animate-cell(@w:550px,@h:283px);
+  position: absolute;
+  bottom: -353px;
+  left: 50%;
+  margin-left:-255px; 
+  z-index: 10;
+  background: url("../images/intro/yun1.png") no-repeat;background-size: 100% auto;
+  .animation(center_clouds .6s ease-in-out @count @fill-mode);
+}
+
+
+/*
+云系列动画
+*/
+#clouds{
+	&>div:nth-child(1) {
+		.animate-cell(@w:20px,@h:38px);
+  	position: absolute;
+  	bottom: -300px;
+  	right: 307px;
+  	background: url("../images/intro/yun2.png") no-repeat;background-size: 100% auto;
+  	.animation(clouds_1 1.2s linear @count @fill-mode);
+  }
+  &>div:nth-child(2) {
+  	.animate-cell(@w:92px,@h:48px);
+  	position: absolute;
+  	bottom: -100px;
+  	left: 382px;
+  	background: url("../images/intro/yun2.png") no-repeat;background-size: 100% auto;
+  	.animation(clouds_2 1.7s linear @count @fill-mode);
+
+  }
+  &>div:nth-child(3) {
+  	.animate-cell(@w:38px,@h:20px);
+  	position: absolute;
+  	bottom: 20px;
+  	left: 156px;
+  	background: url("../images/intro/yun2.png") no-repeat;background-size: 100% auto;
+  	.animation(clouds_3 1.1s linear @count @fill-mode);
+
+  }
+  &>div:nth-child(4) {
+  	.animate-cell(@w:86px,@h:45px);
+  	position: absolute;
+  	bottom: -75px;
+  	right: 290px;
+  	background: url("../images/intro/yun2.png") no-repeat;background-size: 100% auto;
+  	.animation(clouds_4 1.2s linear @count @fill-mode);
+
+  }
+  &>div:nth-child(5) {
+  	.animate-cell(@w:142px,@h:74px);
+  	position: absolute;
+  	bottom: -250px;
+  	right: 305px;
+  	background: url("../images/intro/yun2.png") no-repeat;background-size: 100% auto;
+  	.animation(clouds_5 1.2s linear @count @fill-mode);
+
+  }
+  &>div:nth-child(6) {
+  	.animate-cell(@w:274px,@h:143px);
+  	position: absolute;
+  	bottom: -1000px;
+  	right: 500px;
+  	background: url("../images/intro/yun2.png") no-repeat;background-size: 100% auto;
+  	.animation(clouds_6 1.5s linear @count @fill-mode);
+
+  }
+  &>div:nth-child(7) {
+  	.animate-cell(@w:346px,@h:180px);
+  	position: absolute;
+  	bottom: -300px;
+  	left: 300px;
+  	background: url("../images/intro/yun2.png") no-repeat;background-size: 100% auto;
+  	.animation(clouds_7 1.3s linear @count @fill-mode);
+
+  }
+  &>div:nth-child(8) {
+  	.animate-cell(@w:130px,@h:68px);
+  	position: absolute;
+  	bottom: -800px;
+  	left: 65px;
+  	background: url("../images/intro/yun2.png") no-repeat;background-size: 100% auto;
+  	.animation(clouds_8 1.7s linear @count @fill-mode);
+
+  }
+}
+
+@-webkit-keyframes clouds_1{
+  from {bottom: -300px;}
+  to {bottom: 1200px;}
+}
+
+@-webkit-keyframes clouds_2{
+  from {bottom: -100px;}
+  to {bottom: 1200px;}
+}
+
+@-webkit-keyframes clouds_3{
+  from {bottom: 20px;}
+  to {bottom: 1200px;}
+}
+
+@-webkit-keyframes clouds_4{
+  from {bottom: -75px;}
+  to {bottom: 1200px;}
+}
+
+@-webkit-keyframes clouds_5{
+  from {bottom: -250px;}
+  to {bottom: 1200px;}
+}
+
+@-webkit-keyframes clouds_6{
+  from {bottom: -1000px;}
+  to {bottom: 1200px;}
+}
+
+@-webkit-keyframes clouds_7{
+  from {bottom: -300px;}
+  to {bottom: 1200px;}
+}
+
+@-webkit-keyframes clouds_8{
+  from {bottom: -800px;}
+  to {bottom: 1200px;}
+}
+
+/*
+ 树动画
+*/
+#trees{
+  &>div:nth-child(1) {
+    .animate-cell(@w:842px,@h:780px);
+    position: absolute;
+    bottom: 0px;
+    left: -670px;
+    background: url("../images/intro/tree2.png") no-repeat;background-size: 100% auto;
+    z-index: 10;
+    .animation(trees_1 1.6s ease-in-out @count @fill-mode);
+  }
+  &>div:nth-child(2) {
+    .animate-cell(@w:540px,@h:587px);
+    position: absolute;
+    bottom: 0px;
+    left: -132px;
+    background: url("../images/intro/tree4.png") no-repeat;background-size: 100% auto;
+    .animation(trees_2 1.6s ease-in-out @count @fill-mode);
+    z-index: 20;
+  }
+  &>div:nth-child(3) {
+    .animate-cell(@w:771px,@h:702px);
+    position: absolute;
+    bottom: 0px;
+    left: 205px;
+    z-index: 30;
+    background: url("../images/intro/tree3.png") no-repeat;background-size: 100% auto;
+    .animation(trees_3 1.6s ease-in-out @count @fill-mode);
+  }
+  &>div:nth-child(4) {
+    .animate-cell(@w:1025px,@h:935px);
+    position: absolute;
+    bottom: 0px;
+    left: 933px;
+    z-index: 30;
+    background: url("../images/intro/tree1.png") no-repeat;background-size: 100% auto;
+    .animation(trees_4 1.6s ease-in-out @count @fill-mode);
+  }
+}
+
+@-webkit-keyframes trees_1{
+  0% {
+    bottom: 0px;
+    left: -670px;
+    .scale(1);
+    .rotate(-45deg);
+  }
+  67%{
+    bottom: 0px;
+    left: 67px;
+    .rotate(0deg);
+    .scale(0.2);
+  }
+  100% {
+    left: 67px;
+    bottom: -800px;
+    .scale(0.2);
+  }
+}
+
+@-webkit-keyframes trees_2{
+  0% {
+    bottom: 100px;
+    left: -132px;
+    .scale(1);
+    .rotate(-45deg);
+  }
+  67% {
+    bottom: 100px;
+    left: 250px;
+    .rotate(0deg);
+    .scale(0.2);
+  }
+  100%{
+    left: 250px;
+    bottom: -800px;
+    .scale(0.2);
+  }
+}
+@-webkit-keyframes trees_3{
+  0% {
+    bottom: 0px;
+    left: 205px;
+    .scale(1);
+    .rotate(-45deg);
+  }
+  67% {
+    bottom: 0px;
+    left: 155px;
+    .rotate(0deg);
+    .scale(0.2);
+  }
+  100% {
+    left: 155px;
+    bottom: -800px;
+    .scale(0.2);
+  }
+}
+@-webkit-keyframes trees_4{
+  0% {
+    bottom: 0px;
+    left: 933px;
+    .scale(1);
+    .rotate(-45deg);
+  }
+  67% {
+    bottom: 0px;
+    left: 509px;
+    .rotate(0deg);
+    .scale(0.2);
+  }
+  100%{
+    left: 509px;
+    bottom: -800px;
+    .scale(0.2);
+  }
+}
+
+/*
+马动画
+*/
+@-webkit-keyframes intro-horse_first{
+  @cell2:-450px;
+  0%{
+    background-position-x: 0;
+  }
+  10%{
+    background-position-x: @cell2;
+  }
+  20%{
+    background-position-x: @cell2*2;
+  }
+  30%{
+    background-position-x: @cell2*3;
+  }
+  40%{
+    background-position-x: @cell2*4;
+  }
+  50%{
+    background-position-x: @cell2*5;
+  }
+  60%{
+    background-position-x: @cell2*6;
+  }
+  70%{
+    background-position-x: @cell2*7;
+  }
+  80%{
+    background-position-x: @cell2*8;
+  }
+  90%{
+    background-position-x: @cell2*9;
+  }
+}
+
+@-webkit-keyframes intro-horse{
+  0%{
+    .scale(1);
+    left: 1131px;
+  }
+  75%{
+    left: 50%;
+    margin-left:-270px;
+    .scale(.4);
+  }
+  100%{
+    left: -1200px;
+    .rotate(-270deg);
+  }
+}
+
+
+#introHorse {
+  .animate-cell(@w:720px, @h:626px);
+  position: absolute;
+  left:1131px; 
+  z-index: 100;
+  &>div:first-child{
+    .animate-cell(@w:450px, @h:400px);
+    background: url("../images/intro/intro-horse.png") repeat-x;
+    .animation(intro-horse_first 0.6s step-end infinite);
+    position: absolute; 
+    .scale(1.6);
+  }
+  .animation(intro-horse 1.5s ease-in-out @count @fill-mode);
+}
+
+
+/*
+拍子动画
+*/
+@-webkit-keyframes racket{
+  0%{
+    right: -500px;
+    .scale(1);
+    .rotate(90deg);
+  }
+  75%{
+    right: 100px;
+    .rotate(90deg);
+    .scale(0.6);
+  }
+  100%{
+    right: -3000px;
+  }
+}
+
+#racket {
+  .animate-cell(@w:804px,@h:790px);
+  position: absolute;
+  bottom: -200px;
+  right: -500px;
+  z-index: 30;
+  .rotate(90deg);
+  background: url("../images/intro/pai.png") no-repeat;background-size: 100% auto;
+  .animation(racket 1.2s ease-in @count @fill-mode);
+}
+
+/*
+底部背景动画
+*/
+@-webkit-keyframes intro-bg-1{
+  0%{
+    bottom: -2400px;
+    right: -1600px;
+    .rotate(-45deg);
+  }
+  80%{
+    bottom: -2000px;
+    right: -800px;
+    .rotate(7deg);
+  }
+  100%{
+    bottom: 900px;
+    right: -800px;
+    .rotate(7deg);
+  }
+}
+
+@-webkit-keyframes intro-bg-2{
+ 
+}
+
+
+@-webkit-keyframes intro-bg-3{
+}
+
+
+@-webkit-keyframes intro-bg-4{
+}
+
+#intro-bg{
+  z-index: 1;
+  &>div:nth-child(1) {
+    .animate-cell(@w:2398px,@h:2383px);
+    position: absolute;
+    bottom: -2400px;
+    right: -1600px;
+    .rotate(-45deg);
+    background-color: #EFE8C0;
+    z-index: 1;
+    .animation(intro-bg-1 1.2s ease-in @count @fill-mode);
+  }
+/*  &>div:nth-child(2) {
+    .animate-cell(@w:1500px,@h:154px);
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    z-index: 0;
+    .rotate(-45deg);
+    background-color: #FFFFFF;
+    .animation(intro-bg-2 1.2s ease-in @count @fill-mode);
+  }
+  &>div:nth-child(3) {
+    .animate-cell(@w:1397px,@h:509px);
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    .rotate(-45deg);
+    z-index: 5;
+    background-color: #4CA395;
+    .animation(intro-bg-3 1.2s ease-in @count @fill-mode);
+  }
+  &>div:nth-child(4) {
+    .animate-cell(@w:1407px,@h:1517px);
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    .rotate(-45deg);
+    z-index: 6;
+    background-color: #EC5E56;
+    .animation(intro-bg-4 1.2s ease-in @count @fill-mode);
+  }*/
+}

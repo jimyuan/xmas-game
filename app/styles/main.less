@@ -4,8 +4,18 @@
 @import "../bower_components/font-awesome/less/font-awesome.less";
 @fa-font-path: "../fonts/font-awesome";
 
+body {
+  background-color: #4CA395;
+  overflow: hidden;
+}
 
+#gameMain {
+  .animate-cell(100%,100%);
+  margin: auto;
+  background: url("../images/body_bg.jpg");
+}
 @cell:-449px;
+
 .animate-cell(@w:-@cell, @h:378px){
   .size(@w, @h);
 }
@@ -14,35 +24,313 @@
 @import "horse-run-slow.less";
 @import "horse-walk-fast.less";
 @import "horse-walk-slow.less";
+@import "horse-walk-stop.less";
 @import "monster-yellow.less";
 @import "monster-green.less";
+@import "timer_bar.less";
+@import "intro.less";
+@import "ranking.less";
+@import "scroe.less";
+@import "weibofd_send.less";
+@import "weibofd_list.less";
+@import "loading.less";
+@import "2014go.less";
+@import "car.less";
+@import "bicycle.less";
 
-body{
-  background: url("../images/body_bg.jpg") no-repeat center;
-}
+
 .main-scene{
-  background: url("../images/background.png") 100% center;
-  height:500px;
-  .transition(background-position .2s ease-out); 
-  &>div:first-child{
-    top:160px;
-    
+  .size(100%,100%);
+  background: url("../images/background.png");
+  height: 470px;
+  margin:auto;
+  margin-top: 205px;
+  .transition(background-position 0.2s ease-out); 
+  &>div:first-child{ 
+    .size(100%,100%);
+    position: absolute;
+    left: 0px;
+    top: 420px;
+    z-index: 1;
+    background:#fbffdc;
+  }
+  &>div:nth-child(2) {/*qian bei jin*/
+    height: 597px;
+    width: 9600px;
+    position: absolute;
+    left:0px;
+    top:-120px;
+    background:url("../images/background-before.png") right center  ;
+    z-index: 66;
+    .transition(background-position .2s ease-out); 
+  }
+  &>div:last-child{/*ma*/
+    position: absolute;
+    top:50%;
     left:50%;
+    margin-top: -205px;
     margin-left:-200px;
-
+    z-index: 88;
   }
 }
 
 #timeCount {
-  float:right;
-
+  width:310px;
+  right: 50px;
+  top: 100px;
+  position: absolute;
+  z-index: 999;
+  line-height: 47px;
+  &>div:nth-child(1) {
+    width:100%;
+    text-align: right;
+    float:left;
+  }
 }
+.bar {
+  .size(100%,5px);
+  background-color: #FFF;
+  position: relative;
+  float: left;
+  &>div:first-child{
+    .size(1px,5px);
+    background-color: #67c1b3;
+  }
+  &>div:last-child {
+    position: absolute;
+    top: -2px;
+    left: 0px;
+    .size(20px,9px);
+    background-color: yellow;
+  }
+}
+
 #count {
-  float:right;
+  left: 50px;
+  top: 100px;
+  position: absolute;
+  z-index: 999;
+  &>div:first-child {
+    float:left;
+  }
+  line-height: 47px;
+}
+.fontFace{
+  display: block;
+  height: 70px;
+  width: 100%;
+  float: left;
+  text-align: right;
+  font-size: 88px;
+  color: #FFF;
+  font-weight: bold;
+}
+
+.title{
+  font-size: 20px;
+  color: #FFF;
 }
 
 #startButton{
   .square(100px);
   .center-block;
   font-size:100px;
+  position: absolute;
+  z-index: 100;
+  left:50%;
+  top:0px;
+  margin-left:-50px;
+
+}
+
+.door{
+  .size(100%,100%);
+  position:absolute;
+  top:0; left:0;
+  z-index: 1000;
+  background-color: #4CA395; 
+}
+
+#oppbox{
+  .size(100%,100%);
+  position:absolute;
+  top:0; left:0;
+  z-index: 1000;
+}
+
+.zoomOut{
+  .transition(all .5s ease-out); 
+  .scale(0);
+}
+
+.zoomIn{
+  .transition(all .5s ease-out); 
+  .scale(1);
+}
+
+.box{
+  width:90px;
+  height:90px;
+}
+
+@-webkit-keyframes box-keyframes{
+  0%{
+    .rotateY(100px);
+  }
+  100% {
+    .rotateY(0px);
+  }
+}
+
+
+.box a{
+  width:90px;
+  height:90px;
+  .transition(box-shadow 400ms ease-in-out 0s);
+  background: no-repeat scroll center center #DDA994;
+  background-size: 100% auto;
+  border-radius: 50% 50% 50% 50%;
+  box-shadow: 0 0 1px 230px rgba(0, 0, 0, 0.6) inset, 0 0 0 0 #D5AD94 inset;
+  display: block;
+  outline: medium none;
+  overflow: hidden;
+  text-align: center;
+  font-size:16px;
+  line-height:90px;
+  cursor:pointer;
+}
+.ka{
+  .transition(text-shadow 400ms ease-in-out 0s);
+  color:transparent;
+  font-size:16px;
+  /*text-transform: uppercase;*/
+  word-wrap:break-word;overflow:hidden;
+  display: block;
+  text-shadow: 0 0 0 #FFFFFF;
+}
+.box a:hover{
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.6) inset, 0 0 0 0 #C18167 inset, 0 0 10px rgba(0, 0, 0, 0.3);
+  color:#000;
+  text-decoration: none;
+  .animation(box-keyframes 2s ease-in-out 1 forwards);
+}
+.ka:hover{
+  text-decoration: none;
+  text-shadow: 0 0 0;
+}
+#mainHead {
+  float: left;
+  margin: 10px auto auto 50%;
+  .size(50%,40px);
+}
+#mainHead span{
+  line-height: 40px;
+  float: left;
+  font-size: 20px;
+  color: #FFF;
+}
+#mainHead b:nth-child(1){
+  display:block;
+  .size(100px,40px);
+  float: left;
+  font-size: 20px;
+  color: #FFFFFF;
+}
+#mainHead b:nth-child(2){
+  display:block;
+  .size(40px,40px);
+  float: right;
+  background: url("../images/head.jpeg") no-repeat center center;
+  background-size: 100% auto;
+  border-radius: 50% 50% 50% 50%;
+  outline: medium none;
+  overflow: hidden;
+}
+#mainranking{
+  .size(50%,100%);
+  float:right;
+  margin-left: 40%;
+}
+
+#mainranking ul {
+  margin: 0px 0px;
+  padding: 0px 0px;
+  list-style-type: none;
+}
+
+#mainranking ul li {
+  line-height: 20px;
+  display:block;
+  width: 100%;
+  height: 18px;
+  float: left;
+  margin-top: 6px;
+  list-style-type: none;
+}
+
+#mainranking ul li{
+  &>b:first-child {
+    display:block;
+    .size(32px,18px);
+    border-right: solid 5px #787878;
+    background-color: #e0c441;
+    float: left;
+    color: #FFF;
+    text-align: center;
+  }
+  &>b:last-child {
+    display:block;
+    .size(123px,18px);
+    background-color: #2e726d;
+    float: right;
+    color: #FFF;
+    text-align: center;
+  }
+}
+
+#enddiv {
+  .size(600px,500px);
+  position: absolute;
+  z-index: 68;
+  left: 0px;
+  bottom: 0px;
+  &>div:nth-child(1) {
+    left:210px;
+    bottom: 0px;
+    position:absolute;
+    z-index: 10;
+    .size(203px,170px);
+    background:url("../images/hill_1.png");
+  }
+  &>div:nth-child(2) {
+    left:0px;
+    bottom: 0px;
+    position: absolute;
+    z-index: 6;
+    .size(495px,248px);
+    background:url("../images/hill_2.png");
+  }
+  &>div:nth-child(3) {
+    left:175px;
+    top: 60px;
+    position: absolute;
+    z-index: 8;
+    .size(169px,422px);
+    background:url("../images/succesMark.png");
+  }
+}
+
+#mini-wrap{
+  position:absolute;
+  top:300px; left:0;
+  .size(9600px, 500px);
+  left:-9600px;
+  .transition(all 30s ease-out); 
+}
+.mini-animate{
+  position:absolute;
+}
+
+#oppbox{
+  // display:none
 }

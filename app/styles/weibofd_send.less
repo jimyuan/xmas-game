@@ -1,0 +1,68 @@
+#weiboSend {
+	&>div:nth-child(1) {
+		.size(100%,100%);
+		position: absolute;
+		left: 0px;
+		bottom: 0px;
+		z-index: 10;
+		background:url("../images/green_bg.png") no-repeat center center;
+	}
+	&>div:nth-child(2) {
+		.size(200px,30px);
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		margin-top: -220px;
+		margin-left: -50px;
+		font-size: 24px;
+		color: #FFFFFF;
+		z-index: 20;
+	}
+	&>div:nth-child(3) {
+		.size(600px,400px);
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		margin-top: -160px;
+		margin-left: -300px;
+		z-index: 30;
+		&>div:first-child{
+			float:left;
+			margin-top: -60px;
+			.size(196px,296px);
+			background: url("../images/head.jpg") no-repeat center center;
+			background-size: 100% auto;
+		}	
+		&>div:last-child{
+			position: absolute;
+			float: left;
+			left: 220px;
+		}	
+	}
+	&>div:nth-child(4) {
+		.size(126px,42px);
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		margin-top: 100px;
+		margin-left: -77px;
+		z-index: 30;
+	}
+}
+
+#sendWeibobtn{
+	.size(100%,100%);
+	background-color: #efe6bd;
+	border: none;
+	font-size: 26px;
+	font-weight: bold;
+	color: green;
+}
+
+.weibosendcontent {
+	position: relative;
+	.size(382px,201px);
+	background-color:#efe6bd;
+	color:#4CA395;
+	font-size: 30px;
+}

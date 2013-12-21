@@ -19,25 +19,59 @@
     <!--[if lt IE 9]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-
-    
-    <div id="startButton"><i class="fa fa-play-circle-o"></i></div>
-    <div class="main-scene">
-      <div id="warphorseWalkSlow">
+    <div class="door fullscreen">
+      <div id="loading"></div>
+      <div id="percent1"></div>
+      <div id="percent0"></div>
+    </div>
+    <div id="gameMain">
+      <div id="startButton"><i class="fa fa-play-circle-o"></i></div>
+      <div class="main-scene">
+        <!--前景背景 不动 z-index:1-->
+        <div id="beforebg"></div>
+        <!--前景动画 动 z-index:2-->
+        <div class="before-scene"></div>
+        <div id="mini-wrap">
+          
+        </div>
+        <!--马  z-index :3-->
+        <div id="warphorseWalkStop">
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      
+      <div id="timeCount">
+        <div class="title">倒计时/秒</div><br>
+        <span class="fontFace">30:00</span>
+        <div class="bar">
+            <div></div>
+            <div></div>
+        </div>
+        <div id="mainHead">
+          <b>当前排行</b>
+          <b></b>
+        </div>
+        <div id="mainranking">
+          <ul>
+          </ul>
+        </div>
+      </div>
+      <div id="count">
+        <div class="title">拍马屁/次数</div><br>
+        <span class="fontFace">0</span>
+      </div>
+      <div id="enddiv">
+        <div></div>
         <div></div>
         <div></div>
       </div>
     </div>
-    <div id="timeCount">
-      计时器:<span>60</span>
-    </div><br>
-    <div id="count">
-      点击次数:<span>0</span>
-    </div>
     <!-- build:js scripts/main.js -->
     <script src="bower_components/jquery/jquery.js"></script>
+    <script src="scripts/components.js"></script>
+    <script src="scripts/jquery.timer.js"></script>
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
-
   </body>
 </html>

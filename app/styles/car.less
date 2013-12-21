@@ -1,0 +1,280 @@
+/*
+汽车
+*/
+/*car3
+*/
+@-webkit-keyframes wrapcar_3{
+  @cell2:-410px;
+  0%{
+    background-position-x: 0;
+  }
+  9%{
+    background-position-x: @cell2;
+  }
+  18.1%{
+    background-position-x: @cell2*2;
+  }
+  27.2%{
+    background-position-x: @cell2*3;
+  }
+  36.3%{
+    background-position-x: @cell2*4;
+  }
+  45.4%{
+    background-position-x: @cell2*5;
+  }
+  54.5%{
+    background-position-x: @cell2*6;
+  }
+  63.6%{
+    background-position-x: @cell2*7;
+  }
+  72.7%{
+    background-position-x: @cell2*8;
+  }
+  81.8%{
+    background-position-x: @cell2*9;
+  }
+  90.9%{
+    background-position-x: @cell2*10;
+  }
+}
+@-webkit-keyframes wrapcar_3_head{
+ 0%{
+    top: 42.8px;
+  }
+  9%{
+    top: 41.95px;
+  }
+  18.1%{
+    top: 41.1px;
+  }
+  27.2%{
+    top: 40.3px;
+  }
+  36.3%{
+    top: 39.45px;
+  }
+  45.4%{
+    top: 38.6px;
+  }
+  54.5%{
+    top: 39.3px;
+  }
+  63.6%{
+    top: 40px;
+  }
+  72.7%{
+    top: 40.65px;
+  }
+  81.8%{
+    top: 41.35px;
+  }
+  90.9%{
+    top: 42.05px;
+  }
+}
+#wrapcar_3 {
+  .animate-cell(@w:410px,@h:310px);
+  &>div:first-child{
+    .animate-cell(@w:410px,@h:310px);
+    background: url("../images/car_3.png") repeat-x;
+    .animation(wrapcar_3 .4s step-end infinite);
+    position: absolute;z-index:2;
+  }
+  &>div:last-child{
+    .animate-cell(@w:91px,@h:155px);
+    position: absolute;
+    z-index: 1; 
+    top: 42.8px;
+    left: 98.05px;
+    background: url("../images/head_1.png") no-repeat;background-size: 80% auto;
+    .animation(wrapcar_3_head .4s step-end infinite);    
+  }
+}
+
+/*car2
+*/
+@-webkit-keyframes wrapcar_2{
+  @cell2:-410px;
+  0%{
+    background-position-x: 0;
+  }
+  9%{
+    background-position-x: @cell2;
+  }
+  18.1%{
+    background-position-x: @cell2*2;
+  }
+  27.2%{
+    background-position-x: @cell2*3;
+  }
+  36.3%{
+    background-position-x: @cell2*4;
+  }
+  45.4%{
+    background-position-x: @cell2*5;
+  }
+  54.5%{
+    background-position-x: @cell2*6;
+  }
+  63.6%{
+    background-position-x: @cell2*7;
+  }
+  72.7%{
+    background-position-x: @cell2*8;
+  }
+  81.8%{
+    background-position-x: @cell2*9;
+  }
+  90.9%{
+    background-position-x: @cell2*10;
+  }
+}
+@-webkit-keyframes wrapcar_2_head{
+ 0%{
+    top: 42.65px;
+  }
+  9%{
+    top: 42px;
+  }
+  18.1%{
+    top: 41.35px;
+  }
+  27.2%{
+    top: 40.65px;
+  }
+  36.3%{
+    top: 40px;
+  }
+  45.4%{
+    top: 39.4px;
+  }
+  54.5%{
+    top: 39.9px;
+  }
+  63.6%{
+    top: 40.45px;
+  }
+  72.7%{
+    top: 40.95px;
+  }
+  81.8%{
+    top: 41.5px;
+  }
+  90.9%{
+    top: 41.95px;
+  }
+}
+#wrapcar_2 {
+  .animate-cell(@w:410px,@h:280px);
+  &>div:first-child{
+    .animate-cell(@w:410px,@h:280px);
+    background: url("../images/car_2.png") repeat-x;
+    .animation(wrapcar_2 .4s step-end infinite);
+    position: absolute;z-index:2;
+  }
+  &>div:last-child{
+    .animate-cell(@w:91px,@h:155px);
+    position: absolute;
+    z-index: 1; 
+    top: 42.65px;
+    left: 126.6px;
+    background: url("../images/head_1.png") no-repeat;background-size: 72% auto;
+    .animation(wrapcar_2_head .4s step-end infinite);    
+  }
+}
+
+/*car1
+*/
+
+@-webkit-keyframes wrapcar_1{
+  @cell2:-410px;
+  0%{
+    background-position-x: 0;
+  }
+  9%{
+    background-position-x: @cell2;
+  }
+  18.1%{
+    background-position-x: @cell2*2;
+  }
+  27.2%{
+    background-position-x: @cell2*3;
+  }
+  36.3%{
+    background-position-x: @cell2*4;
+  }
+  45.4%{
+    background-position-x: @cell2*5;
+  }
+  54.5%{
+    background-position-x: @cell2*6;
+  }
+  63.6%{
+    background-position-x: @cell2*7;
+  }
+  72.7%{
+    background-position-x: @cell2*8;
+  }
+  81.8%{
+    background-position-x: @cell2*9;
+  }
+  90.9%{
+    background-position-x: @cell2*10;
+  }
+}
+
+@-webkit-keyframes wrapcar_1_head{
+ 0%{
+    top: 36.2px;
+  }
+  9%{
+    top: 36.9px;
+  }
+  18.1%{
+    top: 37.6px;
+  }
+  27.2%{
+    top: 38.3px;
+  }
+  36.3%{
+    top: 39px;
+  }
+  45.4%{
+    top: 39.7px;
+  }
+  54.5%{
+    top: 39px;
+  }
+  63.6%{
+    top: 38.3px;
+  }
+  72.7%{
+    top: 37.65px;
+  }
+  81.8%{
+    top: 36.95px;
+  }
+  90.9%{
+    top: 36.2px;
+  }
+}
+#wrapcar_1 {
+  .animate-cell(@w:410px,@h:280px);
+  &>div:first-child{
+    .animate-cell(@w:410px,@h:280px);
+    background: url("../images/car_1.png") repeat-x;
+    .animation(wrapcar_1 .4s step-end infinite);
+    position: absolute;z-index:2;
+  }
+  &>div:last-child{
+    .animate-cell(@w:91px,@h:155px);
+    position: absolute;
+    z-index: 1; 
+    top: 42.65px;
+    left: 126.6px;
+    background: url("../images/head_1.png") no-repeat;background-size: 72% auto;
+    .animation(wrapcar_1_head .4s step-end infinite);    
+  }
+}
