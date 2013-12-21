@@ -1,25 +1,21 @@
-@import "../bower_components/bootstrap/less/bootstrap.less";
-@icon-font-path: "../fonts/glyphicons/";
+// Core variables and mixins
+@import "../bower_components/bootstrap/less/variables.less";
+@import "../bower_components/bootstrap/less/mixins.less";
 
-@import "../bower_components/font-awesome/less/font-awesome.less";
-@fa-font-path: "../fonts/font-awesome";
+// Reset
+@import "../bower_components/bootstrap/less/normalize.less";
+@import "../bower_components/bootstrap/less/print.less";
 
-body {
-  background-color: #4CA395;
-  overflow: hidden;
-}
+// Core CSS
+@import "../bower_components/bootstrap/less/scaffolding.less";
+@import "../bower_components/bootstrap/less/type.less";
+@import "../bower_components/bootstrap/less/code.less";
+@import "../bower_components/bootstrap/less/grid.less";
+@import "../bower_components/bootstrap/less/tables.less";
+@import "../bower_components/bootstrap/less/forms.less";
+@import "../bower_components/bootstrap/less/buttons.less";
 
-#gameMain {
-  .animate-cell(100%,100%);
-  margin: auto;
-  background: url("../images/body_bg.jpg");
-}
-@cell:-449px;
-
-.animate-cell(@w:-@cell, @h:378px){
-  .size(@w, @h);
-}
-
+//个体动画定义
 @import "horse-run-fast.less";
 @import "horse-run-slow.less";
 @import "horse-walk-fast.less";
@@ -32,89 +28,242 @@ body {
 @import "ranking.less";
 @import "scroe.less";
 @import "weibofd_send.less";
-@import "weibofd_list.less";
 @import "loading.less";
-@import "2014go.less";
 @import "car.less";
 @import "bicycle.less";
 
+@cell:-449px;
+.animate-cell(@w:-@cell, @h:378px){
+  .size(@w, @h);
+}
 
-.main-scene{
-  .size(100%,100%);
-  background: url("../images/background.png");
-  height: 470px;
-  margin:auto;
-  margin-top: 205px;
-  .transition(background-position 0.2s ease-out); 
-  &>div:first-child{ 
+body {
+  background-color: #4CA395;
+  overflow: hidden;
+}
+
+.fullscreen{
+  .size(100%, 100%);
+  position:absolute;
+  .transition(all 0.3s ease-in-out);
+}
+
+//大场景转场动画定义
+.sceneTrans{
+  .transform-origin(left bottom);
+  .translate(0, 2000px)
+}
+
+// 大场景定义开始
+#Loading{
+  background-color: #4CA395; 
+  z-index:1000;
+}
+
+#Intro{
+  background:green;
+  z-index:800;
+}
+
+#Weibo{
+  background:#4CA395;
+  background:url("../images/write_bg.png") no-repeat center center rgba(76,163,149,0.5);
+  z-index:600;
+  #weibofdlist{
     .size(100%,100%);
-    position: absolute;
-    left: 0px;
-    top: 420px;
-    z-index: 1;
-    background:#fbffdc;
+    // background-color: #4CA395;
+    // position: absolute;
+    // left: 0px;
+    // bottom: 0px;
+    &>div:nth-child(1) {
+      .size(600px,90px);
+      position: absolute;
+      left: 50%;
+      margin-left:-300px; 
+      top: 50%;
+      margin-top: -250px;
+      float:left;
+      background:url("../images/weibolist_title.png") no-repeat center center;
+    }
+    &>div:nth-child(2){
+      position: absolute;
+      left: 50%;
+      top:50%;
+      margin-left: -640px;
+      margin-top: -100px;
+    }
   }
-  &>div:nth-child(2) {/*qian bei jin*/
-    height: 597px;
-    width: 9600px;
+  #leftbtn {
+    .size(38px,74px);
     position: absolute;
-    left:0px;
-    top:-120px;
-    background:url("../images/background-before.png") right center  ;
-    z-index: 66;
-    .transition(background-position .2s ease-out); 
+    left: 150px;
+    top: 50%;
+    cursor:pointer;
+    margin-top: -37px;
+    background: url("../images/left_btn.png");
   }
-  &>div:last-child{/*ma*/
+
+  #rightbtn {
+    .size(38px,74px);
     position: absolute;
+    cursor:pointer;
+    right: 150px;
+    top: 50%;
+    margin-top: -37px;
+    background: url("../images/left_btn.png");
+    .rotate(180deg);
+  }
+
+  #listHead {
+    position: absolute;
+    left: 50%;
     top:50%;
-    left:50%;
-    margin-top: -205px;
-    margin-left:-200px;
-    z-index: 88;
+    margin-left:-50px; 
+    margin-top: 240px;
+    z-index: 30;
+  }
+
+  #weiboList ul {
+    list-style:none;
+    width:1280px;
+    float:left;
+  }  
+  #weiboList li {
+    width:120px;
+    height:120px;
+    float:left;
+    text-align:center;
+    position:relative;
+  }
+  #weiboList li img {
+    width:100px;
+    height:100px;
+    position:absolute;
   }
 }
 
-#timeCount {
-  width:310px;
-  right: 50px;
-  top: 100px;
-  position: absolute;
-  z-index: 999;
-  line-height: 47px;
-  &>div:nth-child(1) {
-    width:100%;
-    text-align: right;
-    float:left;
+#Mainscene{
+  .animate-cell(100%,100%);
+  margin: auto;
+  background: url("../images/body_bg.jpg");
+  z-index:400;
+  .brandgo{
+    .rotate(-2000deg);
+    .transition(all .5s ease-in);
   }
-}
-.bar {
-  .size(100%,5px);
-  background-color: #FFF;
-  position: relative;
-  float: left;
-  &>div:first-child{
-    .size(1px,5px);
-    background-color: #67c1b3;
+  .main-scene{
+    .size(100%,100%);
+    background: url("../images/background.png");
+    height: 470px;
+    margin:auto;
+    margin-top: 205px;
+    .transition(background-position 0.2s ease-out); 
+    &>div:first-child{ 
+      .size(100%,100%);
+      position: absolute;
+      left: 0px;
+      top: 420px;
+      z-index: 1;
+      background:#fbffdc;
+    }
+    &>div:nth-child(2) {/*qian bei jin*/
+      height: 597px;
+      width: 9600px;
+      position: absolute;
+      left:0px;
+      top:-120px;
+      background:url("../images/background-before.png") right center  ;
+      z-index: 66;
+      .transition(background-position .2s ease-out); 
+    }
+    &>div:last-child{/*ma*/
+      position: absolute;
+      top:50%;
+      left:50%;
+      margin-top: -205px;
+      margin-left:-200px;
+      z-index: 88;
+    }
   }
-  &>div:last-child {
+
+  #timeCount {
+    width:310px;
+    right: 50px;
+    top: 100px;
     position: absolute;
-    top: -2px;
-    left: 0px;
-    .size(20px,9px);
-    background-color: yellow;
+    z-index: 999;
+    line-height: 47px;
+    &>div:nth-child(1) {
+      width:100%;
+      text-align: right;
+      float:left;
+    }
+  }
+  .bar {
+    .size(100%,5px);
+    background-color: #FFF;
+    position: relative;
+    float: left;
+    &>div:first-child{
+      .size(1px,5px);
+      background-color: #67c1b3;
+    }
+    &>div:last-child {
+      position: absolute;
+      top: -2px;
+      left: 0px;
+      .size(20px,9px);
+      background-color: yellow;
+    }
+  }
+  #count {
+    left: 50px;
+    top: 100px;
+    position: absolute;
+    z-index: 999;
+    &>div:first-child {
+      float:left;
+    }
+    line-height: 47px;
+  }
+  #mini-wrap{
+    position:absolute;
+    top:300px; left:0;
+    .size(9600px, 500px);
+    left:-9600px;
+    .transition(all 30s ease-out); 
+  }
+  .mini-animate{
+    position:absolute;
+    &>div:last-child{
+      img{
+        border-radius:30px;
+        max-width: 73%;
+      }
+    }
   }
 }
 
-#count {
-  left: 50px;
-  top: 100px;
-  position: absolute;
-  z-index: 999;
-  &>div:first-child {
-    float:left;
-  }
-  line-height: 47px;
+#Gameover{
+  background:white;
+  z-index:200;
 }
+// 大场景定义完毕
+
+
+
+
+#gameMain {
+  .animate-cell(100%,100%);
+  margin: auto;
+  background: url("../images/body_bg.jpg");
+}
+
+
+
+
+
+
 .fontFace{
   display: block;
   height: 70px;

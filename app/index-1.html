@@ -19,13 +19,17 @@
     <!--[if lt IE 9]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    <div class="door fullscreen">
+    
+    <div class="fullscreen" id="Loading">
       <div id="loading"></div>
       <div id="percent1"></div>
       <div id="percent0"></div>
     </div>
-    <div id="gameMain">
-      <div id="startButton"><i class="fa fa-play-circle-o"></i></div>
+    <div class="fullscreen" id="Intro">Intro</div>
+    <div class="fullscreen" id="Weibo">
+      <button class="btn btn-primary btn-lg" id="weiboBtn">登录微博授权</button>
+    </div>
+    <div class="fullscreen" id="Mainscene">
       <div class="main-scene">
         <!--前景背景 不动 z-index:1-->
         <div id="beforebg"></div>
@@ -65,11 +69,14 @@
         <div></div>
       </div>
     </div>
+    <div class="fullscreen" id="Gameover">Gameover</div>
+
+
     <!-- build:js scripts/main.js -->
     <script src="bower_components/jquery/jquery.js"></script>
     <script src="scripts/components.js"></script>
     <script src="scripts/jquery.timer.js"></script>
-    <script src="scripts/main.js"></script>
+    <script src="scripts/main-1.js"></script>
     <!-- endbuild -->
   </body>
 </html>
