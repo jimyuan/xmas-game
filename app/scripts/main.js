@@ -22,6 +22,7 @@
     rankingData:[],
     rating:["拍马屁实习生","初级马屁精","资深马屁精","马屁精指导","马屁王"],
     sendWeiboImage:"",
+    weiboBio:[],
     //游戏场景
     _m : {
       speed:function(n){// speed level 
@@ -196,11 +197,16 @@
     _street:function(){ //路人场景
       var sp=["wrapcar_1","wrapcar_2","wrapcar_3","wrapbicycle_1","wrapbicycle_2","wrapbicycle_3"];
       var rdm=0, c={};
-      sp=$.ext(sp, 10);
+      var people=10;
+      var bio=$.chaos(J.weiboBio);
+      bio.length=people;
+      sp=$.ext(sp, people);
+
       $($.chaos(sp)).each(function(x,y){
         $("#mini-wrap").append('<div class="mini-animate" id="'+y+'"><div/><div/></div>');
       });
-      $("#mini-wrap .mini-animate").each(function(){
+
+      $("#mini-wrap .mini-animate").each(function(i){
         rdm=Math.random();
         if(rdm>0.5){
           c={
@@ -214,7 +220,8 @@
             "z-index":80,
           }
         }
-        $(this).css(c).css("left",(Math.floor(9300*Math.random()))+"px");
+        $(this).css(c).css("left",(Math.floor(9600*Math.random()))+"px");
+        $(this).children(":last-child").css("backgroundImage",bio[i]);
       });
       // $("#mini-wrap").animate({"left":$(window).width()+"px"}, 30);
       $("#mini-wrap").css("left", $(window).width()+"px");
@@ -241,6 +248,11 @@
     }
     $("#weiboList ul").html(weiboListHtml);
     selectFriendList();
+    //获取并存储微博头像地址
+    $("#weiboList>ul>li a").each(function(){
+      J.weiboBio.push($(this).css("backgroundImage"));
+    });
+    J.weiboBio=$.unique(J.weiboBio);
   }
 
   function selectFriendList() {
@@ -292,7 +304,7 @@
     }
   }
 
-  function showWebiLogin() {
+  function showWebiLogin() {// 微博登录
      $.get("http://www.wangfan.com/2014/islogin.ashx",'',function(data){
         if(data.result == "success") {
           showWeiboList(data.jsonResponse);
@@ -355,7 +367,7 @@
   //     $(this).addClass("zoomOut");
   //   });
   // }();
-  var img=["num-0.png","num-1.png","num-2.png","num-3.png","num-4.png","num-5.png","num-6.png","num-7.png","num-8.png","num-9.png","loading-circle.png", "background-before.png","background.png","body_bg.jpg","body-bg-before.jpg","green_bg.png","hill_1.png","hill_2.png", "horse-fast.png","horse-slow.png","horse-walk-fast.png","horse-walk-slow.png","horse-walk-stop.png","monster-green.png", "ranking_beipai.png","ranking_bg.png","ranking_pai.png","ranking_title.png","scroe_title.png","succesMark.png","weibolist_title.png","write_bg.png"];
+  var img=["num-0.png","num-1.png","num-2.png","num-3.png","num-4.png","num-5.png","num-6.png","num-7.png","num-8.png","num-9.png","loading-circle.png", "background-before.png","background.png","body_bg.jpg","green_bg.png","hill_1.png","hill_2.png", "horse-fast.png","horse-slow.png","horse-walk-fast.png","horse-walk-slow.png","horse-walk-stop.png","monster-green.png", "ranking_beipai.png","ranking_bg.png","ranking_pai.png","ranking_title.png","scroe_title.png","succesMark.png","weibolist_title.png","write_bg.png","bicycle_1.png","bicycle_2.png","bicycle_3.png","car_1.png","car_2.png","car_3.png"];
   var cImg=[];
   var numImagesLoaded = 0;
   function incrementAndCheckLoading(){
@@ -364,7 +376,7 @@
     if(numImagesLoaded === img.length){
       $("#percent1").css("background-image","url(images/num-9.png)");
       $("#percent0").css("background-image","url(images/num-8.png)");
-      console.log("All are done!");
+      // console.log("All are done!");
       $(".door").html("");
       showWebiLogin();
       J.indexRanking();

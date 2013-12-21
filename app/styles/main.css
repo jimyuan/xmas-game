@@ -7365,24 +7365,54 @@ body {
 */
 @-webkit-keyframes horse-runhead-fast {
   0% {
-    top: 120.75px;
-    left: 275.8px;
+    top: 121.85px;
+    left: 272.9px;
+    -webkit-transform: rotate(12.7deg);
+    -ms-transform: rotate(12.7deg);
+    transform: rotate(12.7deg);
+    -webkit-transform: skew(-20deg, 4deg);
+    -ms-transform: skewX(-20deg) skewY(4deg);
+    transform: skew(-20deg, 4deg);
   }
   20% {
-    top: 125.55px;
-    left: 270.95px;
+    top: 126.65px;
+    left: 268.05px;
+    -webkit-transform: rotate(12.7deg);
+    -ms-transform: rotate(12.7deg);
+    transform: rotate(12.7deg);
+    -webkit-transform: skew(-20deg, 4deg);
+    -ms-transform: skewX(-20deg) skewY(4deg);
+    transform: skew(-20deg, 4deg);
   }
   40% {
-    top: 125.05;
-    left: 255.45px;
+    top: 126.1px;
+    left: 252.55px;
+    -webkit-transform: rotate(14deg);
+    -ms-transform: rotate(14deg);
+    transform: rotate(14deg);
+    -webkit-transform: skew(-20deg, 6deg);
+    -ms-transform: skewX(-20deg) skewY(6deg);
+    transform: skew(-20deg, 6deg);
   }
   60% {
-    top: 125.65px;
-    left: 270.95px;
+    top: 125.75px;
+    left: 271.05px;
+    -webkit-transform: rotate(12.7deg);
+    -ms-transform: rotate(12.7deg);
+    transform: rotate(12.7deg);
+    -webkit-transform: skew(-20deg, 4deg);
+    -ms-transform: skewX(-20deg) skewY(4deg);
+    transform: skew(-20deg, 4deg);
   }
   80% {
-    top: 121.25px;
-    left: 279.25px;
+    top: 122.15px;
+    left: 279.2px;
+    -webkit-transform: rotate(16.4deg);
+    -ms-transform: rotate(16.4deg);
+    transform: rotate(16.4deg);
+    -webkit-transform: skew(-20deg, 4deg);
+    -ms-transform: skewX(-20deg) skewY(4deg);
+    transform: skew(-20deg, 4deg);
   }
 }
 #warphorseRunFast {
@@ -7397,17 +7427,22 @@ body {
   -webkit-animation: horse-run-fast 0.3s step-end infinite;
   animation: horse-run-fast 0.3s step-end infinite;
   position: absolute;
-  z-index: 2;
+  z-index: 1;
 }
 #warphorseRunFast > div:last-child {
-  width: 32px;
-  height: 40px;
-  /*-webkit-transform:rotate(-10deg); */
+  width: 25px;
+  height: 25px;
   position: absolute;
-  z-index: 1;
-  top: 120.75px;
-  left: 275.8px;
-  background: url("../images/head.jpg") no-repeat;
+  z-index: 2;
+  top: 121.85px;
+  left: 272.9px;
+  -webkit-transform: rotate(12.7deg);
+  -ms-transform: rotate(12.7deg);
+  transform: rotate(12.7deg);
+  -webkit-transform: skew(-20deg, 4deg);
+  -ms-transform: skewX(-20deg) skewY(4deg);
+  transform: skew(-20deg, 4deg);
+  background: url("../images/head.jpeg") no-repeat;
   background-size: 100% auto;
   -webkit-animation: horse-runhead-fast 0.3s step-end infinite;
   animation: horse-runhead-fast 0.3s step-end infinite;
@@ -7446,36 +7481,60 @@ body {
 */
 @-webkit-keyframes horse-runhead-slow {
   0% {
-    top: 110.65px;
-    left: 253.6px;
+    top: 112.4px;
+    left: 252.75px;
+    -webkit-transform: skew(3deg, -10deg);
+    -ms-transform: skewX(3deg) skewY(-10deg);
+    transform: skew(3deg, -10deg);
   }
   12.5% {
-    top: 117.45px;
-    left: 253.6px;
+    top: 119.25px;
+    left: 252.65px;
+    -webkit-transform: skew(3deg, -10deg);
+    -ms-transform: skewX(3deg) skewY(-10deg);
+    transform: skew(3deg, -10deg);
   }
   25% {
-    top: 125.35px;
-    left: 253.6px;
+    top: 127.15px;
+    left: 252.7px;
+    -webkit-transform: skew(3deg, -10deg);
+    -ms-transform: skewX(3deg) skewY(-10deg);
+    transform: skew(3deg, -10deg);
   }
   37.5% {
-    top: 124.95px;
-    left: 246.4px;
+    top: 126.7px;
+    left: 245.55px;
+    -webkit-transform: skew(3deg, -10deg);
+    -ms-transform: skewX(3deg) skewY(-10deg);
+    transform: skew(3deg, -10deg);
   }
   50% {
-    top: 128.95px;
-    left: 233.2px;
+    top: 130.7px;
+    left: 235.35px;
+    -webkit-transform: skew(3deg, -10deg);
+    -ms-transform: skewX(3deg) skewY(-10deg);
+    transform: skew(3deg, -10deg);
   }
   62.5% {
-    top: 136.3px;
-    left: 242.15px;
+    top: 138.1px;
+    left: 247.4px;
+    -webkit-transform: skew(-1.2deg, -13.8deg);
+    -ms-transform: skewX(-1.2deg) skewY(-13.8deg);
+    transform: skew(-1.2deg, -13.8deg);
   }
   75% {
-    top: 134.95px;
-    left: 252.8px;
+    top: 136.7px;
+    left: 256.9px;
+    -webkit-transform: skew(3deg, -10deg);
+    -ms-transform: skewX(3deg) skewY(-10deg);
+    transform: skew(3deg, -10deg);
   }
   87.5% {
-    top: 124.95px;
-    left: 252.8px;
+    top: 126.7px;
+    left: 255.9px;
+    -webkit-transform: skew(3deg, -10deg);
+    -ms-transform: skewX(3deg) skewY(-10deg);
+    transform: skew(3deg, -10deg);
   }
 }
 #warphorseRunSlow {
@@ -7490,16 +7549,19 @@ body {
   -webkit-animation: horse-run-slow 0.6s step-end infinite;
   animation: horse-run-slow 0.6s step-end infinite;
   position: absolute;
-  z-index: 2;
+  z-index: 1;
 }
 #warphorseRunSlow > div:last-child {
-  width: 32px;
-  height: 40px;
+  width: 25px;
+  height: 25px;
   position: absolute;
-  z-index: 1;
-  top: 110.65px;
-  left: 253.6px;
-  background: url("../images/head.jpg") no-repeat;
+  z-index: 2;
+  top: 112.4px;
+  left: 252.75px;
+  -webkit-transform: skew(3deg, -10deg);
+  -ms-transform: skewX(3deg) skewY(-10deg);
+  transform: skew(3deg, -10deg);
+  background: url("../images/head.jpeg") no-repeat;
   background-size: 100% auto;
   -webkit-animation: horse-runhead-slow 0.6s step-end infinite;
   animation: horse-runhead-slow 0.6s step-end infinite;
@@ -7544,44 +7606,74 @@ body {
 */
 @-webkit-keyframes horse-walkhead-fast {
   0% {
-    top: 123.5px;
-    left: 249.55px;
+    top: 125.15px;
+    left: 248.5px;
+    -webkit-transform: skew(-5deg, -6deg);
+    -ms-transform: skewX(-5deg) skewY(-6deg);
+    transform: skew(-5deg, -6deg);
   }
   10% {
-    top: 126.6px;
-    left: 258.8px;
+    top: 128.35px;
+    left: 257.75px;
+    -webkit-transform: skew(-6deg, -5deg);
+    -ms-transform: skewX(-6deg) skewY(-5deg);
+    transform: skew(-6deg, -5deg);
   }
   20% {
-    top: 127.4px;
-    left: 263.15px;
+    top: 129.1px;
+    left: 262.1px;
+    -webkit-transform: skew(-6deg, -5deg);
+    -ms-transform: skewX(-6deg) skewY(-5deg);
+    transform: skew(-6deg, -5deg);
   }
   30% {
-    top: 134.8px;
-    left: 257.95px;
+    top: 136.55px;
+    left: 257px;
+    -webkit-transform: skew(-3deg, -8deg);
+    -ms-transform: skewX(-3deg) skewY(-8deg);
+    transform: skew(-3deg, -8deg);
   }
   40% {
-    top: 136.35px;
-    left: 244.7px;
+    top: 138.15px;
+    left: 243.85px;
+    -webkit-transform: skew(0deg, -11deg);
+    -ms-transform: skewX(0deg) skewY(-11deg);
+    transform: skew(0deg, -11deg);
   }
   50% {
-    top: 123.5px;
-    left: 249.55px;
+    top: 125.2px;
+    left: 248.55px;
+    -webkit-transform: skew(-5deg, -6deg);
+    -ms-transform: skewX(-5deg) skewY(-6deg);
+    transform: skew(-5deg, -6deg);
   }
   60% {
-    top: 126.6px;
-    left: 258.8px;
+    top: 128.35px;
+    left: 257.8px;
+    -webkit-transform: skew(-6deg, -5deg);
+    -ms-transform: skewX(-6deg) skewY(-5deg);
+    transform: skew(-6deg, -5deg);
   }
   70% {
-    top: 127.4px;
-    left: 263.15px;
+    top: 129.1px;
+    left: 262.1px;
+    -webkit-transform: skew(-7deg, -5deg);
+    -ms-transform: skewX(-7deg) skewY(-5deg);
+    transform: skew(-7deg, -5deg);
   }
   80% {
-    top: 134.8px;
-    left: 257.9px;
+    top: 136.55px;
+    left: 256.95px;
+    -webkit-transform: skew(-3deg, -8deg);
+    -ms-transform: skewX(-3deg) skewY(-8deg);
+    transform: skew(-3deg, -8deg);
   }
   90% {
-    top: 136.35px;
-    left: 244.7px;
+    top: 138.15px;
+    left: 243.85px;
+    -webkit-transform: skew(0deg, -11deg);
+    -ms-transform: skewX(0deg) skewY(-11deg);
+    transform: skew(0deg, -11deg);
   }
 }
 #warphorseWalkFast {
@@ -7596,16 +7688,19 @@ body {
   -webkit-animation: horse-walk-fast 0.6s step-end infinite;
   animation: horse-walk-fast 0.6s step-end infinite;
   position: absolute;
-  z-index: 2;
+  z-index: 1;
 }
 #warphorseWalkFast > div:last-child {
-  width: 32px;
-  height: 40px;
+  width: 25px;
+  height: 25px;
   position: absolute;
-  z-index: 1;
-  top: 123.5px;
-  left: 249.55px;
-  background: url("../images/head.jpg") no-repeat;
+  z-index: 2;
+  top: 125.15px;
+  left: 248.5px;
+  -webkit-transform: skew(5deg, -6deg);
+  -ms-transform: skewX(5deg) skewY(-6deg);
+  transform: skew(5deg, -6deg);
+  background: url("../images/head.jpeg") no-repeat;
   background-size: 100% auto;
   -webkit-animation: horse-walkhead-fast 0.6s step-end infinite;
   animation: horse-walkhead-fast 0.6s step-end infinite;
@@ -7653,52 +7748,88 @@ body {
 */
 @-webkit-keyframes horse-walkhead-slow {
   0% {
-    top: 136.2px;
-    left: 245.55px;
+    top: 137.95px;
+    left: 244.6px;
+    -webkit-transform: skew(-6deg, -5deg);
+    -ms-transform: skewX(-6deg) skewY(-5deg);
+    transform: skew(-6deg, -5deg);
   }
   8.3% {
-    top: 135.9px;
-    left: 237.65px;
+    top: 137.65px;
+    left: 236.75px;
+    -webkit-transform: skew(-1deg, -10deg);
+    -ms-transform: skewX(-1deg) skewY(-10deg);
+    transform: skew(-1deg, -10deg);
   }
   16.6% {
-    top: 136px;
-    left: 233.05px;
+    top: 137.85px;
+    left: 232.3px;
+    -webkit-transform: skew(-1deg, -13deg);
+    -ms-transform: skewX(-1deg) skewY(-13deg);
+    transform: skew(-1deg, -13deg);
   }
   25% {
-    top: 136.2px;
-    left: 231.4px;
+    top: 138.05px;
+    left: 230.65px;
+    -webkit-transform: skew(2deg, -14deg);
+    -ms-transform: skewX(2deg) skewY(-14deg);
+    transform: skew(2deg, -14deg);
   }
   33.3% {
-    top: 136.1px;
-    left: 233px;
+    top: 137.95px;
+    left: 232.25px;
+    -webkit-transform: skew(1deg, -13deg);
+    -ms-transform: skewX(1deg) skewY(-13deg);
+    transform: skew(1deg, -13deg);
   }
   41.6% {
-    top: 136.05px;
-    left: 237.6px;
+    top: 137.85px;
+    left: 236.75px;
+    -webkit-transform: skew(-2deg, -10deg);
+    -ms-transform: skewX(-2deg) skewY(-10deg);
+    transform: skew(-2deg, -10deg);
   }
   50% {
-    top: 136.2px;
-    left: 245.55px;
+    top: 137.9px;
+    left: 244.55px;
+    -webkit-transform: skew(-6deg, -5deg);
+    -ms-transform: skewX(-6deg) skewY(-5deg);
+    transform: skew(-6deg, -5deg);
   }
   58.3% {
-    top: 135.9px;
-    left: 237.6px;
+    top: 137.7px;
+    left: 236.75px;
+    -webkit-transform: skew(-2deg, -10deg);
+    -ms-transform: skewX(-2deg) skewY(-10deg);
+    transform: skew(-2deg, -10deg);
   }
   66.7% {
-    top: 136px;
-    left: 233.05px;
+    top: 137.85px;
+    left: 232.25px;
+    -webkit-transform: skew(1deg, -13deg);
+    -ms-transform: skewX(1deg) skewY(-13deg);
+    transform: skew(1deg, -13deg);
   }
   75% {
-    top: 136.2px;
-    left: 231.4px;
+    top: 138.05px;
+    left: 230.65px;
+    -webkit-transform: skew(2deg, -14deg);
+    -ms-transform: skewX(2deg) skewY(-14deg);
+    transform: skew(2deg, -14deg);
   }
   83.3% {
-    top: 136.45px;
-    left: 234.05px;
+    top: 138.3px;
+    left: 233.3px;
+    -webkit-transform: skew(1deg, -12deg);
+    -ms-transform: skewX(1deg) skewY(-12deg);
+    transform: skew(1deg, -12deg);
   }
   91.6% {
-    top: 137.65px;
-    left: 242.75px;
+    top: 139.45px;
+    left: 233.8px;
+    -webkit-transform: skew(-4deg, -12deg);
+    -ms-transform: skewX(-4deg) skewY(-12deg);
+    transform: skew(-4deg, -12deg);
   }
 }
 #warphorseWalkSlow {
@@ -7713,16 +7844,19 @@ body {
   -webkit-animation: horse-walk-slow 0.6s step-end infinite;
   animation: horse-walk-slow 0.6s step-end infinite;
   position: absolute;
-  z-index: 2;
+  z-index: 1;
 }
 #warphorseWalkSlow > div:last-child {
-  width: 32px;
-  height: 40px;
+  width: 25px;
+  height: 25px;
   position: absolute;
-  z-index: 1;
-  top: 136.2px;
-  left: 245.55px;
-  background: url("../images/head.jpg") no-repeat;
+  z-index: 2;
+  top: 137.95px;
+  left: 244.6px;
+  -webkit-transform: skew(-6deg, -5deg);
+  -ms-transform: skewX(-6deg) skewY(-5deg);
+  transform: skew(-6deg, -5deg);
+  background: url("../images/head.jpeg") no-repeat;
   background-size: 100% auto;
   -webkit-animation: horse-walkhead-slow 0.6s step-end infinite;
   animation: horse-walkhead-slow 0.6s step-end infinite;
@@ -7807,6 +7941,161 @@ body {
     background-position-x: -9600px;
   }
 }
+/*
+快跑头像动画
+*/
+@-webkit-keyframes horse-walkhead-stop {
+  0% {
+    top: 138.2px;
+    -webkit-transform: skew(-5deg, -6deg);
+    -ms-transform: skewX(-5deg) skewY(-6deg);
+    transform: skew(-5deg, -6deg);
+  }
+  4% {
+    top: 138.25px;
+    -webkit-transform: skew(-5deg, -6deg);
+    -ms-transform: skewX(-5deg) skewY(-6deg);
+    transform: skew(-5deg, -6deg);
+  }
+  8% {
+    top: 138.3px;
+    -webkit-transform: skew(-5deg, -6deg);
+    -ms-transform: skewX(-5deg) skewY(-6deg);
+    transform: skew(-5deg, -6deg);
+  }
+  12% {
+    top: 138.5px;
+    -webkit-transform: skew(-5deg, -6deg);
+    -ms-transform: skewX(-5deg) skewY(-6deg);
+    transform: skew(-5deg, -6deg);
+  }
+  16% {
+    top: 138.75px;
+    -webkit-transform: skew(-5deg, -6deg);
+    -ms-transform: skewX(-5deg) skewY(-6deg);
+    transform: skew(-5deg, -6deg);
+  }
+  20% {
+    top: 139.25px;
+    -webkit-transform: skew(-5deg, -6deg);
+    -ms-transform: skewX(-5deg) skewY(-6deg);
+    transform: skew(-5deg, -6deg);
+  }
+  24% {
+    top: 139.7px;
+    -webkit-transform: skew(-5deg, -6deg);
+    -ms-transform: skewX(-5deg) skewY(-6deg);
+    transform: skew(-5deg, -6deg);
+  }
+  28% {
+    top: 140.15px;
+    -webkit-transform: skew(-5deg, -6deg);
+    -ms-transform: skewX(-5deg) skewY(-6deg);
+    transform: skew(-5deg, -6deg);
+  }
+  32% {
+    top: 140.5px;
+    -webkit-transform: skew(-5deg, -6deg);
+    -ms-transform: skewX(-5deg) skewY(-6deg);
+    transform: skew(-5deg, -6deg);
+  }
+  36% {
+    top: 140.7px;
+    -webkit-transform: skew(-5deg, -6deg);
+    -ms-transform: skewX(-5deg) skewY(-6deg);
+    transform: skew(-5deg, -6deg);
+  }
+  40% {
+    top: 140.85px;
+    -webkit-transform: skew(-5deg, -6deg);
+    -ms-transform: skewX(-5deg) skewY(-6deg);
+    transform: skew(-5deg, -6deg);
+  }
+  44% {
+    top: 140.9px;
+    -webkit-transform: skew(-5deg, -6deg);
+    -ms-transform: skewX(-5deg) skewY(-6deg);
+    transform: skew(-5deg, -6deg);
+  }
+  48% {
+    top: 140.85px;
+    -webkit-transform: skew(-5deg, -6deg);
+    -ms-transform: skewX(-5deg) skewY(-6deg);
+    transform: skew(-5deg, -6deg);
+  }
+  52% {
+    top: 140.8px;
+    -webkit-transform: skew(-5deg, -6deg);
+    -ms-transform: skewX(-5deg) skewY(-6deg);
+    transform: skew(-5deg, -6deg);
+  }
+  56% {
+    top: 140.7px;
+    -webkit-transform: skew(-5deg, -6deg);
+    -ms-transform: skewX(-5deg) skewY(-6deg);
+    transform: skew(-5deg, -6deg);
+  }
+  60% {
+    top: 140.5px;
+    -webkit-transform: skew(-5deg, -6deg);
+    -ms-transform: skewX(-5deg) skewY(-6deg);
+    transform: skew(-5deg, -6deg);
+  }
+  64% {
+    top: 140.25px;
+    -webkit-transform: skew(-5deg, -6deg);
+    -ms-transform: skewX(-5deg) skewY(-6deg);
+    transform: skew(-5deg, -6deg);
+  }
+  68% {
+    top: 139.85px;
+    -webkit-transform: skew(-5deg, -6deg);
+    -ms-transform: skewX(-5deg) skewY(-6deg);
+    transform: skew(-5deg, -6deg);
+  }
+  72% {
+    top: 139.45px;
+    -webkit-transform: skew(-5deg, -6deg);
+    -ms-transform: skewX(-5deg) skewY(-6deg);
+    transform: skew(-5deg, -6deg);
+  }
+  76% {
+    top: 139px;
+    -webkit-transform: skew(-5deg, -6deg);
+    -ms-transform: skewX(-5deg) skewY(-6deg);
+    transform: skew(-5deg, -6deg);
+  }
+  80% {
+    top: 138.7px;
+    -webkit-transform: skew(-5deg, -6deg);
+    -ms-transform: skewX(-5deg) skewY(-6deg);
+    transform: skew(-5deg, -6deg);
+  }
+  84% {
+    top: 138.45px;
+    -webkit-transform: skew(-5deg, -6deg);
+    -ms-transform: skewX(-5deg) skewY(-6deg);
+    transform: skew(-5deg, -6deg);
+  }
+  88% {
+    top: 138.3px;
+    -webkit-transform: skew(-5deg, -6deg);
+    -ms-transform: skewX(-5deg) skewY(-6deg);
+    transform: skew(-5deg, -6deg);
+  }
+  92% {
+    top: 138.2px;
+    -webkit-transform: skew(-5deg, -6deg);
+    -ms-transform: skewX(-5deg) skewY(-6deg);
+    transform: skew(-5deg, -6deg);
+  }
+  96% {
+    top: 138.2px;
+    -webkit-transform: skew(-5deg, -6deg);
+    -ms-transform: skewX(-5deg) skewY(-6deg);
+    transform: skew(-5deg, -6deg);
+  }
+}
 #warphorseWalkStop {
   width: 400px;
   height: 410px;
@@ -7816,20 +8105,25 @@ body {
   width: 400px;
   height: 410px;
   background: url("../images/horse-walk-stop.png") repeat-x;
-  -webkit-animation: horse-walk-stop 2s step-end infinite;
-  animation: horse-walk-stop 2s step-end infinite;
-  position: absolute;
-  z-index: 2;
-}
-#warphorseWalkStop > div:last-child {
-  width: 32px;
-  height: 40px;
+  -webkit-animation: horse-walk-stop 1.5s step-end infinite;
+  animation: horse-walk-stop 1.5s step-end infinite;
   position: absolute;
   z-index: 1;
-  top: 136.55px;
-  left: 254.55px;
-  background: url("../images/head.jpg") no-repeat;
+}
+#warphorseWalkStop > div:last-child {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  z-index: 2;
+  top: 138.2px;
+  left: 254px;
+  -webkit-transform: skew(-5deg, -6deg);
+  -ms-transform: skewX(-5deg) skewY(-6deg);
+  transform: skew(-5deg, -6deg);
+  background: url("../images/head.jpeg") no-repeat;
   background-size: 100% auto;
+  -webkit-animation: horse-walkhead-stop 1.5s step-end infinite;
+  animation: horse-walkhead-stop 1.5s step-end infinite;
 }
 /*
   黄毛怪
