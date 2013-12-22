@@ -4818,8 +4818,8 @@ body {
   width: 9600px;
   height: 500px;
   left: -9600px;
-  -webkit-transition: all 30s ease-out;
-  transition: all 30s ease-out;
+  -webkit-transition: left 0.2s ease-out;
+  transition: left 0.2s ease-out;
 }
 #Mainscene .mini-animate {
   position: absolute;

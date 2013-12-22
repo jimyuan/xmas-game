@@ -205,7 +205,7 @@
           J.weiboBio.push(biourl.slice(4, biourl.length-1));
         });
         J.weiboBio=$.unique(J.weiboBio);
-        // console.log(J.weiboBio)
+        console.log(J.weiboListData)
       };
 
       var selectFriendList=function() {
@@ -268,8 +268,18 @@
       }
 
       var scrollBg=function (speed) {
+        var streetStep=(9600+$(window).width())/350;
+
         J.mainScene.css("background-position", "+="+speed*50);
         J.beforeScene.css("background-position", "+="+speed*250);
+        if(speed===0){
+          $("#mini-wrap").css("left", "-="+streetStep+"px");
+        }
+        else{
+          $("#mini-wrap").css("left", "+="+streetStep+"px");
+        }
+        
+        console.log(speed)
       }
 
       var run=function (speed) {
@@ -346,7 +356,7 @@
           // $(this).children(":last-child").css("backgroundImage",bio[i]);
           $(this).children(":last-child").append('<img src="'+bio[i]+'">');
         });
-        $("#mini-wrap").css("left", $(window).width()+"px");
+        // $("#mini-wrap").css("left", $(window).width()+"px");
       };
       return mainscene;
     }
@@ -397,40 +407,8 @@
         $("#score_count span").text(J.count);
         $('#scroe_rating').text(setRating());
 
-        $("#scroe_open_ranking").on("click", openRankingWindow);
-        $("#weiboBtn").on("click",openSendWeiboWindow);
-      };
-
-      var openRankingWindow=function () {//游戏排行榜
-        show($("#Gameover"),'ranking','ranking',initRankingData,true);
-      };
-      var initRankingData=function() {
-        var rankpaihtml="";
-        $('#ranking_pai ul').html("");
-        var rankbeipaihtml="";
-        $('#ranking_beipai ul').html("");
-        for(var i=0; i < 5; i++) {
-          rankpaihtml +="<li><div><b>NO."+(i+1)+"</b><br><b>"+J.rankingData[0].pai[i].score+"次</b></div><div><b class='ranking_head_img' style='background:url("+J.rankingData[0].pai[i].avatar+") no-repeat center center; background-size:100% auto;'></b><b class='ranking_u_name'>"+J.rankingData[0].pai[i].name+"</b></div></li>";
-          rankbeipaihtml +="<li><div><b>NO."+(i+1)+"</b><br><b>"+J.rankingData[0].beipai[i].score+"次</b></div><div><b class='ranking_head_img' style='background:url("+J.rankingData[0].beipai[i].avatar+") no-repeat center center;  background-size:100% auto;'></b><b class='ranking_u_name'>"+J.rankingData[0].beipai[i].name+"</b></div></li>"
-        }
-        $('#ranking_pai ul').html(rankpaihtml);
-        $('#ranking_beipai ul').html(rankbeipaihtml);
-      };
-
-      var openSendWeiboWindow=function () {//发送微博
-        show($("#Gameover"),'weibofd_send','weiboSend',sendWeibo,true);
-      };
-      var sendWeibo=function () {
-        $('#weibosendimage').css("backgroundImage","url(http://www.wangfan.com/2014/"+J.sendWeiboImage+")");
-        $("#sendWeibobtn").on("click",function (){
-          console.log($(".weibosendcontent").val(),J.weibosendimage);
-           $.post("http://www.wangfan.com/2014/share.ashx", {content:$(".weibosendcontent").val(),pic:J.sendWeiboImage},
-           function(data){
-              if(data.result ==="success") {
-                $('#oppbox').remove();
-              }
-           },"jsonp");
-        });
+        $("#scroe_open_ranking").on("click", Ranking.createNew().begin);
+        $("#weiboBtn").on("click",ShareWB.createNew().begin);
       };
 
       var setRating=function(){
@@ -456,6 +434,60 @@
       return gameover;
     }
   };
+
+  var Ranking={
+    createNew:function(){
+      var ranking={}, c1=Common.createNew();
+      ranking.begin=function(){
+        Common.createNew().transformSence("#Ranking");
+        openRankingWindow();
+      }
+      var openRankingWindow=function () {//游戏排行榜
+        c1.show($("#Ranking"),'ranking','ranking',initRankingData,true);
+      };
+      var initRankingData=function() {
+        var rankpaihtml="";
+        $('#ranking_pai ul').html("");
+        var rankbeipaihtml="";
+        $('#ranking_beipai ul').html("");
+        for(var i=0; i < 5; i++) {
+          rankpaihtml +="<li><div><b>NO."+(i+1)+"</b><br><b>"+J.rankingData[0].pai[i].score+"次</b></div><div><b class='ranking_head_img' style='background:url("+J.rankingData[0].pai[i].avatar+") no-repeat center center; background-size:100% auto;'></b><b class='ranking_u_name'>"+J.rankingData[0].pai[i].name+"</b></div></li>";
+          rankbeipaihtml +="<li><div><b>NO."+(i+1)+"</b><br><b>"+J.rankingData[0].beipai[i].score+"次</b></div><div><b class='ranking_head_img' style='background:url("+J.rankingData[0].beipai[i].avatar+") no-repeat center center;  background-size:100% auto;'></b><b class='ranking_u_name'>"+J.rankingData[0].beipai[i].name+"</b></div></li>"
+        }
+        $('#ranking_pai ul').html(rankpaihtml);
+        $('#ranking_beipai ul').html(rankbeipaihtml);
+      };
+      return ranking;
+    }
+  }
+
+  var ShareWB={
+    createNew:function(){
+      var sharewb={}, c1=Common.createNew();
+      sharewb.begin=function(){
+        Common.createNew().transformSence("#ShareWB");
+        openSendWeiboWindow();
+      }
+
+      var openSendWeiboWindow=function () {//发送微博
+        c1.show($("#ShareWB"),'weibofd_send','weiboSend',sendWeibo,true);
+      };
+      var sendWeibo=function () {
+        $('#weibosendimage').css("backgroundImage","url(http://www.wangfan.com/2014/"+J.sendWeiboImage+")");
+        $("#sendWeibobtn").on("click",function (){
+          // console.log($(".weibosendcontent").val(),J.weibosendimage);
+          $.post("http://www.wangfan.com/2014/share.ashx", 
+          {content:$(".weibosendcontent").val(),pic:J.sendWeiboImage},
+          function(data){
+            if(data.result ==="success") {
+              $('#ShareWB').html("");
+            }
+          },"jsonp");
+        });
+      };
+      return sharewb;
+    }
+  }
 
   var Init=function(){
       Common.createNew().size($("body"), $(window).width(), $(window).height());
