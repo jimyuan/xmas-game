@@ -283,6 +283,42 @@ body {
       }
     }
   }
+  #fireworks {
+    .animate-cell(@w:150px,@h:150px);
+    background: url("../images/fireworks.png") repeat-x;
+    background-position: 450px;
+    position: absolute; 
+    top:50%; left:50%;
+    z-index:90;
+    margin-left:60px; margin-top:-40px;
+    .animation(fire-works .3s step-end 1 forwards);
+  }
+
+  .startFire{
+  }
+
+  @-webkit-keyframes fire-works{
+    @cell2:150px;
+    /*0%{
+      background-position-x: 0;
+    }
+    16.7%{
+      background-position-x: @cell2;
+    }*/
+    33.3%{
+      background-position-x: @cell2*2;
+    }
+    50%{
+      background-position-x: @cell2*3;
+    }
+    66.7%{
+      background-position-x: @cell2*4;
+    }
+    /*83.3%{
+      background-position-x: @cell2*5;
+    }*/
+  }
+
 }
 
 #Gameover{
@@ -534,32 +570,3 @@ body {
   // display:none
 }
 
-#fireworks {
-    .animate-cell(@w:150px,@h:150px);
-    background: url("../images/fireworks.png") repeat-x;
-    .animation(fire-works .3s step-end infinite);
-    position: absolute; z-index: 1; 
-}
-
-@-webkit-keyframes fire-works{
-  @cell2:150px;
-  0%{
-    background-position-x: 0;
-  }
-  16.7%{
-    background-position-x: @cell2;
-  }
-  33.3%{
-    background-position-x: @cell2*2;
-  }
-  50%{
-    background-position-x: @cell2*3;
-  }
-  66.7%{
-    background-position-x: @cell2*4;
-  }
-
-  83.3%{
-    background-position-x: @cell2*5;
-  }
-}

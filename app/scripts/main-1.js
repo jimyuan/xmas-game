@@ -2,7 +2,7 @@
   var J = {
     timeStamp:0,
     count:0,
-    currTime:3*1000,
+    currTime:.3*1000,
     incrementTime:70,
     mainScene:$(".main-scene"),
     beforeScene:$(".before-scene"),
@@ -92,7 +92,7 @@
       loading.begin=function(){
         //调取Loading场景
         Common.createNew().transformSence("#Loading");
-        this.picPreLoad();
+        loading.picPreLoad();
       };
       loading.picPreLoad=function(){
         var img=J.preLoad, cImg=[], numImagesLoaded=0
@@ -251,7 +251,7 @@
         c1.transformSence("#Oauthor");
         $("#Mainscene").removeClass("sceneTrans");
         seeTips();
-        // showWebiLogin();
+        showWebiLogin();
       };
       var seeTips=function(){
         $("#Oauthor div:first-child").css("top", 0).nextAll().css("bottom", 0);
@@ -281,7 +281,19 @@
         if(arguments[0]){
           gameStart(arguments[0]);
         }
+        paiSound();
       };
+
+      var paiSound=function(){
+        var snd=document.getElementById("pai-sound")
+        $(document).on("keydown.playsound", function(){
+          snd.play();
+          $("#fireworks").show();
+        }).on("keyup.playsound", function(){
+          snd.currentTime=0;
+          $("#fireworks").hide();
+        });
+      }
 
       var speed=function(n){// speed level 
         var level=[100,150,600,1000];
@@ -320,14 +332,16 @@
         },1000);
         J._timer.init();
         J.timeStamp=e.timeStamp;
-        $(document).bind("keyup",keyUphandler);
+        $(document).on("keyup.startGame",keyUphandler);
         street();
       };
 
       mainscene.gameOver=function () {
         //game over
-        $(document).unbind("keyup",J._keyUphandler);
+        $(document).off(".startGame");
+        $(document).off(".playsound");
         J.stopwatch.text("00:00");
+        J.currentTime=3*1000;
         console.log("游戏结束");
         Gameover.createNew().begin();
       }
@@ -428,6 +442,7 @@
         $('#scroe_rating').text(setRating());
 
         $("#scroe_open_ranking").on("click", Ranking.createNew().begin);
+        $("#scroe_play_again").on("click", Loading.createNew().begin);
         $("#weiboBtn").on("click",ShareWB.createNew().begin);
       };
 
@@ -511,7 +526,7 @@
 
   var Init=function(){
       Common.createNew().size($("body"), $(window).width(), $(window).height());
-      Oauthor.createNew().begin();
+      Loading.createNew().begin();
   }; 
   //初始化函数
   Init();

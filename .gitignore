@@ -26,4 +26,4 @@ dist
 .tmp
 app/bower_components
 app/styles/main.css
-app/styles/mian.css.map
+app/styles/main.css.map
