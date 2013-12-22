@@ -147,9 +147,9 @@
       var weibo={};
       weibo.begin=function(){
         Common.createNew().transformSence("#Weibo");
-        showWebiLogin();
+        showWeiboList();
       };
-      var showWebiLogin=function(){
+      /*var showWebiLogin=function(){
         $.get("http://www.wangfan.com/2014/islogin.ashx",'',function(data){
           if(data.result == "success") {
             showWeiboList(data.jsonResponse);
@@ -160,7 +160,7 @@
             });
           }
         },"jsonp");
-      };
+      };*/
 
       var showWeiboList=function(_own) {
         J._self = _own;
@@ -243,6 +243,34 @@
       return weibo;
     }
   };
+
+  var Oauthor={
+    createNew:function(){
+      var oauthor={}, c1=Common.createNew();
+      oauthor.begin=function(){
+        c1.transformSence("#Oauthor");
+        $("#Mainscene").removeClass("sceneTrans");
+        seeTips();
+        // showWebiLogin();
+      };
+      var seeTips=function(){
+        $("#Oauthor div:first-child").css("top", 0).nextAll().css("bottom", 0);
+      }
+      var showWebiLogin=function(){
+        $.get("http://www.wangfan.com/2014/islogin.ashx",'',function(data){
+          if(data.result == "success") {
+            Weibo.createNew().begin();
+          } 
+          else {
+            $("#Oauthor div:last-child").on("click" ,function (e){
+              window.open('http://www.wangfan.com/2014/login.aspx','newwindow','height=240,width=480,top=0,left=0,toolbar=no,menubar=no,scrollbars=no,resizable=no,location=no,status=no');
+            });
+          }
+        },"jsonp");
+      };
+      return oauthor;
+    }
+  }
 
   var Mainscene={
     createNew:function(){
@@ -483,7 +511,7 @@
 
   var Init=function(){
       Common.createNew().size($("body"), $(window).width(), $(window).height());
-      Loading.createNew().begin();
+      Oauthor.createNew().begin();
   }; 
   //初始化函数
   Init();

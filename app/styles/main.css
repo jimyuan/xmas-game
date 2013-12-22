@@ -4714,6 +4714,51 @@ body {
   height: 100px;
   position: absolute;
 }
+@-webkit-keyframes cs {
+  0% {
+    background-position-x: 0px;
+  }
+  100% {
+    background-position-x: 695px;
+  }
+}
+#Oauthor {
+  z-index: 500;
+}
+#Oauthor > div:first-child {
+  position: absolute;
+  width: 641px;
+  height: 510px;
+  background: url(../images/gametitle.png);
+  top: -1000px;
+  left: 50%;
+  margin-left: -320px;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+}
+#Oauthor > div:nth-child(2) {
+  position: absolute;
+  width: 695px;
+  height: 463px;
+  background: url("../images/click-space-0.png");
+  bottom: -1000px;
+  left: 50%;
+  margin-left: -347.5px;
+  -webkit-transition: bottom 0.5s ease-in;
+  transition: bottom 0.5s ease-in;
+}
+#Oauthor > div:last-child {
+  -webkit-animation: cs 0.3s step-end infinite;
+  animation: cs 0.3s step-end infinite;
+  width: 695px;
+  height: 463px;
+  position: absolute;
+  background: url("../images/click-space-2.png") repeat-x;
+  bottom: 0px;
+  left: 50%;
+  margin-left: -347.5px;
+  cursor: pointer;
+}
 #Mainscene {
   width: 100%;
   height: 100%;
@@ -4825,11 +4870,17 @@ body {
   position: absolute;
 }
 #Mainscene .mini-animate > div:last-child img {
-  max-width: 73%;
+  max-width: 83%;
 }
 #Gameover {
   background: white;
   z-index: 200;
+}
+#Ranking {
+  z-index: 100;
+}
+#ShareWB {
+  z-index: 100;
 }
 #gameMain {
   width: 100%;

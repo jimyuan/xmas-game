@@ -142,6 +142,44 @@ body {
   }
 }
 
+@-webkit-keyframes cs{
+  0%{
+     background-position-x: 0px;
+  }
+  100%{
+     background-position-x: 695px;
+  }
+}
+#Oauthor{
+  z-index: 500;
+  &>div:first-child{
+    position:absolute;;
+    .size(641px, 510px);
+    background:url(../images/gametitle.png);
+    top:-1000px; left:50%;
+    margin-left: -640px/2;
+    .transition(all .5s ease-in);
+  }
+  &>div:nth-child(2){
+    position:absolute;;
+    .size(695px, 463px);
+    background:url("../images/click-space-0.png");
+    bottom:-1000px; left:50%;
+    margin-left:-695px/2;
+    .transition(bottom .5s ease-in);
+
+  }
+  &>div:last-child{
+    .animation(cs .3s step-end infinite);
+    .size(695px, 463px);
+    position:absolute;;
+    background:url("../images/click-space-2.png") repeat-x;
+    bottom:0px; left:50%;
+    margin-left:-695px/2;
+    cursor:pointer;
+  }
+}
+
 #Mainscene{
   .animate-cell(100%,100%);
   margin: auto;
@@ -238,7 +276,7 @@ body {
     &>div:last-child{
       img{
         // border-radius:30px;
-        max-width: 73%;
+        max-width: 83%;
       }
     }
   }
@@ -248,6 +286,15 @@ body {
   background:white;
   z-index:200;
 }
+
+#Ranking{
+  z-index: 100;
+}
+
+#ShareWB{
+  z-index: 100;
+}
+
 // 大场景定义完毕
 
 
