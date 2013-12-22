@@ -3951,10 +3951,11 @@ input[type="button"].btn-block {
   width: 150px;
   height: 150px;
   float: right;
-  margin-top: 18px;
+  margin-top: 20px;
 }
 #scroe > div:nth-child(3) > div:last-child > div:nth-child(1) {
   font-size: 24px;
+  color: red;
 }
 #scroe > div:nth-child(3) > div:last-child > div:nth-child(2) {
   color: #4CA395;
@@ -3968,33 +3969,47 @@ input[type="button"].btn-block {
   color: #4CA395;
   font-size: 20px;
 }
-#scroe > div:nth-child(4) {
-  width: 350px;
+#scroe > div:nth-child(3) > div:last-child > div:nth-child(5) {
+  width: 240px;
+  margin-top: 25px;
   position: absolute;
-  left: 50%;
-  margin-left: -175px;
-  top: 450px;
-  z-index: 20;
-  color: #4CA395;
-  font-size: 24px;
 }
-#scroe > div:nth-child(4) > div:nth-child(1) {
+#scroe > div:nth-child(3) > div:last-child > div:nth-child(5) > div:nth-child(1) {
   float: left;
+  color: #4CA395;
+  font-size: 20px;
 }
-#scroe > div:nth-child(4) > div:nth-child(2) {
-  margin-left: 200px;
-  margin-top: -15px;
+#scroe > div:nth-child(3) > div:last-child > div:nth-child(5) > img:nth-child(2) {
+  float: right;
+  margin-top: -20px;
 }
-#scroe > div:nth-child(5) {
-  width: 220px;
-  height: 65px;
+#scroe > div:nth-child(4) {
+  width: 244px;
+  height: 58px;
   position: absolute;
   left: 50%;
-  margin-left: -110px;
+  margin-left: -300px;
   top: 540px;
   z-index: 20;
-  background: url("../images/ranking_title.png") no-repeat;
+  background-color: #4CA395;
   cursor: pointer;
+  text-align: center;
+  color: #ffffff;
+  font-size: 24px;
+}
+#scroe > div:nth-child(5) {
+  width: 244px;
+  height: 58px;
+  position: absolute;
+  left: 50%;
+  margin-left: 50px;
+  top: 540px;
+  z-index: 20;
+  background-color: #4CA395;
+  text-align: center;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 24px;
 }
 #weiboSend > div:nth-child(1) {
   width: 100%;
@@ -5118,5 +5133,34 @@ body {
 }
 .mini-animate {
   position: absolute;
+}
+#fireworks {
+  width: 150px;
+  height: 150px;
+  background: url("../images/fireworks.png") repeat-x;
+  -webkit-animation: fire-works 0.3s step-end infinite;
+  animation: fire-works 0.3s step-end infinite;
+  position: absolute;
+  z-index: 1;
+}
+@-webkit-keyframes fire-works {
+  0% {
+    background-position-x: 0;
+  }
+  16.7% {
+    background-position-x: 150px;
+  }
+  33.3% {
+    background-position-x: 300px;
+  }
+  50% {
+    background-position-x: 450px;
+  }
+  66.7% {
+    background-position-x: 600px;
+  }
+  83.3% {
+    background-position-x: 750px;
+  }
 }
 /*# sourceMappingURL=/styles/main.css.map */
