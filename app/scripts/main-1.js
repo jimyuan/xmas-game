@@ -2,7 +2,8 @@
   var J = {
     timeStamp:0,
     count:0,
-    currTime:.3*1000,
+    totalTime:3*1000,
+    currTime:0,
     incrementTime:70,
     mainScene:$(".main-scene"),
     beforeScene:$(".before-scene"),
@@ -149,7 +150,7 @@
         Common.createNew().transformSence("#Weibo");
         showWeiboList();
       };
-      /*var showWebiLogin=function(){
+      var showWebiLogin=function(){
         $.get("http://www.wangfan.com/2014/islogin.ashx",'',function(data){
           if(data.result == "success") {
             showWeiboList(data.jsonResponse);
@@ -160,7 +161,7 @@
             });
           }
         },"jsonp");
-      };*/
+      };
 
       var showWeiboList=function(_own) {
         J._self = _own;
@@ -330,6 +331,8 @@
           $("#enddiv").addClass("brandgo").animate({
           top: "-1000px", left: "-1000px"});
         },1000);
+        J.currTime = J.totalTime;
+        J.currBarWidth = 0;
         J._timer.init();
         J.timeStamp=e.timeStamp;
         $(document).on("keyup.startGame",keyUphandler);
