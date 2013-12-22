@@ -25,5 +25,5 @@ node_modules
 dist
 .tmp
 app/bower_components
-app/style/main.css
-app/style/mian.css.map
+app/styles/main.css
+app/styles/mian.css.map

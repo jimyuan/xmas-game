@@ -37,9 +37,10 @@
 		&>div:last-child{
 			.size(150px,150px);
 			float: right;
-			margin-top: 18px;
+			margin-top: 20px;
 			&>div:nth-child(1) {
 				font-size: 24px;
+				color: red;
 			}
 			&>div:nth-child(2) {
 				color: #4CA395;
@@ -53,34 +54,46 @@
 				color: #4CA395;
 				font-size: 20px;
 			}
+			&>div:nth-child(5) {
+				width: 240px;
+				margin-top: 25px;
+				position: absolute;
+				&>div:nth-child(1) {
+					float:left;
+					color: #4CA395;
+					font-size: 20px;
+				}
+				&>img:nth-child(2) {
+					float: right;
+					margin-top: -20px;
+				}
+			}
 		}
 	}
 	&>div:nth-child(4) {
-		width: 350px;
+		.size(244px,58px);
 		position: absolute;
 		left: 50%;
-  	margin-left:-175px; 
-		top: 450px;
-		z-index: 20;
-		color: #4CA395;
-		font-size: 24px;
-		&>div:nth-child(1) {
-			float:left;
-		}
-		&>div:nth-child(2) {
-			margin-left: 200px;
-			margin-top: -15px;
-		}
-
-	}
-	&>div:nth-child(5) {
-		.size(220px,65px);
-		position: absolute;
-		left: 50%;
-  	margin-left:-110px; 
+  	margin-left:-300px; 
 		top: 540px;
 		z-index: 20;
-		background:url("../images/ranking_title.png") no-repeat;
+		background-color: #4CA395;
 		cursor: pointer;
+		text-align: center;
+		color: #ffffff;
+		font-size: 24px;
+	}
+	&>div:nth-child(5) {
+		.size(244px,58px);
+		position: absolute;
+		left: 50%;
+  	margin-left:50px; 
+		top: 540px;
+		z-index: 20;
+		background-color: #4CA395;
+		text-align: center;
+		cursor: pointer;
+		color: #ffffff;
+		font-size: 24px;
 	}
 }
