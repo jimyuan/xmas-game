@@ -199,13 +199,6 @@
         }
         $("#weiboList ul").html(weiboListHtml);
         selectFriendList();
-        //获取并存储微博头像地址
-        $("#weiboList>ul>li a").each(function(){
-          biourl=$(this).css("backgroundImage")
-          J.weiboBio.push(biourl.slice(4, biourl.length-1));
-        });
-        J.weiboBio=$.unique(J.weiboBio);
-        console.log(J.weiboListData)
       };
 
       var selectFriendList=function() {
@@ -278,8 +271,6 @@
         else{
           $("#mini-wrap").css("left", "+="+streetStep+"px");
         }
-        
-        console.log(speed)
       }
 
       var run=function (speed) {
@@ -330,7 +321,8 @@
         var sp=["wrapcar_1","wrapcar_2","wrapcar_3","wrapbicycle_1","wrapbicycle_2","wrapbicycle_3"];
         var rdm=0, c={};
         var people=10;
-        var bio=$.chaos(J.weiboBio);
+
+        var bio=$.chaos($.R(1,25));
         bio.length=people;
         sp=$.ext(sp, people);
 
@@ -354,7 +346,7 @@
           }
           $(this).css(c).css("left",(Math.floor(9600*Math.random()))+"px");
           // $(this).children(":last-child").css("backgroundImage",bio[i]);
-          $(this).children(":last-child").append('<img src="'+bio[i]+'">');
+          $(this).children(":last-child").append('<img src="images/userhead/'+bio[i]+'.png">');
         });
         // $("#mini-wrap").css("left", $(window).width()+"px");
       };
