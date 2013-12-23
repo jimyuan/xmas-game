@@ -284,39 +284,43 @@ body {
     }
   }
   #fireworks {
-    .animate-cell(@w:150px,@h:150px);
-    background: url("../images/fireworks.png") repeat-x;
-    background-position: 450px;
+    .size(294px, 222px);
+    background: url("../images/fireworks.png") no-repeat;
     position: absolute; 
     top:50%; left:50%;
     z-index:90;
-    margin-left:60px; margin-top:-40px;
-    .animation(fire-works .3s step-end 1 forwards);
+    margin-left:-20px; margin-top:-60px;
+    // .animation(fire-works .3s step-end 1 forwards);
   }
-
-  .startFire{
+  #hand-pai{
+    .size(76px, 98px);
+    background: url("../images/hand.png") no-repeat;
+    position: absolute; 
+    top:50%; left:50%;
+    z-index:90;
+    margin-left:90px;
   }
 
   @-webkit-keyframes fire-works{
-    @cell2:150px;
-    /*0%{
+    @cell2:294px;
+    0%{
       background-position-x: 0;
     }
-    16.7%{
+    /*16.7%{
       background-position-x: @cell2;
-    }*/
+    }
     33.3%{
       background-position-x: @cell2*2;
-    }
-    50%{
-      background-position-x: @cell2*3;
-    }
-    66.7%{
-      background-position-x: @cell2*4;
-    }
-    /*83.3%{
-      background-position-x: @cell2*5;
     }*/
+    50%{
+      background-position-x: @cell2;
+    }
+    /*66.7%{
+      background-position-x: @cell2*4;
+    }*/
+    100%{
+      background-position-x: 0;
+    }
   }
 
 }
