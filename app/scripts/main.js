@@ -148,14 +148,12 @@
       var weibo={};
       weibo.begin=function(){
         Common.createNew().transformSence("#Weibo");
-        this.showWeiboList(arguments[0]);
+        this.showWeiboList(arguments[0].jsonResponse);
       };
       
       weibo.showWeiboList=function(_own) {
         J._self = _own;
         var show=Common.createNew().show;
-
-        $("#weiboBtn").fadeOut();
         if(J._self === undefined) {
           $('#mainHead').children(":last-child").css("backgroundImage","url("+J.horseHead+")");
         } else {
@@ -296,8 +294,7 @@
         J.beforeScene.css("background-position", "+="+speed*250);
         if(speed===0){
           $("#mini-wrap").css("left", "-="+streetStep+"px");
-        }
-        else{
+        } else{
           $("#mini-wrap").css("left", "+="+streetStep+"px");
         }
       }
@@ -320,7 +317,9 @@
           top: "-1000px", left: "-1000px"});
         },1000);
         J.currTime = J.totalTime;
+        $("#mini-wrap").css("left",0);
         J.currBarWidth = 0;
+        J.count =0;
         J._timer.init();
         J.timeStamp=e.timeStamp;
         $(document).on("keyup.startGame",keyUphandler);
@@ -332,8 +331,9 @@
         $(document).off(".startGame");
         $(document).off(".playsound");
         J.stopwatch.text("00:00");
-        J.currentTime=3*1000;
         console.log("游戏结束");
+
+        $("#mini-wrap").empty();
         Gameover.createNew().begin();
       }
 
@@ -353,10 +353,13 @@
       var street=function(){ //路人场景
         var sp=["wrapcar_1","wrapcar_2","wrapcar_3","wrapbicycle_1","wrapbicycle_2","wrapbicycle_3"];
         var rdm=0, c={};
+        var bio = [];
         var people=10;
+        console.log("people:"+people);
 
-        var bio=$.chaos($.R(1,25));
+        bio=$.chaos($.R(1,28));
         bio.length=people;
+        console.log("+++++++:"+bio.length);
         sp=$.ext(sp, people);
 
         $($.chaos(sp)).each(function(x,y){
@@ -439,16 +442,16 @@
 
       var setRating=function(){
         var flag = "";
-        if(J.count > 600) {
+        if(J.count > 400) {
           flag = J.rating[4];
         } 
-        else if(J.count < 600 && J.count >= 500) {
+        else if(J.count < 400 && J.count >= 300) {
           flag = J.rating[3];
         } 
-        else if(J.count < 500 && J.count >= 300) {
+        else if(J.count < 300 && J.count >= 200) {
           flag = J.rating[2];
         } 
-        else if(J.count < 300 && J.count >= 200) {
+        else if(J.count < 200 && J.count >= 100) {
           flag = J.rating[1];
         } 
         else {
@@ -521,5 +524,5 @@
   }; 
   //初始化函数
   Init();
-  window.showWeiboList=Weibo.createNew().showWeiboList;
+  window.showWeiboList=Weibo.createNew().begin;
 }(window.jQuery);
