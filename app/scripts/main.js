@@ -148,7 +148,7 @@
       var weibo={};
       weibo.begin=function(){
         Common.createNew().transformSence("#Weibo");
-        this.showWeiboList(arguments[0].jsonResponse);
+        this.showWeiboList(arguments[0]["jsonResponse"]);
       };
       
       weibo.showWeiboList=function(_own) {
