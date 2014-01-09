@@ -24,7 +24,11 @@
     rating:["拍马屁实习生","初级马屁精","资深马屁精","马屁精指导","马屁王"],
     sendWeiboImage:"",
     weiboBio:[],
-    preLoad:["1.png","2.png","3.png","4.png","5.png","6.png","7.png","8.png","9.png","10.png","11.png","12.png","13.png","14.png","15.png","16.png","17.png","18.png","19.png","20.png","21.png","22.png","23.png","24.png","25.png","26.png","27.png","28.png","click-space-0.png","num-0.png","click-space-1.png","num-1.png","click-space-2.png","num-2.png","cloud.png","num-3.png","fireworks.png","num-4.png","gametitle.png","num-5.png","green_bg.png","num-6.png","head.jpeg","num-7.png","head.jpg","num-8.png","head_1.png","num-9.png","hill_1.png","hill_2.png","ranking_beipai.png","background-before.png","horse-fast.png","ranking_bg.png","background.png","horse-slow.png","ranking_pai.png","bicycle_1.png","horse-walk-fast.png","ranking_title.png","bicycle_2.png","horse-walk-slow.png","scroe_title.png","bicycle_3.png","horse-walk-stop.png","succesMark.png","body-bg-before.jpg","body_bg.jpg","left_btn.png","weibo.png","car_1.png","loading-circle.png","weibolist_title.png","car_2.png","monster-green.png","weixin.png","car_3.png","monster-yellow.png","write_bg.png","hand.png","loading-shadow.png"],
+    carSpeed:10,
+    runRightFun:"",
+    runLeftFun:"",
+    addCarFun:"",
+    headArray:[],
     _timer:{
       timer:0,
       updateTimer:function () {
@@ -86,57 +90,178 @@
       return common;
     }
   }
-    
   var Loading={
     createNew: function(){
       var loading={};
       loading.begin=function(){
+
+        var loader = new createjs.LoadQueue(false);
         //调取Loading场景
+         var manifest = [
+          {src:'images/num-0.png', id:'num-0'},
+          {src:'images/num-1.png', id:'num-1'},
+          {src:'images/num-2.png', id:'num-2'},
+          {src:'images/num-3.png', id:'num-3'},
+          {src:'images/num-4.png', id:'num-4'},
+          {src:'images/num-5.png', id:'num-5'},
+          {src:'images/num-6.png', id:'num-6'},
+          {src:'images/num-7.png', id:'num-7'},
+          {src:'images/num-8.png', id:'num-8'},
+          {src:'images/num-9.png', id:'num-9'},
+          {src:'images/loading-circle.png', id:'loading-circle'}
+        ];
+
         Common.createNew().transformSence("#Loading");
-        loading.picPreLoad();
-      };
-      loading.picPreLoad=function(){
-        var img=J.preLoad, cImg=[], numImagesLoaded=0
-
-        var incrementAndCheckLoading=function(){
-          showPercent(numImagesLoaded);
-          numImagesLoaded=numImagesLoaded+1;
-          if(numImagesLoaded === img.length){
-            $("#percent1").css("background-image","url(images/num-9.png)");
-            $("#percent0").css("background-image","url(images/num-9.png)");
-            Gameover.createNew().indexRanking();
-            //转移到下一场景
-            Intro.createNew().begin();
-          }
-        };
-        var showPercent=function(num){
-          var percent=Math.floor(num/img.length*100);
-          if(percent<10){ 
-            $("#percent1").css("background-image","url(images/num-0.png)");
-            $("#percent0").css("background-image","url(images/num-"+percent+".png)");
-          }
-          else{
-            $("#percent1").css("background-image","url(images/num-"+Math.floor(percent/10)+".png)");
-            $("#percent0").css("background-image","url(images/num-"+(percent-Math.floor(percent/10)*10)+".png)");
-          }
-        };
-
-        $(img).each(function(x, y){
-          cImg[x]=new Image();
-          cImg[x].src="images/"+y;
-          cImg[x].onload = incrementAndCheckLoading;
+        loader.addEventListener("complete", function (evt){
+          Loading.createNew().loaderinit();
+            //Gameover.createNew().indexRanking();
+           //转移到下一场景
+           // Intro.createNew().begin();
         });
+        loader.addEventListener("fileload", function (evt) {
+          if (evt.item.type == "image") { images[evt.item.id] = evt.result; }
+        });
+        loader.addEventListener("progress",function (evt) {});
+        loader.loadManifest(manifest);
+      };
+      loading.loaderinit = function() {
+        var loader = new createjs.LoadQueue(false);
+        //调取Loading场景
+         var manifest = [
+          {src:'images/click-space-0.png', id:'click-space-0'},
+          {src:'images/click-space-1.png', id:'click-space-1'},
+          {src:'images/head_1.png', id:'head_1'},
+          {src:'images/click-space-2.png', id:'click-space-2'},
+          {src:'images/cloud.png', id:'cloud'},
+          {src:'images/fireworks.png', id:'fireworks'},
+          {src:'images/gametitle.png', id:'gametitle'},
+          {src:'images/green_bg.png', id:'green_bg'},
+          {src:'images/head.jpeg', id:'head'},
+          {src:'images/head.jpg', id:'head'},
+          {src:"images/cha1.png", id:"cha1"},
+          {src:"images/cha2.png", id:"cha2"},
+          {src:"images/cha3.png", id:"cha3"},
+          {src:"images/copy1.png", id:"copy1"},
+          {src:"images/ma.png", id:"ma"},
+          {src:"images/p.png", id:"p"},
+          {src:"images/pai.png", id:"pai"},
+          {src:"images/paipngcopy.png", id:"paipngcopy"},
+          {src:"images/paipngcopy2.png", id:"paipngcopy2"},
+          {src:"images/paipngcopy3.png", id:"paipngcopy3"},
+          {src:"images/qi1.png", id:"qi1"},
+          {src:"images/qi1pngcopy.png", id:"qi1pngcopy"},
+          {src:"images/qi2.png", id:"qi2"},
+          {src:"images/qi2pngcopy.png", id:"qi2pngcopy"},
+          {src:"images/rbg.jpg", id:"rbg"},
+          {src:"images/tree1.png", id:"tree1"},
+          {src:"images/tree2.png", id:"tree2"},
+          {src:"images/tree3.png", id:"tree3"},
+          {src:"images/tree4.png", id:"tree4"},
+          {src:"images/yi1.png", id:"yi1"},
+          {src:"images/yun1.png", id:"yun1"},
+          {src:"images/yun2.png", id:"yun2"},
+          {src:'images/1.png', id:'1'},
+          {src:'images/2.png', id:'2'},
+          {src:'images/3.png', id:'3'},
+          {src:'images/4.png', id:'4'},
+          {src:'images/5.png', id:'5'},
+          {src:'images/6.png', id:'6'},
+          {src:'images/7.png', id:'7'},
+          {src:'images/8.png', id:'8'},
+          {src:'images/9.png', id:'9'},
+          {src:'images/10.png', id:'10'},
+          {src:'images/11.png', id:'11'},
+          {src:'images/12.png', id:'12'},
+          {src:'images/13.png', id:'13'},
+          {src:'images/14.png', id:'14'},
+          {src:'images/15.png', id:'15'},
+          {src:'images/16.png', id:'16'},
+          {src:'images/17.png', id:'17'},
+          {src:'images/18.png', id:'18'},
+          {src:'images/19.png', id:'19'},
+          {src:'images/20.png', id:'20'},
+          {src:'images/21.png', id:'21'},
+          {src:'images/22.png', id:'22'},
+          {src:'images/23.png', id:'23'},
+          {src:'images/24.png', id:'24'},
+          {src:'images/25.png', id:'25'},
+          {src:'images/26.png', id:'26'},
+          {src:'images/27.png', id:'27'},
+          {src:'images/28.png', id:'28'},
+          {src:'images/hill_1.png', id:'hill_1'},
+          {src:'images/hill_2.png', id:'hill_2'},
+          {src:'images/ranking_beipai.png', id:'ranking_beipai'},
+          {src:'images/background-before.png', id:'background-before'},
+          {src:'images/horse-fast.png', id:'horse-fast'},
+          {src:'images/ranking_bg.png', id:'ranking_bg'},
+          {src:'images/background.png', id:'background'},
+          {src:'images/horse-slow.png', id:'horse-slow'},
+          {src:'images/ranking_pai.png', id:'ranking_pai'},
+          {src:'images/bicycle_1.png', id:'bicycle_1'},
+          {src:'images/horse-walk-fast.png', id:'horse-walk-fast'},
+          {src:'images/ranking_title.png', id:'ranking_title'},
+          {src:'images/bicycle_2.png', id:'bicycle_2'},
+          {src:'images/horse-walk-slow.png', id:'horse-walk-slow'},
+          {src:'images/scroe_title.png', id:'scroe_title'},
+          {src:'images/bicycle_3.png', id:'bicycle_3'},
+          {src:'images/horse-walk-stop.png', id:'horse-walk-stop'},
+          {src:'images/succesMark.png', id:'succesMark'},
+          {src:'images/body-bg-before.jpg', id:'body-bg-before'},
+          {src:'images/body_bg.jpg', id:'body_bg'},
+          {src:'images/left_btn.png', id:'left_btn'},
+          {src:'images/weibo.png', id:'weibo'},
+          {src:'images/car_1.png', id:'car_1'},
+          {src:'images/weibolist_title.png', id:'weibolist_title'},
+          {src:'images/car_2.png', id:'car_2'},
+          {src:'images/monster-green.png', id:'monster-green'},
+          {src:'images/weixin.png', id:'weixin'},
+          {src:'images/car_3.png', id:'car_3'},
+          {src:'images/monster-yellow.png', id:'monster-yellow'},
+          {src:'images/write_bg.png', id:'write_bg'},
+          {src:'images/hand.png', id:'hand'}
+        ];
+        loader.addEventListener("complete", function (evt){
+            Gameover.createNew().indexRanking();
+           //转移到下一场景
+           Intro.createNew().begin();
+        });
+        loader.addEventListener("fileload", function (evt) {
+          if (evt.item.type == "image") { images[evt.item.id] = evt.result; }
+        });
+        loader.addEventListener("progress",function (evt) {
+          var percent=Math.floor(evt.loaded*100);
+          if(percent == 100) percent = 99;
+          $("#percent1").css("background-image","url(images/num-"+Math.floor(percent/10)+".png)");
+          $("#percent0").css("background-image","url(images/num-"+(percent-Math.floor(percent/10)*10)+".png)");
+        });
+        loader.loadManifest(manifest);
+
       }
       return loading;
     }
   };
 
   var Intro={
+    canvas:"", 
+    stage:"",
+    exportRoot:"",
+    init:function() {
+        Intro.canvas = document.getElementById("canvas");
+         Intro.exportRoot = new lib.intro_htm_bg2l();
+
+        Intro.stage = new createjs.Stage(Intro.canvas);
+        Intro.stage.addChild(Intro.exportRoot);
+        Intro.stage.update();
+
+        createjs.Ticker.setFPS(24);
+        createjs.Ticker.addEventListener("tick", Intro.stage);
+        setTimeout(Oauthor.createNew().begin,5000);
+      },
     createNew:function(){
       var intro={};
       intro.begin=function(){
         Common.createNew().transformSence("#Intro");
-        Oauthor.createNew().begin();
+        Intro.init();
       };
 
       return intro;
@@ -148,7 +273,7 @@
       var weibo={};
       weibo.begin=function(){
         Common.createNew().transformSence("#Weibo");
-        this.showWeiboList(arguments[0]["jsonResponse"]);
+       this.showWeiboList(arguments[0]["jsonResponse"]);
       };
       
       weibo.showWeiboList=function(_own) {
@@ -277,11 +402,17 @@
           if(e.which===32) {
             snd.play();
             $("#fireworks").show();
+            var fireworksW = 294;
+            var fireworksH =  222;
+            var randomData= Math.random();
+            $("#fireworks").css({"width":fireworksW*randomData,"height":fireworksH*randomData});
+            $("#hand-pai").show();
           }
         }).on("keyup.playsound", function(e){
           if(e.which===32){
             snd.currentTime=0;
-            $("#fireworks").hide();      
+            $("#fireworks").hide();
+             $("#hand-pai").hide();
           }
         });
       }
@@ -292,15 +423,10 @@
       }
 
       var scrollBg=function (speed) {
-        var streetStep=(9600+$(window).width())/350;
 
         J.mainScene.css("background-position", "+="+speed*50);
         J.beforeScene.css("background-position", "+="+speed*250);
-        if(speed===0){
-          $("#mini-wrap").css("left", "-="+streetStep+"px");
-        } else{
-          $("#mini-wrap").css("left", "+="+streetStep+"px");
-        }
+        $("#mini-wrap").children().animate({"marginLeft":"+=200px"},.05);
       }
 
       var run=function (speed) {
@@ -324,23 +450,32 @@
         $("#mini-wrap").css("left",0);
         J.currBarWidth = 0;
         J.count =0;
+        street();
         J._timer.init();
         J.timeStamp=e.timeStamp;
-        $(document).on("keyup.startGame",keyUphandler);
-        street();
+        $(document).off(".keyUpstartGame");
+        $(document).off(".keyDwonstartGame");
+        $(document).on("keydown.keyDwonstartGame",keyDownhandler);
       };
 
       mainscene.gameOver=function () {
         //game over
-        $(document).off(".startGame");
+        $(document).off(".keyUpstartGame");
+        $(document).off(".keyDwonstartGame");
         $(document).off(".playsound");
         J.stopwatch.text("00:00");
         console.log("游戏结束");
-
+        clearInterval(J.addCarFun);
         $("#mini-wrap").empty();
         Gameover.createNew().begin();
+        clearInterval(J.runLeftFun);
       }
-
+      var keyDownhandler=function (e) {
+        if(e.which === 32) {
+          $(document).on("keyup.keyUpstartGame",keyUphandler);
+          $(document).off(".keyDwonstartGame");
+        }
+      }
       var keyUphandler=function(e){
         if(e.which === 32) {
           J.count++;
@@ -351,45 +486,45 @@
           scrollBg(s);
           run(s);
           J.timeStamp = e.timeStamp;
+          $(document).on("keydown.keyDwonstartGame",keyDownhandler);
+          $(document).off(".keyUpstartGame");
         }
       };
 
       var street=function(){ //路人场景
-        var sp=["wrapcar_1","wrapcar_2","wrapcar_3","wrapbicycle_1","wrapbicycle_2","wrapbicycle_3"];
-        var rdm=0, c={};
-        var bio = [];
-        var people=10;
-        console.log("people:"+people);
+        var flag = 0;
+        for(var i=1 ; i < 29; i++) {
+          J.headArray.push(i);
+        }
 
-        bio=$.chaos($.R(1,28));
-        bio.length=people;
-        console.log("+++++++:"+bio.length);
-        sp=$.ext(sp, people);
-
-        $($.chaos(sp)).each(function(x,y){
-          $("#mini-wrap").append('<div class="mini-animate" id="'+y+'"><div/><div/></div>');
-        });
-
-        $("#mini-wrap .mini-animate").each(function(i){
-          rdm=Math.random();
-          if(rdm>0.5){
-            c={
-              "bottom":(Math.floor(Math.random()*10))+"px",
-              "z-index":100
-            }
-          }
-          else{
-            c={
-              "bottom ":(Math.floor(20+Math.random()*10))+"px",
-              "z-index":80,
-            }
-          }
-          $(this).css(c).css("left",(Math.floor(9600*Math.random()))+"px");
-          // $(this).children(":last-child").css("backgroundImage",bio[i]);
-          $(this).children(":last-child").append('<img src="images/'+bio[i]+'.png">');
-        });
-        // $("#mini-wrap").css("left", $(window).width()+"px");
+        addCar(flag);
+        flag++;
+        J.addCarFun = setInterval(function (){
+          addCar(flag);
+          flag++;
+        },4000);
       };
+
+      var addCar = function (carNum) {
+        //随机获取车子
+        var sp=["wrapcar_1","wrapcar_2","wrapcar_3","wrapbicycle_1","wrapbicycle_2","wrapbicycle_3","wrapMonsterYellow","warphorseMonsterGreen"];
+        var n=Math.floor(Math.random()*sp.length+1)-1;        
+        var headIndex = Math.floor(Math.random()*J.headArray.length+1)-1;
+
+        $("#mini-wrap").append('<div class="s'+carNum+'" id="'+sp[n]+'"><div/><div/></div>');
+        $(".s"+carNum).children(":last-child").css({"backgroundImage":"url('../images/"+J.headArray[headIndex]+".png')","backgroundRepeat":"no-repeat","backgroundSize":"100%"});
+        if(carNum%2 === 0) {
+          $(".s"+carNum).css({"z-index":100,"left":-400,"bottom":(Math.floor(Math.random()*10))+"px"});
+        } else {
+           $(".s"+carNum).css({"z-index":80,"left":-400,"bottom":(Math.floor(200+Math.random()*10))+"px"});
+        }
+        J.headArray.splice(headIndex,1);
+        var timerArray = [1.5,2,2.5,3,3.5,4,4.5,5];
+        var timerNum = Math.floor(Math.random()*timerArray.length+1)-1;
+        J.runLeftFun=setInterval(function (){
+          $(".s"+carNum).css("left","-="+timerArray[timerNum]+"px");
+        },20);
+      }
       return mainscene;
     }
   };
@@ -508,7 +643,6 @@
       var sendWeibo=function () {
         $('#weibosendimage').css("backgroundImage","url(http://www.wangfan.com/2014/"+J.sendWeiboImage+")");
         $("#sendWeibobtn").on("click",function (){
-          // console.log($(".weibosendcontent").val(),J.weibosendimage);
           $.post("http://www.wangfan.com/2014/share.ashx", 
           {content:$(".weibosendcontent").val(),pic:J.sendWeiboImage},
           function(data){
@@ -526,7 +660,11 @@
       Common.createNew().size($("body"), $(window).width(), $(window).height());
       Loading.createNew().begin();
   }; 
+
+  var closeWeiboWindow= function (obj) {
+    Weibo.createNew().begin(obj);
+  }
   //初始化函数
   Init();
-  window.showWeiboList=Weibo.createNew().begin;
+  window.showWeiboList=closeWeiboWindow;
 }(window.jQuery);

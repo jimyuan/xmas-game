@@ -14,50 +14,22 @@
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
+    <script type="text/javascript">
+    toArray();
+      function toArray() {
+        var preLoad = ["1.png","2.png","3.png","4.png","5.png","6.png","7.png","8.png","9.png","10.png","11.png","12.png","13.png","14.png","15.png","16.png","17.png","18.png","19.png","20.png","21.png","22.png","23.png","24.png","25.png","26.png","27.png","28.png","click-space-0.png","num-0.png","click-space-1.png","num-1.png","click-space-2.png","num-2.png","cloud.png","num-3.png","fireworks.png","num-4.png","gametitle.png","num-5.png","green_bg.png","num-6.png","head.jpeg","num-7.png","head.jpg","num-8.png","head_1.png","num-9.png","hill_1.png","hill_2.png","ranking_beipai.png","background-before.png","horse-fast.png","ranking_bg.png","background.png","horse-slow.png","ranking_pai.png","bicycle_1.png","horse-walk-fast.png","ranking_title.png","bicycle_2.png","horse-walk-slow.png","scroe_title.png","bicycle_3.png","horse-walk-stop.png","succesMark.png","body-bg-before.jpg","body_bg.jpg","left_btn.png","weibo.png","car_1.png","loading-circle.png","weibolist_title.png","car_2.png","monster-green.png","weixin.png","car_3.png","monster-yellow.png","write_bg.png","hand.png","loading-shadow.png"];
+        var temp = "";
+        for(var i = 0; i < preLoad.length; i++) {
+          temp += "{src:'images/"+preLoad[i]+"', id:'"+preLoad[i].split('.')[0]+"'},";
+        }
+        console.log(temp);
+      }
+    </script>
   </head>
   <body>
     <!--[if lt IE 9]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    <div class="door">
-      <div id="intro">
-        <div id="centerClouds">
-          
-        </div>
-        <!--云动画-->
-        <div id="clouds">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-        <!--树动画-->
-        <div id="trees">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-        <!--马动画-->
-        <div id="introHorse">
-          <div></div>
-        </div>
-        <!--球拍动画-->
-        <div id="racket"></div>
-        <!--底动画-->
-        <div id="intro-bg">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-      </div>
-    </div>
     <!-- build:js scripts/main.js -->
     <script src="bower_components/jquery/jquery.js"></script>
     <script src="scripts/main.js"></script>

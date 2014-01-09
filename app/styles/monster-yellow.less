@@ -1,6 +1,24 @@
 /*
   黄毛怪
 */
+#warphorseMonsterGreen {
+  .animate-cell(@w:150px,@h:220px);
+  position: absolute;
+   &>div:first-child{ 
+    .animate-cell(@w:150px,@h:220px);
+    background: url("../images/monster-yellow.png") repeat-x;
+    .animation(monster-yellow .6s step-end infinite);
+   }
+   &>div:last-child {
+    .animate-cell(@w:70px,@h:120px);
+    position: absolute;
+    z-index: 3; 
+    top:51.6px;
+    left: 111.65px; 
+    .rotate(0deg);
+    .animation(monster-yellowHead .6s step-end infinite);
+   }
+}
 @-webkit-keyframes monster-yellow{
   @cell2:-150px;
   0%{
@@ -30,12 +48,6 @@
   88.8%{
     background-position-x: @cell2*8;
   }
-}
-
-#monsterYellow{
-  .animate-cell(@w:150px,@h:220px);
-  background: url("../images/monster-yellow.png") repeat-x;
-  .animation(monster-yellow .3s step-end infinite);
 }
 
 @-webkit-keyframes monster-yellowHead{
@@ -84,15 +96,4 @@
     left:111.65px;
     .rotate(0deg);
   }
-}
-
-#monsterYellowHead {
-  .animate-cell(@w:91px,@h:115px);
-  position: absolute;
-  z-index: 3; 
-  top:51.6px;
-  left: 111.65px; 
-  .rotate(0deg);
-  background: url("../images/head_1.png") no-repeat;background-size: 100% auto;
-  .animation(monster-yellowHead 6s step-end infinite);
 }

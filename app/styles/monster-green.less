@@ -1,6 +1,21 @@
 #warphorseMonsterGreen {
   .animate-cell(@w:257px,@h:264px);
-  position: relative;
+  position: absolute;
+   &>div:first-child{
+    .animate-cell(@w:257px, @h:264px);
+    background: url("../images/monster-green.png") repeat-x;
+    .animation(monster-green .6s step-end infinite);
+    position: absolute;z-index:2;
+   }
+   &>div:last-child {
+    .animate-cell(@w:70px,@h:120px);
+    position: absolute;
+    z-index: 1; 
+    top:51.6px;
+    left: 111.65px; 
+    .rotate(0deg);
+    .animation(monster-greenHead .6s step-end infinite);
+   }
 }
 
 @-webkit-keyframes monster-green{
@@ -32,13 +47,6 @@
   88.9%{
     background-position-x: @cell2*8;
   }
-}
-
-#monsterGreen{
-  .animate-cell(@w:257px, @h:264px);
-  background: url("../images/monster-green.png") repeat-x;
-  .animation(monster-green 6s step-end infinite);
-  position: absolute;z-index:2;
 }
 
 @-webkit-keyframes monster-greenHead{
@@ -87,15 +95,4 @@
     left:111.65px;
     .rotate(0deg);
   }
-}
-
-#monsterGreenHead {
-  .animate-cell(@w:91px,@h:115px);
-  position: absolute;
-  z-index: 1; 
-  top:51.6px;
-  left: 111.65px; 
-  .rotate(0deg);
-  background: url("../images/head_1.png") no-repeat;background-size: 100% auto;
-  .animation(monster-greenHead 6s step-end infinite);
 }

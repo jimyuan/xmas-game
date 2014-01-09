@@ -51,7 +51,8 @@ body {
 //大场景转场动画定义
 .sceneTrans{
   .transform-origin(left bottom);
-  .translate(0, 2000px)
+  .translate(0, 2000px);
+  background:url("../images/write_bg.png") no-repeat center center rgba(76,163,149,0.5);
 }
 
 // 大场景定义开始
@@ -61,7 +62,7 @@ body {
 }
 
 #Intro{
-  background:green;
+  background:#4CA395;
   z-index:800;
 }
 
@@ -197,7 +198,7 @@ body {
     background: url("../images/background.png");
     height: 470px;
     margin:auto;
-    margin-top: 205px;
+    margin-top: 20px;
     .transition(background-position 0.2s ease-out); 
     &>div:first-child{ 
       .size(100%,100%);
@@ -208,11 +209,11 @@ body {
       background:#fbffdc;
     }
     &>div:nth-child(2) {/*qian bei jin*/
-      height: 597px;
+      height: 779px;
       width: 9600px;
       position: absolute;
       left:0px;
-      top:-120px;
+      top:-100px;
       background:url("../images/background-before.png") right center  ;
       z-index: 66;
       .transition(background-position .2s ease-out); 
@@ -272,7 +273,9 @@ body {
     top:300px; left:0;
     .size(9600px, 500px);
     left:-9600px;
-    .transition(left .2s ease-out); 
+    &>*{
+      .transition(margin-left  1s ease-out); 
+    }
   }
   .mini-animate{
     position:absolute;
@@ -285,7 +288,7 @@ body {
   }
   #fireworks {
     .size(294px, 222px);
-    background: url("../images/fireworks.png") no-repeat;
+    background: url("../images/fireworks.png") no-repeat;background-size: 100% auto;
     position: absolute; 
     top:50%; left:50%;
     z-index:90;
@@ -560,16 +563,21 @@ body {
 }
 
 #mini-wrap{
-  position:absolute;
-  top:300px; left:0;
+  position:relative;
+  top:300px; 
+  left:0;
   .size(9600px, 500px);
-  left:-9600px;
-  .transition(all 30s ease-out); 
 }
 .mini-animate{
   position:absolute;
 }
-
+#canvas {
+  position: absolute;
+  left: 50%;
+  margin-left: -640px;
+  top: 50%;
+  margin-top: -360px;
+}
 #oppbox{
   // display:none
 }
